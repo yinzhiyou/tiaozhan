@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Denglu.BangDingActivity">
+
+
+    <include layout="@layout/layout_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FF999999"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="为了您的账号安全请先绑定手机"
+        android:textColor="#FFD85D27"
+        android:textSize="12sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="10dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/bangding_shouji"
+            android:layout_width="160dp"
+            android:layout_height="20dp"
+            android:background="@null"
+            android:layout_gravity="center_vertical"
+            android:textSize="14dp"
+            android:phoneNumber="true"
+            android:layout_weight="1"
+            android:textColorHint="#999999"
+
+            android:hint="请输入手机号"/>
+
+        <RelativeLayout
+            android:id="@+id/yanzheng"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:background="@drawable/login_rounded_corners">
+
+            <TextView
+                android:id="@+id/bangding_yan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="验证码"
+                android:textColor="#ffffff"
+                android:textSize="12dp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#999999"/>
+
+    <EditText
+        android:id="@+id/bangding_yanzheng"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@null"
+        android:layout_gravity="center_vertical"
+        android:textSize="14dp"
+        android:maxLength="11"
+        android:phoneNumber="true"
+        android:textColorHint="#999999"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:hint="请输入验证码"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#999999"/>
+
+
+    <RelativeLayout
+        android:id="@+id/bangding_queding"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/login_rounded_corners">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="绑定"
+            android:textColor="#ffffff"
+            android:textSize="16sp"/>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

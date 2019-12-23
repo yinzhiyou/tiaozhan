@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="94dp"
+    android:background="#ffffff"
+    android:orientation="horizontal"
+    >
+
+
+    <com.example.android.promoter.Toos.CustomRoundAngleImageView
+        android:id="@+id/haoyou_touxiang"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@mipmap/logo2x"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="4dp"
+        android:scaleType="fitXY"
+        />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="12dp"
+        android:layout_weight="1"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+            <TextView
+                android:id="@+id/haoyou_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="午夜玫瑰"
+                android:textColor="#FF333333"
+                android:textSize="16dp"
+                android:layout_gravity="center"
+                />
+            <ImageView
+                android:id="@+id/haoyou_sex"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:background="@mipmap/xingbie"
+                android:layout_gravity="center"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+
+                />
+            <ImageView
+                android:id="@+id/haoyou_image_qiu"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@mipmap/qiulei"
+                android:layout_gravity="center"
+                android:layout_marginRight="4dp"
+
+                />
+            <TextView
+                android:id="@+id/haoyou_jibie"
+                android:layout_width="26dp"
+                android:layout_height="12dp"
+                android:text="Lv2"
+                android:textColor="#ffffff"
+                android:textSize="10dp"
+                android:background="#F5A623"
+                android:gravity="center"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:id="@+id/haoyou_nianling"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="年龄:32岁"
+                android:textColor="#FF9B9B9B"
+                android:textSize="12dp"
+                />
+
+            <TextView
+                android:id="@+id/haoyou_tizhong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="体重:50kg"
+                android:textColor="#FF9B9B9B"
+                android:textSize="12dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                />
+
+            <TextView
+                android:id="@+id/haoyou_shengao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="身高:180cm"
+                android:textColor="#FF9B9B9B"
+                android:textSize="12dp"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/haoyou_yundong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="喜爱运行项目:足球，篮球"
+            android:textColor="#FF9B9B9B"
+            android:textSize="14dp"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/haoyou_anniu"
+        android:layout_width="50dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="8dp"
+
+        android:background="@drawable/zhifu_cg_yuanjiao">
+
+        <TextView
+            android:id="@+id/haoyou_anniu_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="挑战"
+            android:textColor="#ffffff"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+
+</LinearLayout>

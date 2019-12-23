@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".My.PingjiaTwoActivity">
+
+
+    <include layout="@layout/layout_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/biaotilan"/>
+
+
+    <LinearLayout
+        android:id="@+id/pingjia_two_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/biaotilan"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请对运动伙伴填写的结果进行评价吧~"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:textColor="#333333"
+            android:layout_marginLeft="12dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(匿名)"
+            android:layout_gravity="center"
+            android:layout_marginRight="12dp"
+            />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/pingjia_two_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pingjia_two_layout"
+        >
+
+
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/pingjia_two_tijiao"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+
+        android:layout_alignParentBottom="true"
+        android:background="#D85D27">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="提交评价"
+            android:textColor="#ffffff"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+</RelativeLayout>

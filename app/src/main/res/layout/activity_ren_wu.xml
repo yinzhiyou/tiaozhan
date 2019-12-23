@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Home.RenWuActivity">
+
+
+    <include layout="@layout/layout_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:background="@mipmap/renwubeijing"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:layout_width="126dp"
+        android:layout_height="126dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitXY"
+        android:background="@mipmap/renwu_jinbi"
+
+        >
+        <TextView
+            android:id="@+id/renwu_jinbida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="17dp"
+            android:textColor="#ffffff"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:background="#D85D27"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/renwu_jinbi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="通用金币50个"
+            android:textSize="11dp"
+            android:layout_gravity="center"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            />
+
+    </LinearLayout>
+</LinearLayout>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="504dp"
+    android:orientation="vertical"
+    android:background="@mipmap/renwubeijing2"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="36dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="· 签到"
+                    android:textColor="#000000"
+                    android:textSize="16dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="（每天一次）"
+                    android:textColor="#000000"
+                    android:textSize="13dp"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+2.5个通用金币/次"
+                android:textColor="#D85D27"
+                android:textSize="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="10dp"
+                />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/renwu_qiandao_layout"
+            android:layout_width="55dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+
+            android:background="@drawable/renwu_button"
+            >
+            <TextView
+                android:id="@+id/renwu_qiandao_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已签到"
+                android:textSize="11dp"
+                android:textColor="#ffffff"
+                android:layout_centerInParent="true"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#9B9B9B"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="4dp"
+        ></View>
+
+    <!--分割线-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="· 发布活动"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+5个通用金币/次（匹配成功后）"
+                android:textColor="#D85D27"
+                android:textSize="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="10dp"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="分享活动后，还有可能"
+                    android:textColor="#D85D27"
+                    android:textSize="12dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0元免费试玩"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold"
+                    android:textSize="12dp"
+                    android:layout_marginTop="4dp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/renwu_qufabu"
+            android:layout_width="55dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:background="@drawable/login_rounded_corners"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="去发布"
+                android:textSize="11dp"
+                android:textColor="#ffffff"
+                android:layout_centerInParent="true"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#9B9B9B"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="4dp"
+        ></View>
+
+    <!--分割线-->
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_marginTop="12dp"-->
+        <!--android:layout_marginLeft="24dp"-->
+        <!--android:layout_marginRight="24dp"-->
+        <!--&gt;-->
+        <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="vertical"-->
+            <!--android:layout_weight="1"-->
+            <!--&gt;-->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="· 分享活动"-->
+                <!--android:textColor="#000000"-->
+                <!--android:textSize="16dp"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="+2个通用金币/次"-->
+                <!--android:textColor="#D85D27"-->
+                <!--android:textSize="12dp"-->
+                <!--android:layout_marginTop="4dp"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--/>-->
+        <!--</LinearLayout>-->
+
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/renwu_fenxiang1"-->
+            <!--android:layout_width="55dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:background="@drawable/login_rounded_corners"-->
+            <!--&gt;-->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="去分享"-->
+                <!--android:textSize="11dp"-->
+                <!--android:textColor="#ffffff"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--/>-->
+
+        <!--</RelativeLayout>-->
+    <!--</LinearLayout>-->
+
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="#9B9B9B"-->
+        <!--android:layout_marginLeft="24dp"-->
+        <!--android:layout_marginRight="24dp"-->
+        <!--android:layout_marginTop="4dp"-->
+        <!--&gt;</View>-->
+
+    <!--分割线-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="· 分享APP"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+50个通用金币/注册新用户"
+                android:textColor="#D85D27"
+                android:textSize="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="10dp"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="例:有20个新用户注册，您将获得"
+                    android:textColor="#D85D27"
+                    android:textSize="12dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1000个通用金币"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold"
+                    android:textSize="12dp"
+                    android:layout_marginTop="4dp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/renwu_fenxiang2"
+            android:layout_width="55dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+
+            android:background="@drawable/login_rounded_corners"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="去分享"
+                android:textSize="11dp"
+                android:textColor="#ffffff"
+                android:layout_centerInParent="true"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#9B9B9B"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="4dp"
+        ></View>
+
+    <!--分割线-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="· 新增场馆"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+50个通用金币/次（审核通过后）"
+                android:textColor="#D85D27"
+                android:textSize="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="10dp"
+                />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/renwu_quxinzeng"
+            android:layout_width="55dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+
+            android:background="@drawable/login_rounded_corners"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="去新增"
+                android:textSize="11dp"
+                android:textColor="#ffffff"
+                android:layout_centerInParent="true"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#9B9B9B"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="4dp"
+        ></View>
+
+    <!--分割线-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="· 更正场馆信息"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+20个通用金币/次（审核通过后）"
+                android:textColor="#D85D27"
+                android:textSize="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="10dp"
+                />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/renwu_qugengzheng"
+            android:layout_width="55dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+
+            android:background="@drawable/login_rounded_corners"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="去更正"
+                android:textSize="11dp"
+                android:textColor="#ffffff"
+                android:layout_centerInParent="true"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#9B9B9B"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="4dp"
+        ></View>
+
+    <!--分割线-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:visibility="gone"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="· 发布精彩瞬间"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+2个通用金币/次"
+                android:textColor="#D85D27"
+                android:textSize="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="10dp"
+                />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/renwu_fabujingcai"
+            android:layout_width="55dp"
+            android:layout_height="20dp"
+            android:background="@drawable/login_rounded_corners"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="去发布"
+                android:textSize="11dp"
+                android:textColor="#ffffff"
+                android:layout_centerInParent="true"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#9B9B9B"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="4dp"
+        android:visibility="gone"
+        ></View>
+
+    <!--分割线-->
+</LinearLayout>
+
+
+
+</LinearLayout>
+</ScrollView>

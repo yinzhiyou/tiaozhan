@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:clipToPadding="true"
+
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+
+
+    <com.example.android.promoter.Toos.NoScrollViewPager
+        android:id="@+id/homeViewPager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="51dp"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/main_group"
+        android:layout_alignTop="@+id/main_group"
+        android:background="#FFEAE7E7"
+        />
+
+
+    <RadioGroup
+        android:id="@+id/main_group"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:windowSoftInputMode="adjustPan|stateHidden"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/main_button1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/bottom_button_home"
+            android:padding="5dp"
+            android:text="  首页  "
+            android:textSize="12dp"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:button="@null"
+            android:checked="true"
+
+
+            />
+        <RadioButton
+            android:id="@+id/main_button2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/bottom_button_community"
+            android:padding="5dp"
+            android:text="附近对手"
+            android:textSize="12dp"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:button="@null"
+
+            />
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            >
+        <RadioButton
+            android:id="@+id/main_button_release"
+
+            android:layout_width="53dp"
+            android:layout_height="40dp"
+            android:background="@mipmap/icon_tab"
+            android:padding="5dp"
+            android:layout_centerInParent="true"
+
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:button="@null"
+
+            />
+        </RelativeLayout>
+        <RadioButton
+            android:id="@+id/main_button3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/bottom_button_study"
+            android:padding="5dp"
+            android:text="消息"
+            android:textSize="12dp"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:button="@null"
+            android:checked="false"
+
+            />
+        <RadioButton
+            android:id="@+id/main_button4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/bottom_button_my"
+            android:padding="5dp"
+            android:text="我的"
+            android:textSize="12dp"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:button="@null"
+
+            />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        >
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            ></View>
+        <ImageView
+            android:id="@+id/main_hongdian"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@mipmap/hongdian2"
+            android:layout_marginRight="20dp"
+            />
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            ></View>
+    </LinearLayout>
+</RelativeLayout>

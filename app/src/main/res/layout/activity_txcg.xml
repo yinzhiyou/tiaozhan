@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".My.TXCGActivity">
+    <include layout="@layout/layout_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="174dp"
+        android:background="@mipmap/sqcgbeijing"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提现申请成功"
+            android:textColor="#FFFFFFFF"
+            android:textSize="16dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="120dp"
+            />
+
+        <TextView
+            android:id="@+id/txcg_riqi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="资金将在2个工作日之内到账"
+            android:textColor="#FFFFFFFF"
+            android:textSize="12dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="6dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="#ffffff"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="银行卡"
+            android:textColor="#FF333333"
+            android:textSize="16dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginLeft="24dp"
+            />
+        <TextView
+            android:id="@+id/txcg_yh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#FF333333"
+            android:textSize="16dp"
+            android:layout_marginRight="22dp"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="#ffffff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="金    额"
+            android:textColor="#FF333333"
+            android:textSize="16dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginLeft="24dp"
+            />
+        <TextView
+            android:id="@+id/txcg_jine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#FF333333"
+            android:textSize="16dp"
+            android:layout_marginRight="22dp"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="#ffffff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="时    间"
+            android:textColor="#FF333333"
+            android:textSize="16dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginLeft="24dp"
+            />
+        <TextView
+            android:id="@+id/txcg_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#FF333333"
+            android:textSize="16dp"
+            android:layout_marginRight="22dp"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:layout_marginTop="1dp"
+        >
+        <RelativeLayout
+            android:id="@+id/txcg_wancheng"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/login_rounded_corners">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="完成"
+                android:textColor="#ffffff"
+                android:textSize="16sp"/>
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

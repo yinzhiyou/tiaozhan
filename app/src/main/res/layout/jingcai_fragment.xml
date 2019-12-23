@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    >
+
+   <LinearLayout
+       android:id="@+id/jingcai_layout1"
+       android:layout_width="match_parent"
+       android:layout_height="45dp"
+       android:background="#ffffff"
+       >
+
+       <ImageView
+           android:id="@+id/jingcai_huodong"
+           android:layout_width="14dp"
+           android:layout_height="16dp"
+           android:background="@mipmap/huodonghomehei"
+           android:layout_gravity="center"
+           android:layout_marginLeft="12dp"
+           android:layout_marginTop="12dp"
+           />
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="精彩瞬间"
+           android:layout_weight="1"
+           android:gravity="center"
+           android:layout_gravity="center"
+           android:textSize="18dp"
+           android:textColor="#333333"
+           android:layout_marginTop="12dp"
+           />
+
+       <RelativeLayout
+           android:layout_width="17dp"
+           android:layout_height="17dp"
+           android:layout_gravity="center"
+           android:layout_marginLeft="12dp"
+           android:layout_marginTop="12dp"
+           android:layout_marginRight="12dp"
+           >
+
+
+           <ImageView
+               android:id="@+id/jingcai_xiaoxi"
+               android:layout_width="16dp"
+               android:layout_height="16dp"
+               android:layout_gravity="center"
+               android:background="@mipmap/xinxihei" />
+           <ImageView
+               android:id="@+id/jingcai_xiaoxi_weidu"
+               android:layout_width="6dp"
+               android:layout_height="6dp"
+               android:background="@mipmap/hongdianshi"
+               android:layout_alignParentRight="true"
+               />
+       </RelativeLayout>
+   </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/jingcai_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@id/jingcai_layout1"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:layout_marginTop="1dp"
+
+        >
+
+        <RelativeLayout
+            android:id="@+id/jingcai_shaixuan1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/jingcai_xiangmu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="运动项目" />
+
+            <ImageView
+                android:layout_width="6dp"
+                android:layout_height="4dp"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/jingcai_xiangmu"
+                android:background="@mipmap/xiajiantou" />
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/jingcai_shaixuan2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/jingcai_renqun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="人群" />
+
+            <ImageView
+                android:layout_width="6dp"
+                android:layout_height="4dp"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/jingcai_renqun"
+                android:background="@mipmap/xiajiantou" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/jingcai_shaixuan3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/jingcai_zonghe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="综合" />
+
+            <ImageView
+                android:layout_width="6dp"
+                android:layout_height="4dp"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/jingcai_zonghe"
+                android:background="@mipmap/xiajiantou" />
+
+        </RelativeLayout>
+    </LinearLayout>
+    <!--筛选listView-->
+    <!--android:visibility="gone"-->
+    <LinearLayout
+        android:id="@+id/jingcai_shaixuanlayout"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_below="@id/jingcai_layout2"
+        android:elevation="1dp"
+        android:background="#66333333"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+
+        <LinearLayout
+            android:id="@+id/jingcai_sxlayout1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/jingcai_sxList1_text"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="全部"
+                android:gravity="center"
+                android:background="#E6ffffff"
+                />
+            <com.example.android.promoter.Toos.MyListView
+                android:id="@+id/jingcai_sxList1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E6ffffff"
+                android:divider="@null"></com.example.android.promoter.Toos.MyListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/jingcai_sxlayout2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/jingcai_sxList2_text"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="全部"
+                android:gravity="center"
+                android:background="#E6ffffff"
+                android:visibility="gone"
+                />
+            <com.example.android.promoter.Toos.MyListView
+                android:id="@+id/jingcai_sxList2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E6ffffff"
+                android:divider="@null"></com.example.android.promoter.Toos.MyListView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/jingcai_sxlayout3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.example.android.promoter.Toos.MyListView
+                android:id="@+id/jingcai_sxList3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E6ffffff"
+                android:divider="@null"></com.example.android.promoter.Toos.MyListView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/jingcai_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/jingcai_layout2"
+        android:layout_marginTop="1dp">
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+    <!--<ListView-->
+        <!--android:id="@+id/jingcai_list"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/jingcai_layout2"-->
+        <!--android:layout_marginTop="1dp"></ListView>-->
+    <ImageView
+        android:id="@+id/jingcai_fabu"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:background="@mipmap/jingcai_fabu"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:elevation="1dp"
+        android:layout_marginBottom="26dp"
+        android:layout_marginRight="10dp"
+        />
+</RelativeLayout>

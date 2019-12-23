@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    >
+
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:background="#FFD8D8D8"-->
+        <!--&gt;-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="取消"-->
+            <!--android:textColor="#FF9B9B9B"-->
+            <!--android:textSize="17dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_marginLeft="12dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--/>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="确定"-->
+            <!--android:textColor="#FF333333"-->
+            <!--android:textSize="17dp"-->
+            <!--android:layout_marginRight="12dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--/>-->
+    <!--</LinearLayout>-->
+
+
+    <RelativeLayout
+        android:id="@+id/fqtz_xingbie_nan"
+        android:layout_width="310dp"
+        android:layout_height="34dp"
+        android:background="@drawable/shuying_4"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="男"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/fqtz_xingbie_nv"
+        android:layout_width="310dp"
+        android:layout_height="34dp"
+        android:background="@drawable/shuying_4"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="女"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/fqtz_xingbie_buxian"
+        android:layout_width="310dp"
+        android:layout_height="34dp"
+        android:background="@drawable/shuying_4"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="40dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="不限"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    tools:context=".Home.ShopListActivity">
+
+    <include layout="@layout/layout_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/shop_list_biaoti"
+        />
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_below="@id/shop_list_biaoti"-->
+        <!--android:layout_above="@+id/shop_list_dibu"-->
+        <!--&gt;-->
+
+
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="vertical"-->
+        <!--&gt;-->
+
+
+
+
+    <!--<com.youth.banner.Banner-->
+        <!--android:id="@+id/shop_list_button"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="198dp"-->
+        <!--&gt;</com.youth.banner.Banner>-->
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/shop_list_layout1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical"-->
+        <!--android:background="#ffffff"-->
+        <!--android:layout_below="@id/shop_list_button"-->
+        <!--&gt;-->
+    <!--<TextView-->
+        <!--android:id="@+id/shop_xq_name"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="创意多彩时尚简约网球球拍 比赛专用  "-->
+        <!--android:textColor="#FF333333"-->
+        <!--android:textSize="14dp"-->
+        <!--android:layout_marginLeft="12dp"-->
+        <!--android:layout_marginTop="12dp"-->
+        <!--/>-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="22dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--&gt;-->
+        <!--<TextView-->
+            <!--android:id="@+id/shop_xq_jiage"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="300金币"-->
+            <!--android:textColor="#FFD85D27"-->
+            <!--android:textSize="14dp"-->
+            <!--android:layout_marginLeft="12dp"-->
+            <!--/>-->
+
+
+            <!--<TextView-->
+                <!--android:id="@+id/shop_xq_shichangjiage"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="¥399"-->
+                <!--android:textColor="#FF9B9B9B"-->
+                <!--android:textSize="12dp"-->
+                <!--android:layout_marginLeft="6dp"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:gravity="center"-->
+                <!--/>-->
+
+
+
+
+        <!--<View-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+
+            <!--&gt;</View>-->
+
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/shop_xq_lianjie"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="#fff3f3f3"-->
+            <!--android:layout_marginRight="12dp"-->
+            <!--&gt;-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/shop_xq_jinbi"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="商品链接"-->
+                <!--android:textColor="#333333"-->
+                <!--android:textSize="12dp"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:layout_marginRight="12dp"-->
+                <!--/>-->
+        <!--</RelativeLayout>-->
+
+    <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+
+    <!--&lt;!&ndash;分割线&ndash;&gt;-->
+    <!--<LinearLayout-->
+        <!--android:id="@+id/shop_list_layout2"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="54dp"-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:background="#ffffff"-->
+        <!--android:layout_below="@id/shop_list_layout1"-->
+        <!--&gt;-->
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="说明：尺码和大小请在下单时备注"-->
+        <!--android:textColor="#FF9B9B9B"-->
+        <!--android:textSize="12dp"-->
+        <!--android:layout_marginLeft="12dp"-->
+        <!--android:layout_marginTop="4dp"-->
+        <!--/>-->
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="服务：不支持退换货    此商品包运费"-->
+        <!--android:textColor="#FF333333"-->
+        <!--android:textSize="12dp"-->
+        <!--android:layout_marginLeft="12dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--/>-->
+    <!--</LinearLayout>-->
+
+
+    <!--<TextView-->
+        <!--android:id="@+id/shop_list_text"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:layout_below="@id/shop_list_layout2"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:text="更多详情"-->
+        <!--android:textColor="#FF333333"-->
+        <!--android:gravity="center"-->
+        <!--android:background="#ffffff"-->
+        <!--android:textSize="14dp" />-->
+
+    <!--<com.example.android.promoter.Toos.MyListView-->
+        <!--android:id="@+id/shop_list_list"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_below="@id/shop_list_text"></com.example.android.promoter.Toos.MyListView>-->
+
+        <ListView
+            android:id="@+id/shop_list_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:layout_below="@id/shop_list_biaoti"
+            >
+
+        </ListView>
+
+    <!--</LinearLayout>-->
+
+
+    <!--</ScrollView>-->
+
+    <LinearLayout
+        android:id="@+id/shop_list_dibu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="数量"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            />
+
+        <ImageView
+            android:id="@+id/shop_item_jian"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@mipmap/jianhao"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            android:id="@+id/shop_item_shuliang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:layout_gravity="center"
+            />
+
+        <ImageView
+            android:id="@+id/shop_item_jia"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@mipmap/jiahao"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="26dp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/shop_item_duihuan"
+            android:layout_width="104dp"
+            android:layout_height="match_parent"
+            android:background="#D85D27"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="立即兑换"
+                android:layout_centerInParent="true"
+                android:textColor="#ffffff"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

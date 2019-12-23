@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".My.Setup.MyAnquanTWOActivity">
+
+    <include layout="@layout/layout_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请设置您的安全提示问题"
+        android:textColor="#FF333333"
+        android:textSize="15dp"
+        android:layout_marginLeft="12dp"
+        android:layout_gravity="center"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#FF9B9B9B"
+        android:layout_gravity="center"
+        android:textSize="12dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="33dp"
+        android:background="#ffffff"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="温馨提示：设置安全提示问题有助于您的身份的验证~"
+            android:textColor="#FFD85D27"
+            android:textSize="12dp"
+            android:layout_marginLeft="25dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="218dp"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:layout_marginTop="1dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:orientation="horizontal"
+            >
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="您父亲的姓名？"-->
+                <!--android:textColor="#FF333333"-->
+                <!--android:textSize="14dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginLeft="12dp"-->
+                <!--android:layout_weight="1"-->
+                <!--/>-->
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner"
+                />
+            <!--<ImageView-->
+                <!--android:layout_width="20dp"-->
+                <!--android:layout_height="20dp"-->
+                <!--android:src="@mipmap/xiajiantou"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginRight="12dp"-->
+                <!--/>-->
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/fangkuai"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            >
+            <EditText
+                android:id="@+id/daan_one"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:hint="请输入答案"
+                android:textColorHint="#FF9D9D9D"
+                android:textSize="14dp"
+                android:background="@null"
+                android:layout_marginLeft="6dp"
+                />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+
+            android:orientation="horizontal">
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner2"
+                />
+
+            <!--<ImageView-->
+                <!--android:layout_width="20dp"-->
+                <!--android:layout_height="20dp"-->
+                <!--android:src="@mipmap/xiajiantou"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginRight="12dp"-->
+                <!--/>-->
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/fangkuai"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            >
+            <EditText
+                android:id="@+id/daan_two"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:hint="请输入答案"
+                android:textColorHint="#FF9D9D9D"
+                android:textSize="14dp"
+                android:background="@null"
+                android:layout_marginLeft="6dp"
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:orientation="horizontal"
+            >
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner3"
+                />
+
+            <!--<ImageView-->
+                <!--android:layout_width="20dp"-->
+                <!--android:layout_height="20dp"-->
+                <!--android:src="@mipmap/xiajiantou"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginRight="12dp"-->
+                <!--/>-->
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/fangkuai"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            >
+            <EditText
+                android:id="@+id/daan_three"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:hint="请输入答案"
+                android:textColorHint="#FF9D9D9D"
+                android:textSize="14dp"
+                android:background="@null"
+                android:layout_marginLeft="6dp"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/my_anquan_two_tijiao"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/login_rounded_corners">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="提交"
+            android:textColor="#ffffff"
+            android:textSize="16sp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

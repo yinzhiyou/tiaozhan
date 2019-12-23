@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ratingbar="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.example.android.promoter.Toos.CustomRoundAngleImageView
+            android:id="@+id/pingjia_item_touxiang"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@mipmap/logo"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitXY"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp"
+            >
+            <TextView
+                android:id="@+id/pingjia_item_duiwu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A1"
+                android:textColor="#FF333333"
+                android:textSize="14dp"
+                />
+            <TextView
+                android:id="@+id/pingjia_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nicholas Lawson"
+                android:textColor="#FF333333"
+                android:textSize="14dp"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+<!--分割线-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="12dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="整体评分"
+            android:textColor="#FF9B9B9B"
+            android:textSize="14dp"
+            />
+        <com.example.android.promoter.Toos.StarBar
+            android:id="@+id/starBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ratingbar:starEmpty="@mipmap/xingxinghei"
+            ratingbar:starFill="@mipmap/xingxinghuang"
+            ratingbar:starDistance="5dp"
+            ratingbar:starCount="5"
+            ratingbar:starSize="14dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:rating="5"
+            />
+        <TextView
+            android:id="@+id/pingjia_list_fenshu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5分"
+            android:textColor="#FF9B9B9B"
+            android:textSize="14dp"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E1E0E1"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:visibility="gone"
+        ></View>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="基于对ta的印象点击下方标签评价吧！"
+        android:textColor="#FF9B9B9B"
+        android:textSize="14dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="12dp"
+        />
+
+    <!--<com.example.android.promoter.Toos.MyGridView-->
+        <!--android:id="@+id/pingjia_grid"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:numColumns="3"-->
+        <!--&gt;-->
+    <!--</com.example.android.promoter.Toos.MyGridView>-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        />
+</LinearLayout>

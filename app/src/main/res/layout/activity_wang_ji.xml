@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Denglu.WangJiActivity">
+
+
+    <include layout="@layout/layout_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FF999999"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/wangji_shouji"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@null"
+            android:layout_gravity="center_vertical"
+            android:textSize="14dp"
+            android:maxLength="11"
+            android:phoneNumber="true"
+            android:textColorHint="#999999"
+            android:layout_marginTop="60dp"
+            android:hint="请输入手机号"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="#999999"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/wangji_yanzheng"
+                android:layout_width="160dp"
+                android:layout_height="20dp"
+                android:background="@null"
+                android:layout_gravity="center_vertical"
+                android:textSize="14dp"
+                android:phoneNumber="true"
+                android:layout_weight="1"
+                android:textColorHint="#999999"
+                android:hint="请输入验证码"/>
+
+            <RelativeLayout
+                android:id="@+id/yanzheng"
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:background="@drawable/login_rounded_corners">
+
+                <TextView
+                    android:id="@+id/wangji_yan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="验证码"
+                    android:textColor="#ffffff"
+                    android:textSize="12dp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="#999999"/>
+
+        <EditText
+            android:id="@+id/wangji_mima"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@null"
+            android:layout_gravity="center_vertical"
+            android:textSize="14dp"
+            android:maxLength="11"
+            android:phoneNumber="true"
+            android:textColorHint="#999999"
+            android:layout_marginTop="16dp"
+            android:hint="请输入密码"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="#999999"/>
+        <EditText
+            android:id="@+id/wangji_mima2"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@null"
+            android:layout_gravity="center_vertical"
+            android:textSize="14dp"
+            android:maxLength="11"
+            android:phoneNumber="true"
+            android:textColorHint="#999999"
+            android:layout_marginTop="16dp"
+            android:hint="请再次输入密码"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="#999999"/>
+        <RelativeLayout
+            android:id="@+id/wangji_queding"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="184dp"
+            android:background="@drawable/login_rounded_corners">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="重置"
+                android:textColor="#ffffff"
+                android:textSize="16sp"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

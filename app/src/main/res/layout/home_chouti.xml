@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="238dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E6ffffff"
+    android:clickable="true"
+
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="运动模式"
+        android:textColor="#FF333333"
+        android:textSize="14sp"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="30dp"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        >
+        <RelativeLayout
+            android:id="@+id/chouti_yule"
+            android:layout_width="84dp"
+            android:layout_height="20dp"
+            android:background="@drawable/xiugai_huodong_layout"
+            android:layout_marginRight="12dp"
+            >
+            <TextView
+                android:id="@+id/chouti_yule_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="娱乐模式"
+                android:layout_centerInParent="true"
+                android:textColor="#9B9B9B"
+                android:textSize="12sp"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/chouti_jingji"
+            android:layout_width="84dp"
+            android:layout_height="20dp"
+            android:background="@drawable/xiugai_huodong_layout"
+            >
+            <TextView
+                android:id="@+id/chouti_jingji_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="竞技模式"
+                android:layout_centerInParent="true"
+                android:textSize="12sp"
+                android:textColor="#9B9B9B"
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+    <!--分割线-->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        >
+        <RelativeLayout
+            android:id="@+id/chouti_wozhao"
+            android:layout_width="84dp"
+            android:layout_height="20dp"
+            android:background="@drawable/xiugai_huodong_layout"
+            android:layout_marginRight="12dp"
+            >
+            <TextView
+                android:id="@+id/chouti_wozhao_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发布者找陪练"
+                android:layout_centerInParent="true"
+                android:textColor="#9B9B9B"
+                android:textSize="12sp"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/chouti_woshi"
+            android:layout_width="84dp"
+            android:layout_height="20dp"
+            android:background="@drawable/xiugai_huodong_layout"
+            >
+            <TextView
+                android:id="@+id/chouti_woshi_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发布者是陪练"
+                android:layout_centerInParent="true"
+                android:textSize="12sp"
+                android:textColor="#9B9B9B"
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+<!--分割线-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="场地费承担方式"
+        android:textColor="#FF333333"
+        android:textSize="14sp"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="30dp"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        >
+        <RelativeLayout
+            android:id="@+id/chouti_aa"
+            android:layout_width="84dp"
+            android:layout_height="20dp"
+            android:background="@drawable/xiugai_huodong_layout"
+            android:layout_marginRight="12dp"
+            >
+            <TextView
+                android:id="@+id/chouti_aa_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AA"
+                android:layout_centerInParent="true"
+                android:textColor="#9B9B9B"
+                android:textSize="12sp"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/chouti_shumai"
+            android:layout_width="84dp"
+            android:layout_height="20dp"
+            android:background="@drawable/xiugai_huodong_layout"
+            >
+            <TextView
+                android:id="@+id/chouti_shumai_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="输者买单"
+                android:layout_centerInParent="true"
+                android:textSize="12sp"
+                android:textColor="#9B9B9B"
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+    <!--分割线-->
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发布者性别"
+        android:textColor="#FF333333"
+        android:textSize="14sp"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="30dp"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        >
+        <RelativeLayout
+            android:id="@+id/chouti_nan"
+            android:layout_width="84dp"
+            android:layout_height="20dp"
+            android:background="@drawable/xiugai_huodong_layout"
+            android:layout_marginRight="12dp"
+            >
+            <TextView
+                android:id="@+id/chouti_nan_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="男"
+                android:layout_centerInParent="true"
+                android:textColor="#9B9B9B"
+                android:textSize="12sp"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/chouti_nv"
+            android:layout_width="84dp"
+            android:layout_height="20dp"
+            android:background="@drawable/xiugai_huodong_layout"
+            >
+            <TextView
+                android:id="@+id/chouti_nv_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="女"
+                android:layout_centerInParent="true"
+                android:textSize="12sp"
+                android:textColor="#9B9B9B"
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <!--分割线-->
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="活动开始时间"
+        android:textColor="#FF333333"
+        android:textSize="14sp"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="30dp"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        >
+        <RelativeLayout
+            android:id="@+id/chouti_day_xx"
+            android:layout_width="84dp"
+            android:layout_height="20dp"
+            android:focusableInTouchMode="true"
+            android:background="@drawable/xiugai_huodong_layout"
+            android:layout_marginRight="12dp"
+            >
+            <TextView
+                android:id="@+id/chouti_day_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="选择日期"
+                android:layout_centerInParent="true"
+                android:textColor="#9B9B9B"
+                android:textSize="12sp"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/chouti_time"
+            android:layout_width="84dp"
+            android:layout_height="20dp"
+            android:background="@drawable/xiugai_huodong_layout"
+            >
+            <TextView
+                android:id="@+id/chouti_tiem_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="选择时间"
+                android:layout_centerInParent="true"
+                android:textSize="12sp"
+                android:textColor="#9B9B9B"
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <!--分割线-->
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="已参与人员平均技术等级"
+        android:textColor="#FF333333"
+        android:textSize="14sp"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="30dp"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        >
+        <RelativeLayout
+            android:id="@+id/chouti_js_lv_min"
+            android:layout_width="84dp"
+            android:layout_height="20dp"
+            android:background="@drawable/xiugai_huodong_layout"
+            android:layout_marginRight="12dp"
+            >
+            <TextView
+                android:id="@+id/chouti_js_lv_min_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="最低等级"
+                android:layout_centerInParent="true"
+                android:textColor="#9B9B9B"
+                android:textSize="12sp"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/chouti_js_lv_max"
+            android:layout_width="84dp"
+            android:layout_height="20dp"
+            android:background="@drawable/xiugai_huodong_layout"
+            >
+            <TextView
+                android:id="@+id/chouti_js_lv_max_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="最高等级"
+                android:layout_centerInParent="true"
+                android:textSize="12sp"
+                android:textColor="#9B9B9B"
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <!--分割线-->
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="已参与人员平均好评分数"
+        android:textColor="#FF333333"
+        android:textSize="14sp"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="30dp"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        >
+        <RelativeLayout
+            android:id="@+id/chouti_hp_one"
+            android:layout_width="84dp"
+            android:layout_height="20dp"
+            android:background="@drawable/xiugai_huodong_layout"
+            android:layout_marginRight="12dp"
+            >
+            <TextView
+                android:id="@+id/chouti_hp_one_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1分及以上"
+                android:layout_centerInParent="true"
+                android:textColor="#9B9B9B"
+                android:textSize="12sp"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/chouti_hp_two"
+            android:layout_width="84dp"
+            android:layout_height="20dp"
+            android:background="@drawable/xiugai_huodong_layout"
+            >
+            <TextView
+                android:id="@+id/chouti_hp_two_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2分及以上"
+                android:layout_centerInParent="true"
+                android:textSize="12sp"
+                android:textColor="#9B9B9B"
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        >
+        <RelativeLayout
+            android:id="@+id/chouti_hp_three"
+            android:layout_width="84dp"
+            android:layout_height="20dp"
+            android:background="@drawable/xiugai_huodong_layout"
+            android:layout_marginRight="12dp"
+            >
+            <TextView
+                android:id="@+id/chouti_hp_three_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3分及以上"
+                android:layout_centerInParent="true"
+                android:textColor="#9B9B9B"
+                android:textSize="12sp"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/chouti_hp_four"
+            android:layout_width="84dp"
+            android:layout_height="20dp"
+            android:background="@drawable/xiugai_huodong_layout"
+            >
+            <TextView
+                android:id="@+id/chouti_hp_four_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4分及以上"
+                android:layout_centerInParent="true"
+                android:textSize="12sp"
+                android:textColor="#9B9B9B"
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <!--分割线-->
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="活动"
+        android:textColor="#FF333333"
+        android:textSize="14sp"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="30dp"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        >
+        <RelativeLayout
+            android:id="@+id/chouti_bm_hd"
+            android:layout_width="84dp"
+            android:layout_height="20dp"
+            android:background="@drawable/ellipse_home_details"
+
+            android:layout_marginRight="12dp"
+            >
+            <TextView
+                android:id="@+id/chouti_bm_hd_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="可报名活动"
+                android:layout_centerInParent="true"
+                android:textColor="#D85D27"
+                android:textSize="12sp"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/chouti_qb_hd"
+            android:layout_width="84dp"
+            android:layout_height="20dp"
+            android:background="@drawable/xiugai_huodong_layout"
+            >
+            <TextView
+                android:id="@+id/chouti_qb_hd_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="全部活动"
+                android:layout_centerInParent="true"
+                android:textSize="12sp"
+                android:textColor="#9B9B9B"
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+    <!--分割线-->
+<View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:layout_marginTop="14dp"
+    android:background="@color/huib"></View>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="13dp"
+        >
+        <RelativeLayout
+            android:id="@+id/chouti_cz"
+            android:layout_width="87dp"
+            android:layout_height="24dp"
+            android:background="@drawable/xiugai_huodong_layout"
+            android:layout_marginRight="12dp"
+            >
+            <TextView
+                android:id="@+id/chouti_cz_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="重置"
+                android:layout_centerInParent="true"
+                android:textColor="#9B9B9B"
+                android:textSize="12sp"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/chouti_queding"
+            android:layout_width="87dp"
+            android:layout_height="24dp"
+            android:background="@drawable/btn_bg_qd_selector"
+            >
+            <TextView
+                android:id="@+id/chouti_queding_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="确定"
+
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:layout_centerInParent="true"
+                android:textSize="12sp"
+
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

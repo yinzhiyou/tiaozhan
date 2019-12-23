@@ -1,0 +1,21 @@
+
+buildscript {
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.2'
+    }
+    repositories {
+        google()
+        jcenter()
+    }
+}
+allprojects {
+    repositories {
+//        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+//        maven{ url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
+
+        google()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://raw.githubusercontent.com/miomin/mvn-repo-ione/master' }
+    }
+}

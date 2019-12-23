@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ratingbar="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="10dp"
+        >
+        <ImageView
+            android:layout_width="78dp"
+            android:layout_height="68dp"
+            android:scaleType="fitXY"
+            android:id="@+id/cg_list_image"
+
+
+            />
+        <LinearLayout
+            android:id="@+id/cg_list_tousu_layout"
+            android:layout_width="42dp"
+            android:layout_height="18dp"
+            android:orientation="horizontal"
+            android:background="@mipmap/tsdcl"
+            android:visibility="gone"
+            >
+            <TextView
+                android:id="@+id/cg_list_tousu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="投诉 2"
+                android:textColor="#ffffff"
+                android:textSize="10dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="2dp"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="12dp"
+        android:layout_weight="1"
+        >
+
+        <TextView
+            android:id="@+id/cg_list_name"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="天天羽毛球馆"
+            android:textColor="#FF333333"
+            android:textSize="16dp"
+            android:layout_weight="2"
+            android:lines="2"
+            android:ellipsize="end"
+            />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+
+            >
+
+            <com.example.android.promoter.Toos.StarBar
+                android:id="@+id/starBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                ratingbar:starEmpty="@mipmap/xingxinghei"
+                ratingbar:starFill="@mipmap/xingxinghuang"
+                ratingbar:starDistance="5dp"
+                ratingbar:starCount="5"
+                ratingbar:starSize="14dp"
+                android:clickable="false"
+                android:layout_marginTop="2dp"
+
+                />
+            <TextView
+                android:id="@+id/display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#FF9B9B9B"
+                android:textSize="14dp"
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@+id/starBar"
+
+                />
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="20dp"
+                android:clickable="true"
+                />
+            <!--android:clickable="false"-->
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/cg_list_hezuo"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="合作场馆"
+            android:textColor="#FFD85D27"
+            android:textSize="14dp"
+            android:layout_weight="1"
+
+            />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="12dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/changguan_yuding"
+            android:layout_width="50dp"
+            android:layout_height="22dp"
+            android:background="@drawable/zhifu_cg_yuanjiao"
+
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="预定"
+                android:textColor="#FFFFFFFF"
+                android:textSize="12dp"
+                />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/cg_list_juli"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:layout_gravity="right"
+            android:layout_marginBottom="12dp"
+            android:layout_marginRight="12dp"
+            android:text="3.2km"
+            android:textColor="#FF9B9B9B"
+            android:textSize="12dp"/>
+
+    </LinearLayout>
+</LinearLayout>

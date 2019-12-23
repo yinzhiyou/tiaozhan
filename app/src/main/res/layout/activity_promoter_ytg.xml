@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Promoter.PromoterYTGActivity">
+    <include layout="@layout/layout_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp">
+        <TextView
+            android:id="@+id/promo_ytg_dcl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="待处理投诉"
+            android:gravity="center"
+            android:textColor="#FF4A4A4A"
+            android:textSize="16dp"
+
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            />
+        <TextView
+            android:id="@+id/promo_ytg_clz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="处理中投诉"
+            android:textColor="#FF9B9B9B"
+            android:textSize="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/promo_ytg_zc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="正常"
+            android:gravity="center"
+            android:textColor="#FF9B9B9B"
+            android:textSize="16dp"
+            android:layout_gravity="center"
+            />
+
+    </LinearLayout>
+
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/promo_ytg_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:dividerHeight="12dp"
+        android:divider="#F5F5F5"
+        >
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+</LinearLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/fqtz_xiangmu_list_beijing"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/fqtz_xiangmu_list_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="台球"
+        android:textColor="#FF333333"
+        android:textSize="17dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        />
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#9B9B9B"
+        ></View>
+    <com.example.android.promoter.Toos.MyGridView
+        android:id="@+id/fqtz_xiangmu_list_grid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:numColumns="3"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        ></com.example.android.promoter.Toos.MyGridView>
+</LinearLayout>

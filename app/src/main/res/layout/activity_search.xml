@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Nearby.SearchActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#ffffff"
+        android:layout_marginTop="24dp"
+        >
+
+        <ImageView
+            android:id="@+id/fanhui"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:src="@mipmap/fanhuijian"
+            />
+
+        <LinearLayout
+            android:layout_width="330dp"
+            android:layout_height="30dp"
+            android:background="@drawable/sousuo"
+            android:layout_gravity="center"
+            android:layout_marginLeft="12dp"
+            >
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@mipmap/fangdajing"
+                android:layout_gravity="center"
+                android:layout_marginLeft="12dp"
+                />
+
+            <EditText
+                android:id="@+id/fujin_sousuo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="请输入11位手机号"
+                android:textColor="#FF9B9B9B"
+                android:textSize="14dp"
+                android:background="@null"
+                android:layout_gravity="center"
+                android:layout_marginLeft="12dp"
+                android:phoneNumber="true"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+   <ImageView
+       android:id="@+id/ss_fujin_image"
+       android:layout_width="210dp"
+       android:layout_height="110dp"
+       android:background="@mipmap/fujinbeijing"
+       android:layout_gravity="center"
+       android:layout_marginTop="40dp"
+       />
+    <TextView
+        android:id="@+id/ss_fujin_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="快输入手机号，寻找您的伙伴吧~"
+        android:textColor="#FF9B9B9B"
+        android:textSize="14dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+
+        />
+     <com.handmark.pulltorefresh.library.PullToRefreshListView
+    android:id="@+id/ss_fujin_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/home_layout3"
+    android:layout_marginTop="1dp"
+         >
+</com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+</LinearLayout>

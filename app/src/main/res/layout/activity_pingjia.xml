@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ratingbar="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".My.PingjiaActivity">
+
+
+    <include
+        android:id="@+id/biaotilan"
+        layout="@layout/layout_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/biaotilan"
+       >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+            >
+            <!--android:fitsSystemWindows="true"-->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="1dp"
+                android:background="#ffffff"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="12dp"
+                    android:text="活动整体评价"
+                    android:textColor="#FF333333"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="（匿名）"
+                    android:textColor="#FF9B9B9B"
+                    android:textSize="12dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@mipmap/hua" />
+
+                <TextView
+                    android:id="@+id/pingjia_yjhp"
+                    android:layout_width="60dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@drawable/zhifu_cg_yuanjiao"
+                    android:gravity="center"
+                    android:text="一键好评"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="1dp"
+                android:background="#ffffff"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="12dp"
+                    android:layout_weight="1"
+                    android:text="对运动伙伴评价"
+                    android:textColor="#FF333333"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:text="（匿名）"
+                    android:textColor="#FF9B9B9B"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <com.example.android.promoter.Toos.MyListView
+                android:id="@+id/pingjia_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+
+                >
+                <!--android:dividerHeight="10dp"-->
+                <!--android:divider="#039B9B9B"-->
+            </com.example.android.promoter.Toos.MyListView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="142dp"
+                android:layout_marginTop="10dp"
+                android:background="#ffffff"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="12dp"
+                    android:text="对场馆评价"
+                    android:textColor="#FF333333"
+                    android:textSize="16dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="设施"
+                        android:textColor="#FF333333"
+                        android:textSize="14dp" />
+
+                    <com.example.android.promoter.Toos.StarBar
+                        android:id="@+id/pingjia_sheshi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        ratingbar:starCount="5"
+                        ratingbar:starDistance="5dp"
+                        ratingbar:starEmpty="@mipmap/xingxinghei"
+                        ratingbar:starFill="@mipmap/xingxinghuang"
+                        ratingbar:starSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/pingjia_fenshu1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="超赞"
+                        android:textColor="#FF333333"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="服务"
+                        android:textColor="#FF333333"
+                        android:textSize="14dp" />
+
+                    <com.example.android.promoter.Toos.StarBar
+                        android:id="@+id/pingjia_fuwu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        ratingbar:starCount="5"
+                        ratingbar:starDistance="5dp"
+                        ratingbar:starEmpty="@mipmap/xingxinghei"
+                        ratingbar:starFill="@mipmap/xingxinghuang"
+                        ratingbar:starSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/pingjia_fenshu2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="超赞"
+                        android:textColor="#FF333333"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="价格"
+                        android:textColor="#FF333333"
+                        android:textSize="14dp" />
+
+                    <com.example.android.promoter.Toos.StarBar
+                        android:id="@+id/pingjia_jiage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        ratingbar:starCount="5"
+                        ratingbar:starDistance="5dp"
+                        ratingbar:starEmpty="@mipmap/xingxinghei"
+                        ratingbar:starFill="@mipmap/xingxinghuang"
+                        ratingbar:starSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/pingjia_fenshu3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="超赞"
+                        android:textColor="#FF333333"
+                        android:textSize="14dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="#ffffff"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="#ffffff"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:orientation="vertical"
+                    >
+
+                <EditText
+                    android:id="@+id/pingjia_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:layout_weight="1"
+                    android:hint="说一说您对本场馆的评价吧！"
+                    android:textColor="#FF9B9B9B"
+                    android:maxLength="200"
+                    android:textSize="14dp" />
+                <TextView
+                    android:id="@+id/yjfk_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="剩余字数：200"
+                    android:layout_gravity="right"
+                    />
+            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:layout_marginBottom="30dp"
+                    android:orientation="vertical">
+
+                    <GridView
+                        android:id="@+id/cggz_grid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:numColumns="3"
+                        />
+                    <!--android:verticalSpacing="200dp"-->
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/pingjia_tijiao"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:background="#D85D27">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="提交评价"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

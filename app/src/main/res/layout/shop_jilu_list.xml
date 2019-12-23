@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#ffffff"
+    >
+
+
+    <ImageView
+        android:id="@+id/dhjl_image"
+        android:layout_width="76dp"
+        android:layout_height="70dp"
+        android:background="@mipmap/logo2x"
+        android:layout_margin="10dp"
+
+        android:scaleType="centerCrop"
+        />
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="15dp"
+        android:layout_weight="3"
+        >
+        <TextView
+            android:id="@+id/dhjl_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="运动手环智能计步器智能健身 便捷运动…"
+            android:textColor="#FF333333"
+            android:textSize="12dp"
+            />
+
+        <TextView
+            android:id="@+id/dhjl_beizhu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="白色 8135号"
+            android:textColor="#FF9B9B9B"
+            android:textSize="10dp"
+            />
+
+        <TextView
+            android:id="@+id/dhjl_shuliang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="数量：2个"
+            android:textColor="#FF9B9B9B"
+            android:textSize="12dp"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="2"
+        android:layout_marginTop="18dp"
+        >
+
+        <TextView
+            android:id="@+id/dhjl_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="18/09/09"
+            android:textColor="#FF9B9B9B"
+            android:textSize="10dp"
+            android:gravity="right"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="12dp"
+            android:layout_marginRight="10dp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="合计:"
+                android:layout_marginLeft="5dp"
+                android:textColor="#FF9B9B9B"
+                android:id="@+id/hj"
+                android:textSize="12dp"
+                />
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@mipmap/jinqian"
+                android:layout_toRightOf="@id/hj"
+                android:layout_gravity="center"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:id="@+id/hj_tb"
+                />
+            <TextView
+                android:id="@+id/dhjl_heji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_centerVertical="true"
+                android:text="11498.00"
+                android:layout_marginLeft="10dp"
+                android:textColor="#FF333333"
+                android:textSize="10dp"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

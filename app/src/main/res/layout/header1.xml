@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/home_top"
+    >
+
+    <RelativeLayout
+        android:id="@+id/home_relat1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <com.youth.banner.Banner
+            android:id="@+id/banner"
+            android:layout_width="151dp"
+            android:layout_height="116dp"
+            android:visibility="gone"
+            app:indicator_height="10dp"
+            app:indicator_width="10dp" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="81dp"
+            android:layout_marginTop="-2dp"
+            android:background="@mipmap/banner_background"
+            />
+
+        <com.stx.xhb.xbanner.XBanner
+            android:id="@+id/xbanner"
+            android:layout_width="wrap_content"
+            android:layout_height="116dp"
+            android:layout_below="@id/banner"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            app:AutoPlayTime="3000" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/home_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/home_relat1"
+        android:background="#ffffff"
+        android:gravity="center"
+
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/home_qiandao"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/home_qiandao_image"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@mipmap/qiandao" />
+
+            <TextView
+                android:id="@+id/home_qiandao_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                android:text="签到"
+                android:textSize="12dp" />
+        </LinearLayout>
+        <!--分割线-->
+
+        <LinearLayout
+            android:id="@+id/home_yingjinbi"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+
+                android:background="@mipmap/ytyjb" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+
+                android:text="赢对手币"
+                android:textSize="12dp" />
+        </LinearLayout>
+        <!--分割线-->
+
+        <LinearLayout
+            android:id="@+id/home_duihuanshangcheng"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+                android:background="@mipmap/dhsc" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                android:text="兑换商城"
+                android:textSize="12dp"
+
+                />
+        </LinearLayout>
+        <!--分割线-->
+
+        <LinearLayout
+            android:id="@+id/home_wenzhang"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+
+                android:background="@mipmap/cctgy" />
+
+            <TextView
+                android:id="@+id/home_tgy_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                android:text="成为推广员"
+
+                android:textSize="12dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home_hezuo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+
+                android:background="@mipmap/hzcg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                android:text="成为合作场馆"
+
+                android:textSize="12dp" />
+        </LinearLayout>
+        <!--分割线-->
+    </LinearLayout>
+</RelativeLayout>

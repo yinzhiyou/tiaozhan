@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".My.JBMXActivity">
+
+    <LinearLayout
+        android:id="@+id/layout_base_title_rl"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:visibility="gone"
+        android:background="#D85D27">
+
+        <ImageView
+            android:id="@+id/jbmx_fanhui"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/fanhui" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            >
+        <TextView
+            android:id="@+id/jbmx_biaoti1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="对手币"
+            android:textColor="#ffffff"
+            android:layout_gravity="center"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="10dp"
+            android:textSize="18dp" />
+            <ImageView
+                android:id="@+id/jbmx_tab_img1"
+                android:layout_width="70dp"
+                android:layout_height="4dp"
+                android:background="#ffffff"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            >
+            <TextView
+                android:id="@+id/jbmx_biaoti2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="技术分"
+                android:textColor="#FFEDD0C2"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="10dp"
+                android:textSize="18dp" />
+            <ImageView
+                android:id="@+id/jbmx_tab_img2"
+                android:layout_width="70dp"
+                android:layout_height="4dp"
+                android:background="#D85D27"
+                android:visibility="gone"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+    <include layout="@layout/layout_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.example.android.promoter.Toos.HorizontalListView
+        android:id="@+id/jbmx_xiangmu"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#ffffff"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="12dp"
+        />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/jbmx_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="1dp"
+        >
+
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".My.About.AboutActivity">
+    <include layout="@layout/layout_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/about_kefu"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#ffffff"
+        android:layout_marginTop="1dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="客服电话  (010-88888888)"
+            android:textColor="#FF333333"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginLeft="12dp"
+            />
+
+        <ImageView
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:src="@mipmap/youjiantou"
+            android:layout_gravity="center"
+            android:layout_marginRight="12dp"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/about_women"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#ffffff"
+        android:layout_marginTop="1dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="关于我们"
+            android:textColor="#FF333333"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginLeft="12dp"
+            />
+
+        <ImageView
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:src="@mipmap/youjiantou"
+            android:layout_gravity="center"
+            android:layout_marginRight="12dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/about_shengming"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#ffffff"
+        android:layout_marginTop="1dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="声明"
+            android:textColor="#FF333333"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginLeft="12dp"
+            />
+
+        <ImageView
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:src="@mipmap/youjiantou"
+            android:layout_gravity="center"
+            android:layout_marginRight="12dp"
+            />
+    </LinearLayout>
+</LinearLayout>

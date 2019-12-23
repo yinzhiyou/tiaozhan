@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:gravity="center"
+    android:background="@color/white">
+
+    <fj.dropdownmenu.lib.view.DropdownButton
+        android:id="@+id/btnType1"
+        android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:isLine="true"
+        app:lineColor="@color/colorAccent"
+        app:notSelectedIcon="@mipmap/xiajiantou"
+        app:notSelectedTextColor="@color/font_black_content"
+        app:selectedIcon="@mipmap/xiajiantou"
+        app:selectedTextColor="@color/my_tab" />
+
+
+
+    <fj.dropdownmenu.lib.view.DropdownButton
+        android:id="@+id/btnAnimal"
+        android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+
+
+    <fj.dropdownmenu.lib.view.DropdownButton
+        android:id="@+id/btnRegion"
+        android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+<RelativeLayout
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:layout_gravity="center"
+    android:gravity="center">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:id="@+id/xx_text"
+        android:gravity="center"
+        android:text="筛选"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/xx_text"
+        android:layout_marginLeft="5dp"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/xiajiantou"/>
+</RelativeLayout>
+</LinearLayout>

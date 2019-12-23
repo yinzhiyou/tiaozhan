@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/dialog_top"
+        android:layout_width="290dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/shape_dialog"
+        android:orientation="vertical"
+        android:paddingBottom="20dp">
+
+
+        <TextView
+            android:id="@+id/tv_self_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="技术水平自我评定"
+            android:textColor="#FF333333"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <CheckBox
+            android:id="@+id/tv_newbie"
+            android:layout_width="163dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+
+            android:layout_marginLeft="63dp"
+            android:layout_marginRight="63dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/login_rounded_wu"
+            android:button="@null"
+            android:gravity="center"
+            android:text="菜鸟"
+            android:textColor="#FF333333"
+
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/tv_primary"
+            android:layout_width="163dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/login_rounded_wu"
+            android:gravity="center"
+            android:text="初级"
+            android:textColor="#FF333333"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_intermediate"
+            android:layout_width="163dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/login_rounded_wu"
+            android:gravity="center"
+            android:text="中级"
+            android:textColor="#FF333333"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_advanced"
+            android:layout_width="163dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/login_rounded_wu"
+            android:gravity="center"
+            android:text="高级"
+            android:textColor="#FF333333"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/icon_close"
+        android:layout_below="@id/dialog_top"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@mipmap/icon_close" />
+</RelativeLayout>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".My.JBMXItemActivity">
+    <include layout="@layout/layout_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E1E0E1"
+        ></View>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+        <TextView
+            android:id="@+id/qbmx_list_item_chuzhang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="获得金币"
+            android:textColor="#FF9B9B9B"
+            android:textSize="16dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:id="@+id/jbmx_list_item_jine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100.00"
+            android:textColor="#FF333333"
+            android:textSize="24dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="12dp"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E1E0E1"
+        ></View>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="类         型"
+            android:textColor="#FF9B9B9B"
+            android:textSize="16dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:id="@+id/jbmx_list_item_leixing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="收入"
+            android:textColor="#FF000000"
+            android:textSize="16dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="12dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="时         间"
+            android:textColor="#FF9B9B9B"
+            android:textSize="16dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:id="@+id/jbmx_list_item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2018-09-30  14:20:26"
+            android:textColor="#FF000000"
+            android:textSize="16dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="12dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前金币"
+            android:textColor="#FF9B9B9B"
+            android:textSize="16dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:id="@+id/jbmx_list_item_shengyu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="625.00"
+            android:textColor="#FF000000"
+            android:textSize="16dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="12dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="备         注"
+            android:textColor="#FF9B9B9B"
+            android:textSize="16dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:id="@+id/jbmx_list_item_beizhu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提现"
+            android:textColor="#FF000000"
+            android:textSize="16dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="12dp"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E1E0E1"
+        ></View>
+</LinearLayout>

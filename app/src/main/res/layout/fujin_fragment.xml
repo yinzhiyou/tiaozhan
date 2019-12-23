@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/fujin_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#ffffff">
+
+        <ImageView
+            android:id="@+id/fujin_huodong"
+            android:layout_width="14dp"
+            android:layout_height="16dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="12dp"
+            android:background="@mipmap/huodonghomehei" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="附近伙伴"
+            android:textColor="#333333"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/fujin_sousuo"
+            android:layout_width="32dp"
+            android:layout_height="12dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/fangdajing" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+
+
+        <RelativeLayout
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_marginLeft="8dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_marginRight="12dp">
+
+            <ImageView
+                android:id="@+id/fujin_xiaoxi"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:background="@mipmap/xinxihei" />
+            <ImageView
+                android:id="@+id/fujin_xiaoxi_weidu"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:background="@mipmap/hongdianshi"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/home_layout3"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="1dp"
+        android:background="#ffffff"
+        android:layout_below="@id/fujin_layout1"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/fujin_shaixuan1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/fj_xingbie_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="性别" />
+
+            <ImageView
+                android:layout_width="6dp"
+                android:layout_height="4dp"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/fj_xingbie_text"
+                android:background="@mipmap/xiajiantou" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/fujin_shaixuan2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/fj_xiangmu_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="运动项目" />
+
+            <ImageView
+                android:layout_width="6dp"
+                android:layout_height="4dp"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/fj_xiangmu_text"
+                android:background="@mipmap/xiajiantou" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fujin_shaixuan3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/fj_dengji_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="等级" />
+
+            <ImageView
+                android:layout_width="6dp"
+                android:layout_height="4dp"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/fj_dengji_text"
+                android:background="@mipmap/xiajiantou" />
+
+        </RelativeLayout>
+    </LinearLayout>
+    <!--筛选listView-->
+    <!--android:visibility="gone"-->
+    <LinearLayout
+        android:id="@+id/fujin_shaixuanlayout"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_below="@id/home_layout3"
+        android:elevation="1dp"
+        android:background="#66333333"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+
+        <LinearLayout
+            android:id="@+id/fujin_sxlayout1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+
+            <com.example.android.promoter.Toos.MyListView
+                android:id="@+id/fujin_sxList1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E6ffffff"
+                android:divider="@null"></com.example.android.promoter.Toos.MyListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fujin_sxlayout2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/fujin_sxList1_text"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="全部"
+                android:gravity="center"
+                android:background="#E6ffffff"
+                />
+            <com.example.android.promoter.Toos.MyListView
+                android:id="@+id/fujin_sxList2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E6ffffff"
+                android:divider="@null"></com.example.android.promoter.Toos.MyListView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/fujin_sxlayout3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.example.android.promoter.Toos.MyListView
+                android:id="@+id/fujin_sxList3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E6ffffff"
+                android:divider="@null"></com.example.android.promoter.Toos.MyListView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/fujin_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/home_layout3"
+        android:layout_marginTop="1dp">
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+
+</RelativeLayout>

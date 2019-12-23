@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="126dp">
+
+        <LinearLayout
+            android:id="@+id/jingcai_item_layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:layout_marginTop="1dp"
+
+            android:orientation="horizontal">
+
+            <com.example.android.promoter.Toos.XCRoundImageView
+                android:id="@+id/pinglun_touxiang"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="12dp"
+                android:background="@mipmap/home_vip_head" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/pinglun_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="带着篮球去撒野"
+                        android:textColor="#FF333333"
+                        android:textSize="16dp"
+                        android:layout_weight="1"
+                        />
+
+
+
+                    <TextView
+                        android:id="@+id/pinglun_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="12dp"
+                        android:text="9月20日"
+                        android:textColor="#FF9B9B9B"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/pinglun_neirong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="6dp"
+                    android:text="场馆是打球里边最干净的场馆了，价格实惠，服务人员态度极好！"
+                    android:textColor="#FF333333"
+                    android:textSize="14dp" />
+
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="right"-->
+                    <!--android:layout_marginBottom="14dp"-->
+                    <!--android:layout_marginRight="12dp"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="17dp"-->
+                        <!--android:layout_height="17dp"-->
+                        <!--android:background="@mipmap/zan" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/pinglun_dianzanshu"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="8dp"-->
+                        <!--android:text="66" />-->
+                <!--</LinearLayout>-->
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </LinearLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Home.XiaoxiActivity">
+
+    <include layout="@layout/layout_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#ffffff"
+        android:layout_marginTop="1dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/xiaoxi_xitong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+            <ImageView
+                android:id="@+id/xiaoxi_xitong_image"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@mipmap/xtxxhong"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                />
+            <TextView
+                android:id="@+id/xiaoxi_xitong_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="系统消息"
+                android:textColor="#333333"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/xiaoxi_liaotian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+            <ImageView
+                android:id="@+id/xiaoxi_liaotian_image"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@mipmap/ltxxhuang"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                />
+            <TextView
+                android:id="@+id/xiaoxi_liaotian_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="聊天消息"
+                android:textColor="#333333"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--PullToRefreshListView-->
+
+    <com.itheima.pulltorefreshlib.PullToRefreshListView
+        android:id="@+id/xiaoxi_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        >
+
+
+    </com.itheima.pulltorefreshlib.PullToRefreshListView>
+
+    <LinearLayout
+        android:id="@+id/layout_chat"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

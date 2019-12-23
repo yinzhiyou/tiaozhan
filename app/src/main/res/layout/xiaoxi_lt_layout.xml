@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="84dp"
+    android:orientation="vertical"
+    >
+    <com.mcxtzhang.swipemenulib.SwipeMenuLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:paddingBottom="1dp">
+
+
+        <LinearLayout
+            android:id="@+id/xiaoxi_lt_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:background="@mipmap/denglubeijing"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="半夜开花"
+                    android:textColor="#FF333333"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="18/09/09"
+                    android:layout_marginRight="10dp"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="您好，9月30日在“天天羽毛球馆”的“单打约伴”活动匹配成功，请大家做好准备。"
+                android:textColor="#FF9B9B9B"
+                android:textSize="14dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/lt_btnDelete"
+            android:layout_width="74dp"
+            android:layout_height="match_parent"
+            android:background="#D85D27"
+            android:text="删除"
+            android:gravity="center"
+            android:textColor="@android:color/white"/>
+
+    </com.mcxtzhang.swipemenulib.SwipeMenuLayout>
+</LinearLayout>

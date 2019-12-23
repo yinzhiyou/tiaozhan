@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="68dp">
+
+
+    <com.example.android.promoter.Toos.CustomRoundAngleImageView
+        android:id="@+id/hmd_touxiang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/logo"
+        android:layout_gravity="center"
+        android:layout_marginLeft="12dp"
+        />
+
+    <TextView
+        android:id="@+id/hmd_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="午夜玫瑰"
+        android:textColor="#FF333333"
+        android:textSize="16dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="12dp"
+        android:layout_weight="1"
+        />
+    <TextView
+        android:id="@+id/hmd_yichu"
+        android:layout_width="50dp"
+        android:layout_height="24dp"
+        android:text="移出"
+        android:textColor="#ffffff"
+        android:layout_gravity="center"
+        android:textSize="12dp"
+        android:gravity="center"
+        android:background="@drawable/zhifu_cg_yuanjiao"
+        android:layout_marginRight="12dp"
+        />
+</LinearLayout>

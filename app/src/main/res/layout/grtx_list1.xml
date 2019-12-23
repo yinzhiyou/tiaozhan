@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="38dp"
+    android:background="#ffffff"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/grtx_list1_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="羽毛球"
+        android:textColor="#FF9B9B9B"
+        android:textSize="14dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        />
+    >
+
+    <TextView
+        android:id="@+id/grtx_list1_shuliang"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="30个"
+        android:textColor="#FF9B9B9B"
+        android:textSize="14dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/grtx_list1_lv1"
+            android:layout_width="26dp"
+            android:layout_height="12dp"
+            android:background="#FFF5A623"
+            android:text="Lv2"
+            android:textColor="#ffffff"
+            android:textSize="10dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/grtx_list1_bili"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30/40"
+                android:textColor="#FF8B572A"
+                android:textSize="8dp"
+                android:layout_gravity="center"
+                />
+
+            <ProgressBar
+                android:id="@+id/progressBarLarge"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="68dp"
+                android:layout_height="6dp"
+                android:max="100"
+                android:progress="10"
+                android:layout_gravity="center"
+                />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/grtx_list1_lv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lv3"
+            android:textColor="#FFD85D27"
+            android:textSize="10dp"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+
+
+
+</LinearLayout>

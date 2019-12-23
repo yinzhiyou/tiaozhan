@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:background="#ffffff"
+    android:orientation="horizontal"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_marginLeft="12dp"
+        android:layout_weight="1"
+        >
+
+        <TextView
+            android:id="@+id/ds_qbmx_list_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="签到"
+            android:textColor="#FF333333"
+            android:textSize="16dp"
+            />
+        <TextView
+            android:id="@+id/ds_qbmx_list_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2018-09-30  14:00"
+            android:textColor="#FF9B9B9B"
+            android:textSize="12dp"
+            />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/ds_qbmx_list_jine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:textColor="#FFD85D27"
+        android:textSize="16dp"
+        android:layout_gravity="center"
+        android:layout_marginRight="13dp"
+        />
+
+    <ImageView
+        android:id="@+id/ds_jbmx_image"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@mipmap/youjiantou"
+        android:layout_gravity="center"
+        android:layout_marginRight="12dp"
+        />
+
+</LinearLayout>

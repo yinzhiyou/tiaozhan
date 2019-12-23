@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/layout_base_title_close"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#ffffff">
+
+        <ImageView
+            android:id="@+id/fanhui"
+            android:layout_width="35dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/fanhuijian" />
+
+        <TextView
+            android:id="@+id/biaoti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:maxEms="12"
+            android:singleLine="true"
+
+            android:text="我的钱包"
+            android:textColor="#000000"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/mx_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:textSize="14sp"
+            android:textColor="#333333"
+            android:text="明细"
+
+            />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#4D9B9B9B"
+        android:layout_below="@+id/layout_base_title_close"
+        ></View>
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/pic_qian"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/layout_base_title_close"
+        android:layout_marginTop="73dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/layout_base_title_close"
+        android:layout_marginTop="185dp"
+        android:textColor="#333333"
+        android:textSize="17sp"
+        android:text="我的钱包"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/num_text"
+        android:layout_below="@+id/layout_base_title_close"
+        android:layout_marginTop="216dp"
+        android:textColor="#333333"
+        android:textSize="36sp"
+        android:text="0.00"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+       android:layout_toLeftOf="@+id/num_text"
+        android:layout_below="@+id/layout_base_title_close"
+        android:layout_marginTop="216dp"
+        android:textColor="#333333"
+        android:textSize="36sp"
+
+        android:text="¥"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:gravity="center"
+        android:id="@+id/tixan_text"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/layout_base_title_close"
+        android:layout_marginTop="313dp"
+        android:background="@drawable/btn_bg_selector"
+        android:textColor="#FFFFFF"
+        android:text="提现"
+        android:textSize="17sp"/>
+</RelativeLayout>

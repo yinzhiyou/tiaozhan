@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+   <TextView
+       android:id="@+id/start_time_list_one_zuo"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="08:00"
+       android:textSize="13dp"
+       android:layout_marginLeft="12dp"
+       />
+    <TextView
+        android:id="@+id/start_time_list_one_zuo_xia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="08:00"
+        android:textSize="13dp"
+        android:visibility="gone"
+        android:layout_marginLeft="12dp"
+
+        />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        >
+        <View
+            android:layout_width="7dp"
+            android:layout_height="8dp"
+            android:layout_marginTop="5dp"
+            android:background="#FFD8D8D8"
+            ></View>
+        <View
+            android:layout_width="2dp"
+            android:layout_height="30dp"
+            android:background="#FFD8D8D8"
+            android:layout_gravity="center"
+            ></View>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+    <TextView
+        android:id="@+id/start_time_list_one_you"
+        android:textSize="13dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="08:00"
+        />
+        <TextView
+            android:id="@+id/start_time_list_one_you_xia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="08:00"
+            android:textSize="13dp"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/start_time_list_one_layout"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="31dp"
+        android:layout_marginTop="3dp"
+        android:layout_gravity="center"
+        android:background="@drawable/zhifu_cg_yuanjiao"
+        >
+        <TextView
+            android:id="@+id/start_time_list_one_qian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¥50"
+            android:textSize="14dp"
+            android:layout_centerInParent="true"
+            />
+        <ImageView
+            android:id="@+id/start_time_list_one_xuanzhong"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:visibility="gone"
+            android:src="@mipmap/zhifuchenggongbeijing2"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+
+
+</LinearLayout>

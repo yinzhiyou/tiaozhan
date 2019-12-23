@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.example.android.promoter.Toos.CustomRoundAngleImageView
+            android:id="@+id/pingjia_two_touxiang"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@mipmap/logo"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitXY"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp"
+            android:layout_weight="1"
+            >
+            <TextView
+                android:id="@+id/pingjia_two_duiwu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A1"
+                android:textColor="#FF333333"
+                android:textSize="14dp"
+                />
+            <TextView
+                android:id="@+id/pingjia_two_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nicholas Lawson"
+                android:textColor="#FF333333"
+                android:textSize="14dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom"
+            android:layout_marginRight="12dp"
+            >
+
+            <ImageView
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:background="@mipmap/hongdian2"
+                android:layout_gravity="center"
+                android:layout_marginRight="4dp"
+                />
+            <TextView
+                android:id="@+id/pingjia_two_jieguo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="填写的比赛结果:"
+                android:textColor="#FF333333"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E1E0E1"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:visibility="gone"
+        ></View>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请对ta填写的比赛结果客观性进行评价..."
+        android:textColor="#FF9B9B9B"
+        android:textSize="14dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="12dp"
+
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        >
+
+        <TextView
+            android:id="@+id/pingjia_two_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tousu"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            />
+
+        <TextView
+            android:id="@+id/pingjia_two_no"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="aaaaaaaaaa"
+            android:background="@drawable/xiugai_huodong_layout"
+            android:layout_marginLeft="12dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+
+            />
+    </LinearLayout>
+
+</LinearLayout>

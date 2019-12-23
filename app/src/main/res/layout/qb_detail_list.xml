@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="66dp"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="13dp"
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/top_text"
+        android:text="场地费提成"
+        android:maxEms="16"
+        android:textSize="14sp"
+
+        android:layout_gravity="center"
+        android:textColor="#333333"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/detail_time"
+            android:textColor="#9B9B9B"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_below="@+id/top_text"
+            android:layout_marginTop="2dp"
+            android:textSize="12sp"
+            android:text="2018"/>
+
+    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+5.00"
+        android:layout_centerVertical="true"
+        android:id="@+id/detail_num"
+        android:textSize="14sp"
+        android:layout_alignParentRight="true"
+        android:textColor="#D85D27"
+        android:layout_marginRight="24dp"
+        android:textStyle="bold"/>
+    <ImageView
+        android:layout_width="7dp"
+        android:layout_height="11dp"
+        android:src="@mipmap/youjiantou"
+        android:layout_marginRight="11dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"/>
+</RelativeLayout>

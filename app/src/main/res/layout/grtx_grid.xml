@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp">
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/my_hd_relat1"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:background="@drawable/login_rounded_corners">-->
+
+
+    <!--</RelativeLayout>-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:background="@drawable/bai_bk"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        >
+
+        <TextView
+            android:id="@+id/grtx_grid_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="足球"
+            android:textColor="#ffffff "
+            android:textSize="10dp"
+            android:layout_centerInParent="true"
+            />
+        <TextView
+            android:id="@+id/grtx_grid_shuliang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="1"
+            android:layout_marginLeft="6dp"
+            android:textSize="10dp"
+            android:textColor="#ffffff "
+            android:layout_toRightOf="@+id/grtx_grid_text"
+
+            />
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,938 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".Home.FaqiTiaozhanActivity">
+
+    <include
+        layout="@layout/layout_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.stx.xhb.xbanner.XBanner
+                android:id="@+id/fqtz_banner"
+                android:layout_width="match_parent"
+                android:layout_height="142dp"
+                app:AutoPlayTime="3000" />
+
+            <!--分割线-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="188dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/look_partner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="找运动伙伴"
+                        android:textColor="#D85D27"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:id="@+id/my_look_partner"
+                        android:layout_width="60dp"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#D85D27"
+
+                        />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="17dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="#E9E9E9" />
+
+
+                <LinearLayout
+                    android:layout_width="188dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/have_partner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="我有伙伴"
+                        android:textColor="#333333"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:id="@+id/my_have_partner"
+                        android:layout_width="60dp"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#D85D27"
+                        android:visibility="invisible" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--分割线-->
+            <LinearLayout
+                android:id="@+id/sport_partner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/home_faqi_xiangmu"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="1dp"
+                    android:background="#ffffff">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:text="运动项目"
+                        android:textColor="#FF333333"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/home_faqi_xiangmu_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:text=""
+                        android:textColor="#FF9B9B9B"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:layout_width="11dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="12dp"
+                        android:background="@mipmap/youjiantou" />
+                </LinearLayout>
+
+                <!--分割线-->
+                <LinearLayout
+                    android:id="@+id/home_faqi_moshi"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="1dp"
+                    android:background="#ffffff">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:text="运动模式"
+                        android:textColor="#FF333333"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/home_faqi_moshi_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="娱乐模式"
+                        android:textColor="#FF9B9B9B"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:layout_width="11dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="12dp"
+                        android:background="@mipmap/youjiantou" />
+                </LinearLayout>
+                <!--分割线-->
+                <LinearLayout
+                    android:id="@+id/home_faqi_changguan"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="1dp"
+                    android:background="#ffffff">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:text="运动场馆"
+                        android:textColor="#FF333333"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:id="@+id/home_faqi_changguan_dwd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="4dp"
+                        android:background="@mipmap/dingwei"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/home_faqi_changguan_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="#FF9B9B9B"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/home_faqi_hezuo_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:text="已合作"
+                        android:textColor="#FF9B9B9B"
+                        android:textSize="12dp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:layout_width="11dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="12dp"
+                        android:background="@mipmap/youjiantou" />
+                </LinearLayout>
+                <!--分割线-->
+                <LinearLayout
+                    android:id="@+id/home_faqi_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="1dp"
+                    android:background="#ffffff">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:text="开始时间"
+                        android:textColor="#FF333333"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/home_faqi_time_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:text=""
+                        android:textColor="#FF9B9B9B"
+                        android:textSize="15dp" />
+
+                    <!--分割线-->
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:layout_marginTop="1dp"
+                        android:gravity="center"
+                        android:id="@+id/sc_layout"
+                        android:background="#ffffff">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="10dp"
+                            android:id="@+id/sc"
+                            android:text="时长"
+                            android:textColor="#FF333333"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/home_faqi_shichang_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_toRightOf="@+id/sc"
+                            android:layout_marginRight="12dp"
+                            android:text=""
+                            android:textColor="#FF9B9B9B"
+                            android:textSize="15dp" />
+
+
+                    </RelativeLayout>
+
+
+                    <ImageView
+                        android:id="@+id/home_faqi_time_yjt"
+                        android:layout_width="11dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="12dp"
+
+                        android:background="@mipmap/youjiantou" />
+                </LinearLayout>
+
+                <!--分割线-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="1dp"
+                    android:background="#ffffff">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="10dp"
+                        android:text="场馆费用(元)"
+                        android:textColor="#FF333333"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/home_faqi_feiyong_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textColor="#FFD85D27"
+                        android:textSize="12dp" />
+
+                    <EditText
+                        android:id="@+id/home_faqi_feiyong_edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="非合作场馆请填写费用"
+                        android:phoneNumber="true"
+                        android:textColorHint="#FF9B9B9B"
+                        android:textSize="12dp"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/home_faqi_feiyong"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="12dp"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="15dp"
+                            android:text="承担方式"
+                            android:textColor="#FF333333"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/home_faqi_fangshi_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="12dp"
+                            android:text="AA"
+                            android:textColor="#FF9B9B9B"
+                            android:textSize="12dp" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--分割线-->
+                <LinearLayout
+                    android:id="@+id/home_faqi_xingbie"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="1dp"
+                    android:background="#ffffff">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:text="成员性别"
+                        android:textColor="#FF333333"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/home_faqi_xingbie_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:text="不限"
+                        android:textColor="#FF9B9B9B"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:layout_width="11dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="12dp"
+                        android:background="@mipmap/youjiantou" />
+                </LinearLayout>
+
+                <!--分割线-->
+                <LinearLayout
+                    android:id="@+id/home_faqi_jibie"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="1dp"
+                    android:background="#ffffff">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:text="成员级别"
+                        android:textColor="#FF333333"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/home_faqi_jibie_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:text="不限"
+                        android:textColor="#FF9B9B9B"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:layout_width="11dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="12dp"
+                        android:background="@mipmap/youjiantou" />
+                </LinearLayout>
+
+                <!--分割线-->
+                <LinearLayout
+                    android:id="@+id/home_faqi_dashang"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="1dp"
+                    android:background="#ffffff">
+
+                    <TextView
+                        android:id="@+id/home_faqi_zhuanhuan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:text="打赏费用"
+                        android:textColor="#FF333333"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:id="@+id/home_faqi_dashang_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="请输入金额"
+                        android:phoneNumber="true"
+                        android:textColor="#FF9B9B9B"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:layout_width="11dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="12dp"
+                        android:background="@mipmap/youjiantou" />
+                </LinearLayout>
+                <!--分割线-->
+                <LinearLayout
+                    android:id="@+id/home_faqi_peilianfei"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="1dp"
+                    android:background="#ffffff"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:text="陪练费"
+                        android:textColor="#FF333333"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/home_faqi_peilianfei_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:text="0元/人"
+                        android:textColor="#FF9B9B9B"
+                        android:textSize="15dp"
+
+                        />
+
+                    <ImageView
+                        android:layout_width="11dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="12dp"
+                        android:background="@mipmap/youjiantou" />
+                </LinearLayout>
+                <!--分割线-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="#ffffff">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:text="备注"
+                        android:textColor="#FF333333"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:id="@+id/home_faqi_beizhu_edit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="3"
+                        android:background="@null"
+                        android:hint="请填写活动注意事项（选填150字）"
+                        android:inputType="textMultiLine"
+                        android:maxLength="150"
+                        android:textColorHint="#FF9B9B9B"
+                        android:textSize="15dp" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#ffffff">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:text="参与人员"
+                        android:textColor="#FF333333"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:background="#ffffff"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_marginTop="12dp"
+                        android:text="A队"
+                        android:textColor="#FF333333" />
+
+                    <com.example.android.promoter.Toos.MyGridView
+                        android:id="@+id/home_faqi_grid_a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="58dp"
+                        android:layout_marginTop="12dp"
+                        android:horizontalSpacing="14dp"
+                        android:numColumns="3"
+                        android:verticalSpacing="12dp"></com.example.android.promoter.Toos.MyGridView>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:background="#ffffff"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_marginTop="12dp"
+                        android:text="B队"
+                        android:textColor="#FF333333" />
+
+                    <com.example.android.promoter.Toos.MyGridView
+                        android:id="@+id/home_faqi_grid_b"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="58dp"
+                        android:layout_marginTop="12dp"
+                        android:horizontalSpacing="14dp"
+                        android:numColumns="3"
+                        android:verticalSpacing="12dp"></com.example.android.promoter.Toos.MyGridView>
+                </LinearLayout>
+
+
+                <!--分割线-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="106dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#ffffff">
+
+                    <RelativeLayout
+                        android:id="@+id/faqi_tiaozhan_fabu"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/login_rounded_corners">
+
+                        <TextView
+                            android:id="@+id/fbu_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="确定发布"
+                            android:textColor="#ffffff"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--分割线-->
+            <LinearLayout
+                android:id="@+id/have_sprot_partner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/home_faqi_xiangmu_partner"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="1dp"
+                    android:background="#ffffff">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:text="运动项目"
+                        android:textColor="#FF333333"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/home_faqi_xiangmu_text_partner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:text=""
+                        android:textColor="#FF9B9B9B"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:layout_width="11dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="12dp"
+                        android:background="@mipmap/youjiantou" />
+                </LinearLayout>
+
+
+                <!--分割线-->
+                <LinearLayout
+                    android:id="@+id/home_faqi_changguan_partner"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="1dp"
+                    android:background="#ffffff">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:text="运动场馆"
+                        android:textColor="#FF333333"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:id="@+id/home_faqi_changguan_dwd_partner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="4dp"
+                        android:background="@mipmap/dingwei"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/home_faqi_changguan_text_partner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="#FF9B9B9B"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/home_faqi_hezuo_text_partner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:text="已合作"
+                        android:textColor="#FF9B9B9B"
+                        android:textSize="12dp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:layout_width="11dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="12dp"
+                        android:background="@mipmap/youjiantou" />
+                </LinearLayout>
+                <!--分割线-->
+                <LinearLayout
+                    android:id="@+id/home_faqi_time_partner"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="1dp"
+                    android:background="#ffffff"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:text="开始时间"
+                        android:textColor="#FF333333"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/home_faqi_time_text_partner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:text=""
+                        android:textColor="#FF9B9B9B"
+                        android:textSize="15dp" />
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:layout_marginTop="1dp"
+                        android:id="@+id/sc_layout_partner"
+                        android:gravity="center"
+                        android:background="#ffffff">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="10dp"
+                            android:id="@+id/scr"
+                            android:text="时长"
+                            android:textColor="#FF333333"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/home_faqi_shichang_text_partner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_toRightOf="@+id/scr"
+                            android:layout_marginRight="12dp"
+                            android:text=""
+                            android:textColor="#FF9B9B9B"
+                            android:textSize="15dp" />
+                    </RelativeLayout>
+                    <ImageView
+                        android:id="@+id/home_faqi_time_yjt_partner"
+                        android:layout_width="11dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="12dp"
+
+                        android:background="@mipmap/youjiantou" />
+                </LinearLayout>
+                <!--分割线-->
+
+                <!--分割线-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="1dp"
+                    android:background="#ffffff">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="10dp"
+                        android:text="场馆费用(元)"
+                        android:textColor="#FF333333"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/home_faqi_feiyong_text_partner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textColor="#FFD85D27"
+                        android:textSize="12dp" />
+
+
+                </LinearLayout>
+                <!--分割线-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="#ffffff">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:text="备注"
+                        android:textColor="#FF333333"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:id="@+id/home_faqi_beizhu_edit_partner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="3"
+                        android:background="@null"
+                        android:hint="请填写活动注意事项（选填150字）"
+                        android:inputType="textMultiLine"
+                        android:maxLength="150"
+                        android:textColorHint="#FF9B9B9B"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+
+                <!--分割线-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="106dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#ffffff">
+
+                    <RelativeLayout
+                        android:id="@+id/faqi_tiaozhan_yuding"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/login_rounded_corners">
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="预订场馆"
+                            android:textColor="#ffffff"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="#ffffff"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9月6日"
+        android:textColor="#FF9B9B9B"
+        android:textSize="14dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="18dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="最美不过是马尔代夫的水，海天一色的景色无论做什么都是极好的！"
+            android:textColor="#FF333333"
+            android:textSize="14dp"
+            android:layout_marginRight="12dp"
+            />
+
+        <ImageView
+            android:layout_width="278dp"
+            android:layout_height="194dp"
+            android:layout_marginTop="8dp"
+            android:background="@mipmap/logo2x"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="12dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                />
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="10dp"
+                android:background="@mipmap/chakan"
+                android:layout_gravity="center"
+                android:layout_marginRight="8dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="399"
+                android:textColor="#FF333333"
+                android:textSize="12dp"
+                android:layout_marginRight="30dp"
+                />
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:background="@mipmap/zan"
+                android:layout_gravity="center"
+                android:layout_marginRight="8dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="399"
+                android:textColor="#FF333333"
+                android:textSize="12dp"
+                android:layout_marginRight="12dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
