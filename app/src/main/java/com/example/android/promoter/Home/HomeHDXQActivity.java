@@ -37,6 +37,7 @@ import com.example.android.promoter.Adapter.AshuBAdapter;
 import com.example.android.promoter.Adapter.AyingBAdapter;
 import com.example.android.promoter.Adapter.HDXQAAdapter;
 import com.example.android.promoter.Adapter.HDXQBAdapter;
+import com.example.android.promoter.Adapter.HDXQCPAdapter;
 import com.example.android.promoter.Adapter.QquanAdapter;
 import com.example.android.promoter.Denglu.DengluActivity;
 import com.example.android.promoter.Denglu.GRXXActivity;
@@ -45,6 +46,7 @@ import com.example.android.promoter.Entity.HQQREntity;
 import com.example.android.promoter.Entity.JiaruEntity;
 import com.example.android.promoter.Entity.JiaruTimeYesorNo;
 import com.example.android.promoter.Entity.JiekouSBEntity;
+import com.example.android.promoter.Entity.RefereeClaimerEntity;
 import com.example.android.promoter.Entity.TishiyuEntity;
 import com.example.android.promoter.MainActivity;
 import com.example.android.promoter.My.Friends.LiaoTianActivity;
@@ -84,15 +86,15 @@ import java.util.List;
 import okhttp3.Call;
 
 /**
- *活动详情
+ * 活动详情
  */
 public class HomeHDXQActivity extends BaseActivity implements View.OnClickListener {
 
-    private MyGridView gridViewA, gridViewB, aybgrid, asbgrid, apbgrid,qiquangrid;
+    private MyGridView gridViewA, gridViewB, gridViewC, aybgrid, asbgrid, apbgrid, qiquangrid;
     private TextView biaoti, XMid, qiuleiText, moshi, name, lv, dizhi, feiyong, fangshi, time, timelog, sex, dengji, dashang, queren, beizhu,
             daojishi, fabutime, pipeiText, kaishiText, jieshuText, qxbmText, tuichuText, qiandaoText, quxiaotime, quxiaoyuanyin, hezuo, mingcheng, ayingb,
-            ashub, apingb, zhuanhuan, yingText, cdf, dsf, tyjb, zyjb, dsftext, qunliao, tousu, tousu2,hdxq_cgqd_text,cdh,cgh,
-            tousu1, tousu3, tousu4, tousu5, tousu6, tousu7, tousubiaoti, tousuName, tousuTime, cxts, ty, bty, bofang,qiquan,adWin,bdWin,jgsm_text;
+            ashub, apingb, zhuanhuan, yingText, cdf, dsf, tyjb, zyjb, dsftext, qunliao, tousu, tousu2, hdxq_cgqd_text, cdh, cgh,
+            tousu1, tousu3, tousu4, tousu5, tousu6, tousu7, tousubiaoti, tousuName, tousuTime, cxts, ty, bty, bofang, qiquan, adWin, bdWin, jgsm_text, cp_dj, cp_yd;
     private int tousuTAG = 0;
     private AyingBAdapter adapter1;
     private AshuBAdapter adapter2;
@@ -105,16 +107,18 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
     private List<HDXQEntity.DataBean.GetwaiverInfoBean> data4;
 
 
-    private ImageView fanhui, fenxiang, fabuzheImage, qiuleiImage, qieleiImage2, zhuangtai, shuaxin, tanhao, touxiang,lan_crown,hong_crown;
+    private ImageView fanhui, fenxiang, fabuzheImage, qiuleiImage, qieleiImage2, zhuangtai, shuaxin, tanhao, touxiang, lan_crown, hong_crown;
     private HDXQAAdapter adapter;
     private HDXQBAdapter adapterb;
+    private HDXQCPAdapter adapterc;
     private String tab, uuid, timeString, dizhiString, lat, lng, mylat, mylng, jieguoYN, pingjiaYN, jieshuYN, zhuangtaiString, fangshiString, tuisaiYN,
             tiqianYN, tousuString, yousuYESNO, luyin;
     private LinearLayout linearLayout, ditutiaozhuan, pptime, kstime, jstime, qxtime, qxyy, qiandao, jieguo,
-            ABlayout, jbhfy, tousuLayout, tousuLayout2, anniuLayout, xsls,zcrs,gzsm,jgsm;
-    private RelativeLayout relativeLayout,hdxq_hdz;
+            ABlayout, jbhfy, tousuLayout, tousuLayout2, anniuLayout, xsls, zcrs, gzsm, jgsm;
+    private RelativeLayout relativeLayout, hdxq_hdz;
     private List<HDXQEntity.DataBean.TeamABean> data;
     private List<HDXQEntity.DataBean.TeamBBean> datab;
+    private List<HDXQEntity.DataBean.TeamCBean> datac;
     private int renshu, qiandaoIF, hezuoString, pingjiaTAG;
     private double qian, changdiInt, peilianInt;
     private String token, inviteId, team, SecondSportId, startTime, playTime, FirstSportId, uid, tag = "0", tagb = "0", feiyongString,
@@ -174,7 +178,8 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
         }
     };
     private HDXQEntity entity;
-    private int flg=1;
+    private int flg = 1;
+    private String cp_fy;
 
     @Override
     public int initContentView() {
@@ -190,9 +195,10 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
         fenxiang.setOnClickListener(this);
         gridViewA = findViewById(R.id.home_hdxq_grid_a);
         gridViewB = findViewById(R.id.home_hdxq_grid_b);
+        gridViewC = findViewById(R.id.home_hdxq_grid_c);
         data = new ArrayList<>();
         datab = new ArrayList<>();
-
+        datac = new ArrayList<>();
         fabuzheImage = findViewById(R.id.home_hdxq_touxiang);
         fabuzheImage.setOnClickListener(this);
         linearLayout = findViewById(R.id.hdxq_fbsj);
@@ -241,7 +247,7 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
         qxtime = findViewById(R.id.hdxq_qxsj);
         qxyy = findViewById(R.id.hdxq_qxyy);
         qiandao = findViewById(R.id.hdxq_qiandao);
-        qiandao.setOnClickListener(this);
+
 
         qxbmText = findViewById(R.id.hdxq_qxbm_text);
         tuichuText = findViewById(R.id.hdxq_dianji_zuo);
@@ -303,7 +309,7 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
         hong_crown = findViewById(R.id.hong_crown);
         lan_crown = findViewById(R.id.lan_crown);
         //弃权
-        qiquan=findViewById(R.id.home_hdxq_qiquan);
+        qiquan = findViewById(R.id.home_hdxq_qiquan);
         qiquangrid = findViewById(R.id.home_hdxq_qiquan_grid);
 
         //AB队
@@ -316,14 +322,19 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
         gzsm = findViewById(R.id.home_hdxq_gzsm);
         gzsm.setOnClickListener(this);
         //结果说明
-        jgsm=findViewById(R.id.home_hdxq_jgsm);
-        jgsm_text=findViewById(R.id.home_hdxq_jgsm_Text);
+        jgsm = findViewById(R.id.home_hdxq_jgsm);
+        jgsm_text = findViewById(R.id.home_hdxq_jgsm_Text);
         //场馆签到活动中
-        hdxq_hdz= findViewById(R.id.hdxq_hdz);
-        hdxq_cgqd_text= findViewById(R.id.hdxq_cgqd_text);
+        hdxq_hdz = findViewById(R.id.hdxq_hdz);
+        hdxq_hdz.setOnClickListener(this);
+        hdxq_cgqd_text = findViewById(R.id.hdxq_cgqd_text);
         //场地号
-        cdh= findViewById(R.id.home_hdxq_cdh);
-        cgh= findViewById(R.id.home_hdxq_cgh);
+        cdh = findViewById(R.id.home_hdxq_cdh);
+        cgh = findViewById(R.id.home_hdxq_cgh);
+        //裁判
+        cp_yd = findViewById(R.id.home_hdxq_cq_yd);
+        cp_dj = findViewById(R.id.home_hdxq_cp_dj);
+
         data1 = new ArrayList<>();
         data2 = new ArrayList<>();
         data3 = new ArrayList<>();
@@ -618,7 +629,7 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
                     if (pingjiaTAG == 1) {//1次
                         intent.setClass(this, PingjiaActivity.class);
                         bundle.putString("uuid", uuid);
-                        bundle.putString("tag", pingjiaTAG+"");
+                        bundle.putString("tag", pingjiaTAG + "");
                         intent.putExtras(bundle);
                         startActivity(intent);
                     } else if (pingjiaTAG == 2) {//2次
@@ -626,10 +637,10 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
                         bundle.putString("uuid", uuid);
                         intent.putExtras(bundle);
                         startActivity(intent);
-                    }  else if (pingjiaTAG == 0) {//1=2次
+                    } else if (pingjiaTAG == 0) {//1=2次
                         intent.setClass(this, PingjiaActivity.class);
                         bundle.putString("uuid", uuid);
-                        bundle.putString("tag", pingjiaTAG+"");
+                        bundle.putString("tag", pingjiaTAG + "");
                         intent.putExtras(bundle);
                         startActivity(intent);
                     } else {
@@ -689,33 +700,39 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
 
                 break;
             case R.id.hdxq_hdz://提前退出/中途退赛
-                if (flg==1){
-                    ToastUitl.longs("签到");
+                if (flg == 1) {
+
+                    if (yousuYESNO.equals("3")) {
+                        if (zhuangtaiString.equals("3")) {//活动中
+                            showNormalDialogZong("中途退出，您会被记违约次数一次，专用金币按输扣除并均分至其他未退出方！您应得的打赏费退还至发布者，您预付的场地费支付给场馆方。", zhuangtaiString);
+//                    zhongtutuisai();
+
+                        }
+                    } else {
+                        ToastUitl.longs("投诉中，该功能暂时冻结");
+                    }
+
+
+                }else if (flg==2){
                     mlocationClient.start();
                     dingwei();
-                    hdxq_cgqd_text.setText("中途退赛");
-                    flg=2;
+
                 }
 
-                if (yousuYESNO.equals("3")) {
-                    if (zhuangtaiString.equals("3")) {//活动中
-                        showNormalDialogZong("中途退出，您会被记违约次数一次，专用金币按输扣除并均分至其他未退出方！您应得的打赏费退还至发布者，您预付的场地费支付给场馆方。", zhuangtaiString);
-//                    zhongtutuisai();
-                        tuichuText.setText("中途退赛");
-                    }
-                } else {
-                    ToastUitl.longs("投诉中，该功能暂时冻结");
-                }
+
 
                 break;
+
+
+
             case R.id.hdxq_dianji_you://签到
 
                 if (tab.equals("2")) {//待出发
-                    ToastUitl.longs("签到");
+
                     mlocationClient.start();
                     dingwei();
                 } else if (tab.equals("3")) {//活动中
-                    ToastUitl.longs("签到");
+
                     mlocationClient.start();
                     dingwei();
                 }
@@ -838,12 +855,12 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
                 ptjrInit();
                 break;
             case R.id.home_hdxq_gzsm:
-                Intent intentgzsm=new Intent();
-                intentgzsm.putExtra("uuid",uuid);
+                Intent intentgzsm = new Intent();
+                intentgzsm.putExtra("uuid", uuid);
 
-                intentgzsm.setClass(HomeHDXQActivity.this,HomeGzsmActivity.class);
+                intentgzsm.setClass(HomeHDXQActivity.this, HomeGzsmActivity.class);
 
-                LogU.Le("规则说明",entity.getData().getProfessionalGoldNotes()+entity.getData().getGetRemarks());
+                LogU.Le("规则说明", entity.getData().getProfessionalGoldNotes() + entity.getData().getGetRemarks());
                 startActivity(intentgzsm);
                 break;
         }
@@ -1057,17 +1074,21 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
                 .addParams("uuid", uuid)
                 .build()
                 .execute(new StringCallback() {
+
+
+                    private int refereeNumber;
+
                     @Override
                     public void onError(Call call, Exception e, int id) {
                         responseListener.onFail(e.getMessage());
-                        LogU.Ld("1608", "项目详情" +"我出错了"+e.getMessage());
+                        LogU.Ld("1608", "项目详情" + "我出错了" + e.getMessage());
                     }
 
                     @Override
-                    public void  onResponse(String response, int id) {
+                    public void onResponse(String response, int id) {
                         String result = response.toString();
                         LogU.Ld("1608", "项目详情" + result);
-                        LogU.Ld("1608", "项目详情" +"我出错了"+uuid);
+                        LogU.Ld("1608", "项目详情" + "我出错了" + uuid);
                         Boolean a = result.indexOf("2000") != -1;
                         if (a) {
 
@@ -1109,7 +1130,7 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
 //                                    tousu1.setText("投        诉："+entity.getData().getGetUserscomplaint());
                                     tousu6.setVisibility(View.VISIBLE);
                                     tousu7.setVisibility(View.VISIBLE);
-                                    tousu6.setText(entity.getData().getGetUsersnickname()+":"+ entity.getData().getUnreserved());
+                                    tousu6.setText(entity.getData().getGetUsersnickname() + ":" + entity.getData().getUnreserved());
 //                                    tousu6.setText(entity.getData().getComplaintistrue());
                                     tousu7.setText(entity.getData().getDetailed());
                                     tousu1.setVisibility(View.GONE);
@@ -1174,7 +1195,7 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
 //                                    tousu1.setText("投        诉："+entity.getData().getGetUserscomplaint());
                                     tousu6.setVisibility(View.VISIBLE);
                                     tousu7.setVisibility(View.VISIBLE);
-                                    tousu6.setText(entity.getData().getGetUsersnickname()+":"+ entity.getData().getUnreserved());
+                                    tousu6.setText(entity.getData().getGetUsersnickname() + ":" + entity.getData().getUnreserved());
 //                                    tousu6.setText(entity.getData().getComplaintistrue());
                                     tousu7.setText(entity.getData().getDetailed());
                                     tousu1.setVisibility(View.GONE);
@@ -1243,15 +1264,15 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
                             }
 
                             if (entity.getData().getIsCooper() == 1) {
-                                cdf.setText("预付" + entity.getData().getGetSiteMoney() + "元    退还" + entity.getData().getGetWalletMoney() + "元    实付" + entity.getData().getGetOutMoney() + "元");
-
+                                // cdf.setText("预付" + entity.getData().getGetSiteMoney() + "元    退还" + entity.getData().getGetWalletMoney() + "元    实付" + entity.getData().getGetOutMoney() + "元");
+                                cdf.setText(entity.getData().getGetlist());
                             } else {
                                 if (entity.getData().getIsPublisher() == 1) {
-                                    cdf.setText("预付" + entity.getData().getGetSiteMoney() + "元    收到其他参与方" + entity.getData().getGetWalletMoney() + "元    须向场馆支付" + entity.getData().getGetOutMoney() + "元");
-
+                                    // cdf.setText("预付" + entity.getData().getGetSiteMoney() + "元    收到其他参与方" + entity.getData().getGetWalletMoney() + "元    须向场馆支付" + entity.getData().getGetOutMoney() + "元");
+                                    cdf.setText(entity.getData().getGetlist());
                                 } else {
-                                    cdf.setText("预付" + entity.getData().getGetSiteMoney() + "元    退还" + entity.getData().getGetWalletMoney() + "元    实付" + entity.getData().getGetOutMoney() + "元");
-
+                                    //  cdf.setText("预付" + entity.getData().getGetSiteMoney() + "元    退还" + entity.getData().getGetWalletMoney() + "元    实付" + entity.getData().getGetOutMoney() + "元");
+                                    cdf.setText(entity.getData().getGetlist());
                                 }
                             }
 
@@ -1268,7 +1289,7 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
                             ayingb.setText("A赢B：" + entity.getData().getAwinBcount() + "人");
                             ashub.setText("A输B：" + entity.getData().getAloseBcount() + "人");
                             apingb.setText("A平B：" + entity.getData().getAdrawBcount() + "人");
-                            qiquan.setText("弃权： "+ entity.getData().getGetwaiver() + "人");
+                            qiquan.setText("弃权： " + entity.getData().getGetwaiver() + "人");
                             qunliaoString = entity.getData().getGroupId();
 
                             qunliaoname = entity.getData().getGroup_name();
@@ -1361,7 +1382,7 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
                             }
 
 
-                            if (entity.getData().getGetwaiver()>0){
+                            if (entity.getData().getGetwaiver() > 0) {
                                 List<HDXQEntity.DataBean.GetwaiverInfoBean> list4;
                                 list4 = entity.getData().getGetwaiverInfo();
                                 data4.clear();
@@ -1441,7 +1462,6 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
                             } else if (entity.getData().getFinalresult() == 5) {
 
 
-
                                 zcrs.setVisibility(View.GONE);
                                 ABlayout.setVisibility(View.VISIBLE);
 
@@ -1464,19 +1484,19 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
 //                            bar3.setProgress(entity.getData().getAdrawBcount());
 
                             mingcheng.setText(entity.getData().getSiteName());
-                            fabutime.setText(entity.getData().getCreateTime()+"");
-                            pipeiText.setText(entity.getData().getJoinEndTime()+"");
-                            kaishiText.setText(entity.getData().getStartTime()+"");
+                            fabutime.setText(entity.getData().getCreateTime() + "");
+                            pipeiText.setText(entity.getData().getJoinEndTime() + "");
+                            kaishiText.setText(entity.getData().getStartTime() + "");
                             jieshuText.setText(entity.getData().getFinishedTime());
-                            quxiaotime.setText(entity.getData().getCancelTime()+"");
-                            quxiaoyuanyin.setText(entity.getData().getSuspendReason()+"");
+                            quxiaotime.setText(entity.getData().getCancelTime() + "");
+                            quxiaoyuanyin.setText(entity.getData().getSuspendReason() + "");
                             //jieshuText.setText(entity.getData().getFinishedTime()+"");
 
 
                             timeRI = entity.getData().getStartDays();
                             timeSHI = entity.getData().getStartTimes();
                             sexString = entity.getData().getOpponentsSex() + "";
-                            XMid.setText(entity.getData().getOrderId()+"");
+                            XMid.setText(entity.getData().getOrderId() + "");
                             qiuleiText.setText(entity.getData().getSportName() + "    " + entity.getData().getSportTypeName());
                             zhuangtaiString = entity.getData().getPublicStatus() + "";
 
@@ -1523,16 +1543,15 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
                             DecimalFormat df = new DecimalFormat("0.00");
 
                             name.setText(entity.getData().getPublishPlayerName());
-                            lv.setText(entity.getData().getHeightLevel()+"");
+                            lv.setText(entity.getData().getHeightLevel() + "");
                             Glide.with(HomeHDXQActivity.this).load(getResources().getString(R.string.imgurl) + entity.getData().getPublishPlayerImg()).into(fabuzheImage);
                             dizhi.setText(entity.getData().getSiteAddress());
                             dizhiString = entity.getData().getSiteAddress();
-                            lat = entity.getData().getSiteLat()+"";
-                            lng = entity.getData().getSiteLng()+"";
-                            feiyong.setText("¥"+entity.getData().getSiteMoney() + "元");
+                            lat = entity.getData().getSiteLat() + "";
+                            lng = entity.getData().getSiteLng() + "";
+                            feiyong.setText("¥" + entity.getData().getSiteMoney() + "元");
                             feiyongString = entity.getData().getSiteMoney() + "";
                             changdiInt = entity.getData().getSiteMoney();
-
 
 
                             inviteId = entity.getData().getUuid();
@@ -1549,20 +1568,21 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
                             }
                             time.setText(entity.getData().getStartDays() + "  " + entity.getData().getStartWeek() + "  " + entity.getData().getStartTimes() + "-" + entity.getData().getEndTimes());
                             timelog.setText(entity.getData().getPlayTime() + "小时");
+                            //  cp_dj.setText();
+                            // cp_yd.setText();
 
-
-                            if (entity.getData().getVenuenumber().equals("0")){
+                            if (entity.getData().getVenuenumber().equals("0")) {
                                 cgh.setVisibility(View.GONE);
-                            }else {
+                            } else {
                                 cgh.setText(entity.getData().getVenuenumber());
                             }
-                            if (entity.getData().getVenueid().equals("0")){
+                            if (entity.getData().getVenueid().equals("0")) {
                                 cdh.setVisibility(View.GONE);
-                            }else {
+                            } else {
                                 cdh.setText(entity.getData().getVenueid());
 
                             }
-                            LogU.Ld("1608","场地号"+entity.getData().getVenueid());
+                            LogU.Ld("1608", "场地号" + entity.getData().getVenueid());
                             if (entity.getData().getOpponentsSex().equals("0")) {
                                 sex.setText("男");
                             } else if (entity.getData().getOpponentsSex().equals("1")) {
@@ -1591,6 +1611,12 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
                             peilianString = entity.getData().getMoneyPerhour() + "";
                             peilianInt = entity.getData().getMoneyPerhour();
                             queren.setText(entity.getData().getLackNumber() + "人");
+                            cp_fy = entity.getData().getRefereeFee();
+                            int number = entity.getData().getRefereeNumber();
+                            double cpz = Double.parseDouble(cp_fy);
+
+                            cp_yd.setText(cpz/number + "元/人");
+                            cp_dj.setText(entity.getData().getRefereegrade());
                             beizhu.setText(entity.getData().getComments());
                             if (entity.getData().getSportName().equals("羽毛球")) {
                                 qiuleiImage.setBackgroundDrawable(getResources().getDrawable(R.mipmap.yumaoqiuda));
@@ -1682,10 +1708,9 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
 
 //                                qiandao.setVisibility(View.VISIBLE);
                             } else if (entity.getData().getPublicStatus() == 3) {
-                                if (!yousuYESNO.equals("3")&&tousuString.equals("1")){
+                                if (!yousuYESNO.equals("3") && tousuString.equals("1")) {
                                     tousuLayout.setVisibility(View.GONE);
                                 }
-
 
 
                                 tanhao.setVisibility(View.INVISIBLE);
@@ -1693,15 +1718,30 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
                                 tousu2.setVisibility(View.INVISIBLE);
 
                                 // hdxq_hdz.setVisibility(View.VISIBLE);
-                                //  qiandao.setVisibility(View.GONE);
+
 //                                tousu.setVisibility(View.VISIBLE);
                                 relativeLayout.setVisibility(View.GONE);
                                 zhuangtai.setBackgroundDrawable(getResources().getDrawable(R.mipmap.huodongzhong));
+
                                 linearLayout.setVisibility(View.VISIBLE);
                                 pptime.setVisibility(View.VISIBLE);
                                 kstime.setVisibility(View.VISIBLE);
+                                jstime.setVisibility(View.VISIBLE);
+                                qiandao.setVisibility(View.GONE);
                                 //  hdxq_cgqd_text.setText("中途退赛");
-                                tuichuText.setText("中途退出");
+                                if (entity.getData().getIsSignIn()==1){
+                                    hdxq_hdz.setVisibility(View.VISIBLE);
+                                    hdxq_cgqd_text.setText("中途退赛");
+                                    flg=1;
+                                }else {
+                                    hdxq_hdz.setVisibility(View.VISIBLE);
+                                    hdxq_cgqd_text.setText("场馆签到");
+                                    flg=2;
+                                }
+                                if (entity.getData().getIsQuitInGame()==2){
+                                    hdxq_hdz.setBackgroundResource(R.drawable.tuichu_cg);
+                                }
+                               // tuichuText.setText("中途退出");
                                 if (tousuString.equals("1") || tousuString.equals("3") || tousuString.equals("4")) {
                                     if (entity.getData().getIsQuitInGame() == 2 || entity.getData().getIsQuit() == 2) {
                                         tuichuText.setBackgroundColor(HomeHDXQActivity.this.getResources().getColor(R.color.bbbbb));
@@ -1716,13 +1756,13 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
                                 }
 
 
-                                if (tab.equals("0") || tab.equals("11")) {
+                               /* if (tab.equals("0") || tab.equals("11")) {
 
                                     qiandao.setVisibility(View.GONE);
                                 } else {
 
                                     qiandao.setVisibility(View.VISIBLE);
-                                }
+                                }*/
 //                                qiandao.setVisibility(View.VISIBLE);
                             } else if (entity.getData().getPublicStatus() == 4) {
 //                                if (yousuYESNO.equals("3")) {
@@ -1795,7 +1835,7 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
                                 jstime.setVisibility(View.VISIBLE);
                                 jbhfy.setVisibility(View.VISIBLE);
                                 gzsm.setVisibility(View.VISIBLE);
-                                hdxq_hdz.setVisibility(View.VISIBLE);
+                                hdxq_hdz.setVisibility(View.GONE);
 
                                 qiandao.setVisibility(View.GONE);
                                 relativeLayout.setVisibility(View.GONE);
@@ -1848,7 +1888,7 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
                                     relativeLayout.setBackgroundResource(R.drawable.login_rounded_corners);
                                     qxbmText.setText("去评价");
 
-                                } else  if (pingjiaTAG == 2) {
+                                } else if (pingjiaTAG == 2) {
                                     relativeLayout.setBackgroundResource(R.drawable.login_rounded_corners);
                                     qxbmText.setText("评价比赛结果");
 
@@ -1860,7 +1900,7 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
                                     relativeLayout.setBackgroundResource(R.drawable.renwu_button);
                                     qxbmText.setText("已评价");
 
-                                }else{
+                                } else {
                                     relativeLayout.setBackgroundResource(R.drawable.renwu_button);
                                     qxbmText.setText("去评价");
                                 }
@@ -1936,6 +1976,7 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
 
 
                             renshu = entity.getData().getNeedNumber() / 2;
+                            this.refereeNumber = entity.getData().getRefereeNumber();
                             LogU.Ld("1608", "AB队人数" + renshu);
                             List<HDXQEntity.DataBean.TeamABean> list;
                             list = entity.getData().getTeamA();
@@ -1946,6 +1987,12 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
                             listb = entity.getData().getTeamB();
                             datab.clear();
                             datab.addAll(listb);
+
+                            List<HDXQEntity.DataBean.TeamCBean> listc;
+                            listc = entity.getData().getTeamC();
+                            datac.clear();
+                            datac.addAll(listc);
+
 
                             LogU.Ld("1608", tag + "data大小" + data.size());
                             for (int i = 0; i < data.size(); i++) {
@@ -1969,8 +2016,8 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
 
 
                                 for (int i = 0; i < datab.size(); i++) {
-                                    if(datab.get(i).getUuid()==null||datab.get(i).getUuid()==""){
-                                        LogU.Le("1068","数据为空"+datab.get(i).getUuid());
+                                    if (datab.get(i).getUuid() == null || datab.get(i).getUuid() == "") {
+                                        LogU.Le("1068", "数据为空" + datab.get(i).getUuid());
                                         return;
 
                                     }
@@ -2073,6 +2120,57 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
                             }
                             adapterb = new HDXQBAdapter(HomeHDXQActivity.this, datab, renshu, tag, moshiString, zhuangtaiString, uid);
                             gridViewB.setAdapter(adapterb);
+
+                            adapterc = new HDXQCPAdapter(HomeHDXQActivity.this, datac, this.refereeNumber, tag, moshiString, zhuangtaiString, uid);
+                            gridViewC.setAdapter(adapterc);
+
+                            //裁判点击
+                            if (entity.getData().getPublicStatus() == 7) {
+
+                            } else {
+
+                                gridViewC.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                    @Override
+                                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                                        Intent intent = new Intent();
+                                        Bundle bundle = new Bundle();
+//                                    intent.setClass(HomeHDXQActivity.this,HomeZhifuActivity.class);
+                                        if (tag.equals("1")) {
+//                                            Toast.makeText(HomeHDXQActivity.this, "邀请好友", Toast.LENGTH_SHORT).show();
+                                            if (datac.size() > position) {
+                                                if (datac.get(position).getIsSeat() == 1) {
+
+                                                    intent.setClass(HomeHDXQActivity.this, HomeGRTXActivity.class);
+                                                    bundle.putString("uid", datac.get(position).getUuid() + "");
+                                                    intent.putExtras(bundle);
+                                                    startActivity(intent);
+                                                }
+                                            }
+                                        } else {
+
+                                            if (datac.size() > position) {
+
+                                                intent.setClass(HomeHDXQActivity.this, HomeGRTXActivity.class);
+                                                bundle.putString("uid", datac.get(position).getUuid() + "");
+                                                intent.putExtras(bundle);
+                                                startActivity(intent);
+
+                                            } else {
+                                                jianceCP("3");
+                                                //jiance("2");
+//                                                initDownload(2, "B");
+//                                            showNormalDialog(2);
+                                            }
+
+//                                    initjiaru(2);
+//                                    startActivity(intent);
+                                        }
+                                    }
+                                });
+
+                            }
+
+
                             if (entity.getData().getPublicStatus() == 7) {
 
                             } else {
@@ -2304,9 +2402,9 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
 //                            Toast.makeText(MyhuodongActivity.this, "取消成功", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent();
                             Bundle bundle = new Bundle();//传值
-                            intent.setClass(HomeHDXQActivity.this,PingjiaActivity.class);
-                            bundle.putString("uuid",uuid);
-                            bundle.putString("tag","9");
+                            intent.setClass(HomeHDXQActivity.this, PingjiaActivity.class);
+                            bundle.putString("uuid", uuid);
+                            bundle.putString("tag", "9");
                             intent.putExtras(bundle);
                             startActivity(intent);
                             init();
@@ -2409,7 +2507,9 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
                         if (a) {
                             Gson gson = new Gson();
                             JiekouSBEntity entity = gson.fromJson(result, JiekouSBEntity.class);
-//                            Toast.makeText(HomeHDXQActivity.this, entity.getMsg(), Toast.LENGTH_SHORT).show();
+  //                          Toast.makeText(HomeHDXQActivity.this, entity.getMsg(), Toast.LENGTH_SHORT).show();
+
+
 //                            Toast.makeText(HomeHDXQActivity.this, "取消成功", Toast.LENGTH_SHORT).show();
 //                            initDownload(type, statusType, page);
                             init();
@@ -2456,6 +2556,8 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
                             Gson gson = new Gson();
                             JiekouSBEntity entity = gson.fromJson(result, JiekouSBEntity.class);
                             Toast.makeText(HomeHDXQActivity.this, entity.getMsg(), Toast.LENGTH_SHORT).show();
+                            hdxq_cgqd_text.setText("中途退赛");
+                            flg = 1;
 //                            Toast.makeText(HomeHDXQActivity.this, "取消成功", Toast.LENGTH_SHORT).show();
 //                            initDownload(type, statusType, page);
                             init();
@@ -2520,6 +2622,48 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
 
     }
 
+
+    //检测信息是否完善
+    private void jianceCP(final String tag) {
+        LogU.Ld("1608", "进入检验资料");
+        OkHttpUtils
+                .get()
+                .url(getResources().getString(R.string.http_xutils_zpf_al_cs) + "/checkUserPerfectInfo")
+                .addHeader("token", token)
+                .build()
+                .execute(new StringCallback() {
+                    @Override
+                    public void onError(Call call, Exception e, int id) {
+
+                    }
+
+                    @Override
+                    public void onResponse(String response, int id) {
+                        String result = response.toString();
+                        LogU.Ld("1608", "检验资料" + result);
+                        Boolean a = result.indexOf("2000") != -1;
+
+                        if (a) {
+                            Gson gson = new Gson();
+                            JiekouSBEntity entity = gson.fromJson(result, JiekouSBEntity.class);
+//                            Intent intent = new Intent();
+//                            intent.setClass(DengluActivity.this, MainActivity.class);
+//                            startActivity(intent);
+
+                            showCPDialog();
+
+
+                        } else {
+                            Gson gson = new Gson();
+                            JiekouSBEntity entity = gson.fromJson(result, JiekouSBEntity.class);
+
+                            showNormalDialog();
+
+                        }
+                    }
+                });
+
+    }
 
     //提示语
     private void tishiyu() {
@@ -2904,7 +3048,7 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
                             if (feiyongString.equals("0.0")) {//场地费为0
                                 if (moshiString.equals("4") && !peilianString.equals("0")) {//加入项目发布者我是陪练，且陪练费不为0
                                     //跳支付
-
+                                    cp_fy = "0";
                                     intent.setClass(HomeHDXQActivity.this, HomeZhifuActivity.class);
                                     bundle.putString("tag", "2");
                                     bundle.putString("inviteId", inviteId);
@@ -2921,6 +3065,7 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
                                     bundle.putString("canyurenshu", (renshu * 2) + "");
                                     bundle.putString("hezuo", hezuoString + "");
                                     bundle.putString("moshiString", moshiString + "");
+                                    bundle.putString("cp_fy", cp_fy);
                                     intent.putExtras(bundle);
 
                                     startActivity(intent);
@@ -2931,7 +3076,7 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
 
                             } else {//跳支付
 
-
+                                LogU.Ld("1608", "报名走哪" + entity.getData().getRefereeFee());
                                 dashangString = "0.0";
                                 intent.setClass(HomeHDXQActivity.this, HomeZhifuActivity.class);
                                 bundle.putString("tag", "2");
@@ -2946,7 +3091,9 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
                                 bundle.putString("changdifei", df.format(qian) + "");
                                 bundle.putString("houtaifei", feiyongString);
                                 bundle.putString("fangshi", fangshiString);
-
+                                bundle.putString("cp_fy", entity.getData().getRefereeFee());
+                                bundle.putString("cp_dj", entity.getData().getRefereegrade());
+                                //  bundle.putString("cp_rs", entity.getData().getRefereeFee());
                                 bundle.putString("canyurenshu", (renshu * 2) + "");
                                 bundle.putString("hezuo", hezuoString + "");
                                 bundle.putString("moshiString", moshiString + "");
@@ -2957,9 +3104,11 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
                             }
                             //分割线
                         } else {
+                            LogU.Ld("1608", "报名走哪1" + entity.getData().getRefereeFee());
                             if (feiyongString.equals("0.0")) {//场地费为0
                                 if (moshiString.equals("3") && !peilianString.equals("0.0")) {//加入项目发布者我是陪练，且陪练费不为0
                                     //跳支付
+                                    cp_fy = "0";
                                     intent.setClass(HomeHDXQActivity.this, HomeZhifuActivity.class);
                                     bundle.putString("tag", "2");
                                     bundle.putString("inviteId", inviteId);
@@ -2976,16 +3125,22 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
                                     bundle.putString("hezuo", hezuoString + "");
                                     bundle.putString("moshiString", moshiString + "");
                                     bundle.putString("fangshi", fangshiString);
+                                    bundle.putString("cp_fy", cp_fy);
+
+
                                     intent.putExtras(bundle);
+                                    LogU.Ld("1608", "报名走哪2" + entity.getData().getRefereeFee());
                                     startActivity(intent);
                                 } else {
                                     //不跳
+                                    LogU.Ld("1608", "报名走哪3" + entity.getData().getRefereeFee());
                                     initjiaru(2);
                                 }
 
                             } else {//跳支付
-
+                                LogU.Ld("1608", "报名走哪4" + entity.getData().getRefereeFee());
                                 if (moshiString.equals("4")) {
+                                    cp_fy = "0";
                                     intent.setClass(HomeHDXQActivity.this, HomeZhifuActivity.class);
                                     bundle.putString("tag", "2");
                                     bundle.putString("inviteId", inviteId);
@@ -3002,9 +3157,12 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
                                     bundle.putString("hezuo", hezuoString + "");
                                     bundle.putString("moshiString", moshiString + "");
                                     bundle.putString("fangshi", fangshiString);
+                                    bundle.putString("cp_fy", cp_fy);
                                     intent.putExtras(bundle);
+                                    LogU.Ld("1608", "报名走哪5" + entity.getData().getRefereeFee());
                                     startActivity(intent);
                                 } else {
+                                    LogU.Ld("1608", "报名走哪6" + entity.getData().getRefereeFee());
                                     dashangString = "0.0";
                                     intent.setClass(HomeHDXQActivity.this, HomeZhifuActivity.class);
                                     bundle.putString("tag", "2");
@@ -3022,6 +3180,8 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
                                     bundle.putString("hezuo", hezuoString + "");
                                     bundle.putString("moshiString", moshiString + "");
                                     bundle.putString("fangshi", fangshiString);
+                                    bundle.putString("cp_fy", entity.getData().getRefereeFee());
+                                    bundle.putString("cp_dj", entity.getData().getRefereegrade());
                                     intent.putExtras(bundle);
                                     startActivity(intent);
                                 }
@@ -3030,6 +3190,39 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
                             }
                         }
 
+                    }
+                });
+        normalDialog.setNegativeButton("关闭",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //...To-do
+                    }
+                });
+        // 显示
+        normalDialog.show();
+
+    }
+
+
+    private void showCPDialog() {
+        /* @setIcon 设置对话框图标
+         * @setTitle 设置对话框标题
+         * @setMessage 设置对话框消息提示
+         * setXXX方法返回Dialog对象，因此可以链式设置属性
+         */
+        final AlertDialog.Builder normalDialog =
+                new AlertDialog.Builder(HomeHDXQActivity.this);
+        normalDialog.setIcon(R.mipmap.logo2x);
+        normalDialog.setTitle("温馨提示");
+        normalDialog.setMessage("您确定加入活动吗?");
+        normalDialog.setPositiveButton("确定",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //...To-do
+                        addReferees();
+                        init();
                     }
                 });
         normalDialog.setNegativeButton("关闭",
@@ -3087,6 +3280,48 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
 
     }
 
+    //报名裁判
+
+    private void addReferees() {
+//        http://192.168.0.203/tzOne/public/index.php/api/register?mobile=13321112517&password=wwwwww&password_confirmation=wwwwww&code=944952
+        LogU.Ld("1608", "报名裁判--" + token + "invitedId--" + uid + "startTime--" + timeRI + " --" + timeSHI + "FirstSportId--" + FirstSportId
+                + "SecondSportId--" + SecondSportId + "teamSex" + sexString);
+
+        OkHttpUtils
+                .post()
+                .url(getResources().getString(R.string.http_xutils_zpf_al_cs) + "/addReferees")
+                .addHeader("token", token)
+                .addParams("inviteId", uuid)
+                .addParams("FirstSportId", FirstSportId)
+                .build()
+                .execute(new StringCallback() {
+                    @Override
+                    public void onError(Call call, Exception e, int id) {
+//                        LogU.Ld("1608", "邀请好友" + e);
+                    }
+
+                    @Override
+                    public void onResponse(String response, int id) {
+                        String result = response.toString();
+                        LogU.Ld("1608", "报名裁判" + result);
+                        Boolean a = result.indexOf("2000") != -1;
+                        if (a) {
+                            Gson gson = new Gson();
+                            RefereeClaimerEntity entity = gson.fromJson(result, RefereeClaimerEntity.class);
+                            LogU.Ld("1609", "1609" + entity.getMsg());
+                            //   showNormalDialog(duiwu, dui);
+                        } else {
+                            Gson gson = new Gson();
+                            JiekouSBEntity entity = gson.fromJson(result, JiekouSBEntity.class);
+                            Toast.makeText(HomeHDXQActivity.this, entity.getMsg(), Toast.LENGTH_SHORT).show();
+
+                        }
+                    }
+                });
+
+    }
+
+
     //定位地址
     private void dingwei() {
 //        定位服务的客户端。宿主程序在客户端声明此类，并调用，目前只支持在主线程中启动
@@ -3127,7 +3362,7 @@ public class HomeHDXQActivity extends BaseActivity implements View.OnClickListen
             if (isFirstIn) {
                 isFirstIn = false;
 //                Toast.makeText(getActivity(), bdLocation.getAddrStr()+"大大大"+bdLocation.getCity()+bdLocation.getDistrict(), Toast.LENGTH_SHORT).show();
-                LogU.Ld("1608", "经度" + mLatitude + "纬度" + mLongitude);
+                LogU.Ld("1608", "经度" + mLatitude + "纬度" + mLongitude+bdLocation.getLocType());
                 qiandao(mLatitude + "", mLongitude + "");
             }
 
