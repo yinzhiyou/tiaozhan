@@ -4,30 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#ffffff"
     android:fitsSystemWindows="true"
     android:focusable="true"
     android:focusableInTouchMode="true"
+    android:orientation="vertical"
     tools:context=".Denglu.GRXXActivity">
-    <include layout="@layout/layout_tab"
+
+    <include
+        layout="@layout/layout_tab"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#E1E0E1"/>
+        android:background="#E1E0E1" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="none">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:orientation="vertical"
+
             >
 
 
@@ -35,75 +40,84 @@
                 android:id="@+id/grxx_touxiang"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="*头像"
-                    android:textSize="16dp"
-                    android:textColor="#333333"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    />
-                <com.example.android.promoter.Toos.XCRoundImageView
+                    android:text="*头像"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+
+                <com.example.android.tiaozhan.Toos.XCRoundImageView
                     android:id="@+id/gexx_touxiang_img"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="6dp"
                     android:background="@mipmap/home_vip_head"
-                    android:layout_gravity="center"
-                    android:layout_marginRight="10dp"
-                    android:scaleType="fitXY"
-                    />
+                    android:scaleType="fitXY" />
+
                 <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:src="@mipmap/youjiantou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:visibility="gone"
+                    android:layout_marginRight="2dp"
+                    android:src="@mipmap/youjiantou"
+
                     />
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#E1E0E1"/>
+                android:background="#E1E0E1" />
 
-        <!--分割线-->
+            <!--分割线-->
 
             <LinearLayout
                 android:id="@+id/grxx_name"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="*昵称"
-                    android:textSize="16dp"
-                    android:textColor="#333333"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    />
-                <EditText
+                    android:text="*昵称"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+
+                <com.example.android.tiaozhan.Toos.AutoRightEditText
                     android:id="@+id/grxx_text_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:paddingRight="10dp"
-
-                    android:hint="请输入昵称"
-                    android:gravity="right"
+                    android:layout_marginRight="6dp"
+                    android:textSize="14sp"
                     android:layout_weight="1"
                     android:background="@null"
-                    />
+                    android:gravity="right"
+                    android:hint="取个惊世骇俗的昵称吧！"
+                    android:maxLength="11"
+                    android:textColor="#9B9B9B" />
 
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="2dp"
+                    android:src="@mipmap/youjiantou" />
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#E1E0E1"/>
+                android:background="#E1E0E1" />
 
             <!--分割线-->
 
@@ -111,45 +125,42 @@
                 android:id="@+id/grxx_age"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="*性别"
-                    android:textSize="16dp"
-                    android:textColor="#333333"
-                    android:layout_gravity="center"
-
-                    />
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="（设定不可更改）"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:textColor="#999999"
-                    />
+                    android:text="*性别"
+                    android:textColor="#333333"
+
+                    android:textSize="14sp"/>
+
                 <TextView
                     android:id="@+id/grxx_text_age"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginRight="10dp"
-                    android:text=""
-                    />
+                    android:layout_marginRight="6dp"
+                    android:textSize="14sp"
+                    android:text="为让您找到合适对手，请客观选择"
+                    android:textColor="#9B9B9B" />
+
                 <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:src="@mipmap/youjiantou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:visibility="gone"
+                    android:layout_marginRight="2dp"
+                    android:src="@mipmap/youjiantou"
+
                     />
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#E1E0E1"/>
+                android:background="#E1E0E1" />
 
             <!--分割线-->
 
@@ -157,37 +168,41 @@
                 android:id="@+id/grxx_chusheng"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="*出生年月"
-                    android:textSize="16dp"
-                    android:textColor="#333333"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    />
+                    android:text="*出生年月"
+                    android:textColor="#333333"
+                    android:textSize="14sp"/>
+
                 <TextView
                     android:id="@+id/grxx_riqi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginRight="10dp"
-                    android:text=""
-                    />
+                    android:layout_marginRight="6dp"
+                    android:text="为让您找到合适对手，请客观选择"
+                    android:textSize="14sp"
+                    android:textColor="#9B9B9B" />
+
                 <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:src="@mipmap/youjiantou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:visibility="gone"
+                    android:layout_marginRight="2dp"
+                    android:src="@mipmap/youjiantou"
+
                     />
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#E1E0E1"/>
+                android:background="#E1E0E1" />
 
             <!--分割线-->
 
@@ -195,37 +210,41 @@
                 android:id="@+id/grxx_changzhu"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="*常驻地"
-                    android:textSize="16dp"
-                    android:textColor="#333333"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    />
+                    android:text="*常驻地"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+
                 <TextView
                     android:id="@+id/grxx_text_changzhu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginRight="10dp"
-                    android:text=""
-                    />
+                    android:layout_marginRight="6dp"
+                    android:textSize="14sp"
+                    android:text="将会邀您在常驻地参加有奖选拔比赛"
+                    android:textColor="#9B9B9B" />
+
                 <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:src="@mipmap/youjiantou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:visibility="gone"
+                    android:layout_marginRight="2dp"
+                    android:src="@mipmap/youjiantou"
+
                     />
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#E1E0E1"/>
+                android:background="#E1E0E1" />
 
             <!--分割线-->
 
@@ -233,51 +252,49 @@
                 android:id="@+id/grxx_shengao"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="身高cm"
-                    android:textSize="16dp"
-                    android:textColor="#333333"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    />
-                <EditText
+                    android:text="身高cm"
+                    android:textColor="#333333"
+                    android:textSize="14sp"/>
+
+                <com.example.android.tiaozhan.Toos.AutoRightEditText
                     android:id="@+id/grxx_text_shengao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text=""
+                    android:layout_marginRight="6dp"
                     android:layout_weight="1"
                     android:background="@null"
+                    android:digits="0123456789"
                     android:gravity="right"
-                    android:phoneNumber="true"
-                    android:hint="请输入真实身高  100-250"
-                    android:textSize="16dp"
+                    android:textSize="14sp"
+                    android:hint="可以让小伙伴更全面了解您"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:text=""
+                    android:textColor="#9B9B9B"
                     />
-                <TextView
+
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="cm"
                     android:layout_gravity="center"
-                    android:layout_marginRight="10dp"
-                    android:textSize="16dp"
-                    android:textColor="#333333"
-                    />
-                <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
+                    android:layout_marginRight="2dp"
                     android:src="@mipmap/youjiantou"
-                    android:layout_gravity="center"
-                    android:visibility="gone"
+
                     />
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#E1E0E1"/>
+                android:background="#E1E0E1" />
 
             <!--分割线-->
 
@@ -285,50 +302,49 @@
                 android:id="@+id/grxx_tizhong"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="体重kg"
-                    android:textSize="16dp"
-                    android:textColor="#333333"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    />
-                <EditText
+                    android:text="体重kg"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+
+                <com.example.android.tiaozhan.Toos.AutoRightEditText
                     android:id="@+id/grxx_tizhong_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_marginRight="6dp"
                     android:layout_weight="1"
                     android:background="@null"
+                    android:digits="0123456789"
                     android:gravity="right"
-                    android:phoneNumber="true"
-                    android:hint="请输入真实体重  30-200"
-                    android:textSize="16dp"
+                    android:hint="可以让小伙伴更全面了解您"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:textColor="#9B9B9B"
+                    android:textSize="14sp"
+
                     />
-                <TextView
+
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="kg"
                     android:layout_gravity="center"
-                    android:layout_marginRight="10dp"
-                    android:textSize="16dp"
-                    android:textColor="#333333"
-                    />
-                <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
+                    android:layout_marginRight="2dp"
                     android:src="@mipmap/youjiantou"
-                    android:layout_gravity="center"
-                    android:visibility="gone"
+
                     />
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#E1E0E1"/>
+                android:background="#E1E0E1" />
 
             <!--分割线-->
 
@@ -336,8 +352,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                >
+                android:orientation="vertical">
+
                 <LinearLayout
                     android:id="@+id/grxx_yundong"
                     android:layout_width="match_parent"
@@ -347,76 +363,162 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="*喜爱的运动"
-                        android:textSize="16dp"
-                        android:textColor="#333333"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        />
+                        android:text="技术水平自我评定"
+                        android:textColor="#333333"
+                        android:textSize="14sp" />
 
                     <ImageView
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
-                        android:src="@mipmap/youjiantou"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        />
+                        android:layout_marginRight="2dp"
+                        android:src="@mipmap/youjiantou" />
                 </LinearLayout>
-                <com.example.android.promoter.Toos.MyGridView
+
+                <com.example.android.tiaozhan.Toos.MyGridView
                     android:id="@+id/grxx_grid"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:numColumns="3"
-                    >
-                </com.example.android.promoter.Toos.MyGridView>
+                    android:numColumns="3"></com.example.android.tiaozhan.Toos.MyGridView>
 
 
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#E1E0E1"/>
+                android:background="#E1E0E1" />
 
             <!--分割线-->
             <LinearLayout
                 android:id="@+id/grxx_jianjie"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="horizontal"
-                >
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
                     android:text="个人简介"
-                    android:textSize="16dp"
                     android:textColor="#333333"
-                    android:layout_gravity="center"
+                    android:textSize="14sp"
+
                     />
-                <EditText
+
+                <com.example.android.tiaozhan.Toos.AutoRightEditText
                     android:id="@+id/grxx_text_jianjie"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginRight="10dp"
-                    android:text="走自己的路，让别人无路可走"
-                    android:layout_weight="1"
-                    android:textColor="#9B9B9B"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_weight="1"
                     android:background="@null"
-                    android:textSize="16dp"
-                    />
+                    android:hint="初来乍到，介绍一下吧！"
+                    android:freezesText="true"
+                    android:gravity="left"
+                    android:text=""
+                    android:textColor="#9B9B9B"
+                    android:textSize="14sp" />
+
                 <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:src="@mipmap/youjiantou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:visibility="gone"
-                    />
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="16dp"
+                    android:src="@mipmap/youjiantou" />
             </LinearLayout>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#E1E0E1"/>
+                android:background="#E1E0E1" />
 
+            <!--分割线-->
+            <LinearLayout
+                android:id="@+id/grxx_jianjie_zhao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="16dp"
+                    android:text="照片(9张以内)"
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+
+                    />
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="6dp"
+                    android:textSize="14sp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="人见人爱，花见花开照片来几张吧！"
+                    android:textColor="#9B9B9B" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginRight="2dp"
+
+                    android:src="@mipmap/youjiantou" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E1E0E1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+                android:id="@+id/zhaopian"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text="照片"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+                <com.example.android.tiaozhan.Toos.MyGridView
+                    android:id="@+id/gern_grid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:numColumns="3"
+                    android:stretchMode="columnWidth"
+
+
+                    />
+                <!--android:verticalSpacing="200dp"-->
+
+            </LinearLayout>
             <!--分割线-->
 
 
@@ -425,6 +527,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="34dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
                 android:layout_marginBottom="30dp"
                 android:background="@drawable/login_rounded_corners">
 
@@ -432,9 +536,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="完成"
+                    android:text="提交"
+
                     android:textColor="#ffffff"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp" />
 
             </RelativeLayout>
 
@@ -443,7 +548,6 @@
 
 
     </ScrollView>
-
 
 
 </LinearLayout>

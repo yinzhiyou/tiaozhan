@@ -323,7 +323,7 @@
 
             <!--</com.handmark.pulltorefresh.library.PullToRefreshGridView>-->
 
-            <com.example.android.promoter.Toos.MyGridView
+            <com.example.android.tiaozhan.Toos.MyGridView
                 android:id="@+id/shop_grid"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -332,7 +332,7 @@
                 android:numColumns="2"
                 android:verticalSpacing="10dp">
 
-            </com.example.android.promoter.Toos.MyGridView>
+            </com.example.android.tiaozhan.Toos.MyGridView>
             <!--</LinearLayout>-->
         </LinearLayout>
 

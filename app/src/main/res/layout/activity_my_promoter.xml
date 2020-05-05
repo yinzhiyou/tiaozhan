@@ -18,7 +18,7 @@
             android:background="@mipmap/mytgbj"
             android:scaleType="centerCrop" />
 
-        <com.example.android.promoter.Toos.StatusBarHeightView
+        <com.example.android.tiaozhan.Toos.StatusBarHeightView
             android:id="@+id/view_need_offset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -676,6 +676,6 @@
 
                 </LinearLayout>
             </LinearLayout>
-        </com.example.android.promoter.Toos.StatusBarHeightView>
+        </com.example.android.tiaozhan.Toos.StatusBarHeightView>
     </RelativeLayout>
 </ScrollView>

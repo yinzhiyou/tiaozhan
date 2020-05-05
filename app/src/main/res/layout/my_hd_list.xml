@@ -6,19 +6,20 @@
     android:orientation="vertical">
 
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="3"
+            android:layout_weight="2.8"
+            android:id="@+id/tur"
             android:orientation="vertical">
 
-            <com.example.android.promoter.Toos.CustomRoundAngleImageView
+            <com.example.android.tiaozhan.Toos.CustomRoundAngleImageView
                 android:id="@+id/my_hd_list_touxiang"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
@@ -43,10 +44,10 @@
                 <TextView
                     android:id="@+id/my_hd_list_dengji"
                     android:layout_width="26dp"
-                    android:layout_height="12dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="8dp"
-                    android:background="#FFF4C03D"
+                    android:background="@drawable/lv_bg"
                     android:gravity="center"
                     android:text="Lv 2"
                     android:textColor="#ffffff"
@@ -56,17 +57,21 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:id="@+id/tuz"
+
             android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/tur"
+            android:layout_toLeftOf="@+id/zhuangtai_out"
             android:layout_weight="6"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1">
+                >
 
                 <TextView
                     android:id="@+id/my_hd_list_name"
@@ -88,13 +93,14 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1">
+
+                android:layout_marginTop="2dp">
 
                 <TextView
                     android:id="@+id/my_hd_list_moshi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+
                     android:text="娱乐模式"
                     android:textColor="#D85D27"
                     android:textSize="12dp" />
@@ -103,16 +109,17 @@
                     android:id="@+id/my_hd_list_text_qiu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="篮球"
+
+                    android:layout_marginLeft="10dp"
+                    android:text=""
                     android:textSize="12dp" />
 
                 <TextView
                     android:id="@+id/my_hd_list_renshu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="5V5"
+                    android:layout_marginLeft="10dp"
+                    android:text=""
                     android:textSize="12dp" />
 
                 <TextView
@@ -121,20 +128,21 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="缺1人"
-                    android:textSize="12dp" />
+                    android:textSize="12dp"
+                    android:visibility="gone"/>
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
+                android:layout_height="20dp"
+                android:layout_marginTop="2dp">
 
                 <TextView
                     android:id="@+id/my_hd_list_time1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+
                     android:text="2018-09-09"
                     android:textSize="12dp" />
 
@@ -142,7 +150,7 @@
                     android:id="@+id/my_hd_list_time2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
                     android:text="星期三"
                     android:textSize="12dp" />
 
@@ -150,7 +158,7 @@
                     android:id="@+id/my_hd_list_time3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
                     android:text="15:00-16:00"
                     android:textSize="12dp" />
 
@@ -158,8 +166,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
+                android:layout_height="20dp"
+                android:layout_marginTop="2dp">
 
                 <TextView
                     android:id="@+id/my_hd_list_dizhi"
@@ -172,48 +180,56 @@
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
 
-                <TextView
-                    android:id="@+id/my_hd_list_fangshi"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="场地费：AA"
-                    android:textSize="12dp" />
-
-                <TextView
-                    android:id="@+id/my_hd_list_dashang"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="打赏费：40元/小时"
-                    android:textSize="12dp" />
-
-            </LinearLayout>
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_toRightOf="@+id/tur"
+            android:layout_marginLeft="8dp"
+            android:layout_below="@+id/tuz"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/my_hd_list_fangshi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="场地费：AA"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/my_hd_list_dashang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="10dp"
+                android:text="打赏费：40元/小时"
+                android:textSize="12dp" />
+
+        </LinearLayout>
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1.5"
+
+            android:layout_alignParentRight="true"
+            android:id="@+id/zhuangtai_out"
             android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/my_hd_list_zhuangtai"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="46dp"
+                android:layout_height="41dp"
                 android:layout_gravity="right"
-                android:background="@mipmap/daichufa" />
+             />
 
 
         </LinearLayout>
 
-    </LinearLayout>
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -255,23 +271,24 @@
                 android:textColor="#ffffff"
                 android:textSize="12dp" />
         </RelativeLayout>
-
         <RelativeLayout
             android:id="@+id/my_hd_list_dianji2"
             android:layout_width="80dp"
             android:layout_height="24dp"
             android:layout_marginRight="12dp"
             android:background="@drawable/zhifu_cg_yuanjiao"
-            android:visibility="gone">
+            android:visibility="gone"
+            >
 
             <TextView
                 android:id="@+id/my_hd_list_text_dianji2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="签到"
+                android:text="场馆签到"
                 android:textColor="#ffffff"
                 android:textSize="12dp" />
         </RelativeLayout>
+
     </LinearLayout>
 </LinearLayout>

@@ -22,7 +22,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1.  什么是通用金币？"
+            android:text="1.  什么是对手币？"
             android:textColor="#FF333333"
             android:textSize="16dp"
             android:layout_gravity="center"
@@ -40,7 +40,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="通用金币是平台中一种积分形式t通用金币是平台中一种积分形式t通用金币是平台中一种积分形式t通用金币是平台中一种积分形式t通用金币是平台中一种积分形式t通用金币是平台中一种积分形式"
+            android:text="对手币是平台中一种积分形式t对手币是平台中一种积分形式t对手币是平台中一种积分形式t对手币是平台中一种积分形式t对手币是平台中一种积分形式t对手币是平台中一种积分形式"
             android:textColor="#FF9B9B9B"
             android:textSize="14dp"
             android:layout_marginLeft="12dp"
@@ -60,7 +60,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2.  如何获得通用金币？"
+            android:text="2.  如何获得对手币？"
             android:textColor="#FF333333"
             android:textSize="16dp"
             android:layout_gravity="center"
@@ -78,7 +78,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="通用金币是平台中一种积分形式t通用金币是平台中一种积分形式t通用金币是平台中一种积分形式t通用金币是平台中一种积分形式t通用金币是平台中一种积分形式t通用金币是平台中一种积分形式"
+            android:text="对手币是平台中一种积分形式t对手币是平台中一种积分形式t对手币是平台中一种积分形式t对手币是平台中一种积分形式t对手币是平台中一种积分形式t对手币是平台中一种积分形式"
             android:textColor="#FF9B9B9B"
             android:textSize="14dp"
             android:layout_marginLeft="12dp"

@@ -2,7 +2,7 @@ package com.hyphenate.easeui.model;
 
 import android.content.Context;
 import android.os.SystemClock;
-import android.support.test.InstrumentationRegistry;
+import androidx.test.platform.app.InstrumentationRegistry;
 import android.util.LruCache;
 
 import com.hyphenate.chat.EMCmdMessageBody;

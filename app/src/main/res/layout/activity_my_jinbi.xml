@@ -329,11 +329,11 @@
                     android:textSize="15dp" />
             </LinearLayout>
 
-            <com.example.android.promoter.Toos.MyListView
+            <com.example.android.tiaozhan.Toos.MyListView
                 android:id="@+id/my_jinbi_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:divider="@null"></com.example.android.promoter.Toos.MyListView>
+                android:divider="@null"></com.example.android.tiaozhan.Toos.MyListView>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -389,7 +389,7 @@
                 <!--</LinearLayout>-->
             </LinearLayout>
 
-            <com.example.android.promoter.Toos.MyListView
+            <com.example.android.tiaozhan.Toos.MyListView
                 android:id="@+id/my_jinbi_list2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -397,7 +397,7 @@
                 android:layout_marginTop="1dp"
                 android:divider="@null">
 
-            </com.example.android.promoter.Toos.MyListView>
+            </com.example.android.tiaozhan.Toos.MyListView>
 
 
             <LinearLayout
@@ -431,7 +431,7 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <com.example.android.promoter.Toos.MyListView
+            <com.example.android.tiaozhan.Toos.MyListView
                 android:id="@+id/my_jinbi_list3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -439,7 +439,7 @@
                 android:layout_marginTop="1dp"
                 android:divider="@null">
 
-            </com.example.android.promoter.Toos.MyListView>
+            </com.example.android.tiaozhan.Toos.MyListView>
 
 
         </LinearLayout>

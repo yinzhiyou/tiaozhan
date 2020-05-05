@@ -9,7 +9,20 @@
     <string name="hour">时</string>
     <string name="minute">分</string>
     <string name="cancel">重置</string>
+    <string name="cz">重置</string>
     <string name="ensure">确 定</string>
+    <string name="quxiao">取消</string>
+    <string name="quding">确 定</string>
+
+
+    <string name="timepicker_year">年</string>
+    <string name="timepicker_month">月</string>
+    <string name="timepicker_day">日</string>
+    <string name="timepicker_hour">时</string>
+    <string name="timepicker_min">分</string>
+    <string name="timepicker_title">选择时间</string>
+    <string name="timepicker_finish">确认</string>
+    <string name="timepicker_title_default">设置</string>
 
     <string-array name="weeks">
         <item>星期一</item>
@@ -21,6 +34,30 @@
         <item>星期日</item>
     </string-array>
 
+    <string-array name="reseree_num">
+        <item>0人</item>
+        <item>1人</item>
+        <item>2人</item>
+        <item>3人</item>
+        <item>4人</item>
+        <item>5人</item>
+        <item>6人</item>
+    </string-array>
+
+    <string-array name="reseree_lv">
+        <item>三级</item>
+        <item>二级</item>
+        <item>一级</item>
+        <item>国家级</item>
+    </string-array>
+
+
+    <string-array name="gef_lv">
+        <item>初级</item>
+        <item>中级</item>
+        <item>国家级</item>
+        <item>国际级</item>
+    </string-array>
 
     <string-array name="Lvle">
         <item>不限</item>
@@ -84,7 +121,27 @@
         <item>22:30</item>
         <item>23:00</item>
         <item>23:30</item>
+
     </string-array>
 
 
+    <string-array name="referee">
+        <item>羽毛球</item>
+        <item>乒乓球</item>
+        <item>台球</item>
+        <item>篮球</item>
+        <item>足球</item>
+        <item>排球</item>
+        <item>网球</item>
+        <item>高尔夫</item>
+    </string-array>
+
+
+    <string-array name="dj">
+        <item>一级</item>
+        <item>二级</item>
+        <item>三级</item>
+        <item>国家级</item>
+
+    </string-array>
 </resources>

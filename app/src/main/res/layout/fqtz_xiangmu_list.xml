@@ -20,15 +20,17 @@
     <View
         android:layout_width="1dp"
         android:layout_height="match_parent"
-        android:background="#9B9B9B"
+        android:background="#E9E9E9"
         ></View>
-    <com.example.android.promoter.Toos.MyGridView
+    <com.example.android.tiaozhan.Toos.MyGridView
         android:id="@+id/fqtz_xiangmu_list_grid"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="4"
         android:numColumns="3"
+        android:divider="#E9E9E9"
+        android:dividerHeight="1dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        ></com.example.android.promoter.Toos.MyGridView>
+        ></com.example.android.tiaozhan.Toos.MyGridView>
 </LinearLayout>

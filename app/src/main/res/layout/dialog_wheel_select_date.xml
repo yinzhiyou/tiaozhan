@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/dialog_normal_style"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@drawable/dialog_bg"
 
     android:orientation="horizontal">
@@ -51,7 +51,7 @@
             android:layout_weight="1"
             >
 
-            <com.example.android.promoter.Toos.time.view.WheelView
+            <com.example.android.tiaozhan.Toos.time.view.WheelView
                 android:id="@+id/select_date_wheel_year_wheel"
                 android:layout_width="fill_parent"
                 android:layout_height="150dp"
@@ -74,7 +74,7 @@
             android:layout_height="150dp"
             android:layout_weight="1">
 
-            <com.example.android.promoter.Toos.time.view.WheelView
+            <com.example.android.tiaozhan.Toos.time.view.WheelView
                 android:id="@+id/select_date_month_wheel"
                 android:layout_width="fill_parent"
                 android:layout_height="150dp"
@@ -97,7 +97,7 @@
             android:layout_height="150dp"
             android:layout_weight="1">
 
-            <com.example.android.promoter.Toos.time.view.WheelView
+            <com.example.android.tiaozhan.Toos.time.view.WheelView
                 android:id="@+id/select_date_day_wheel"
                 android:layout_width="fill_parent"
                 android:layout_height="150dp"
@@ -160,6 +160,7 @@
             android:id="@+id/select_date_cancel"
             style="@style/dialog_left_btn_style"
             android:textStyle="bold"
+            android:text="重置"
             android:background="@color/bg_content"   />
 
         <View style="@style/dialog_cutting_line_style" />

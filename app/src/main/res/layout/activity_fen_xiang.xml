@@ -8,20 +8,15 @@
     android:fitsSystemWindows="true"
     tools:context=".Home.FenXiangActivity">
 
+    <include layout="@layout/layout_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="188dp"
         android:background="@mipmap/fenxiangbeijing"
         >
 
-        <ImageView
-            android:id="@+id/fanhui"
-            android:layout_width="12dp"
-            android:layout_height="18dp"
-            android:background="@mipmap/fanhuijian"
-            android:layout_marginTop="12dp"
-            android:layout_marginLeft="15dp"
-            />
     </RelativeLayout>
 
 
@@ -37,10 +32,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="马上分享"
-        android:textColor="#FFD85D27"
-        android:textSize="17dp"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
         android:layout_centerInParent="true"
-        android:textStyle="bold"
+
         />
 
 </RelativeLayout>

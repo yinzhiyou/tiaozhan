@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="38dp"
+    android:layout_height="wrap_content"
     android:background="#ffffff"
-    android:orientation="horizontal">
+   >
 
     <TextView
         android:id="@+id/grtx_list1_name"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="羽毛球"
-        android:textColor="#FF9B9B9B"
+        android:textColor="#4A4A4A"
         android:textSize="14dp"
+
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="18dp"
+        android:layout_centerVertical="true"
         android:layout_gravity="center"
         android:layout_weight="1"
         android:gravity="center"
@@ -20,32 +25,43 @@
 
     <TextView
         android:id="@+id/grtx_list1_shuliang"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="30个"
-        android:textColor="#FF9B9B9B"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="139dp"
+        android:textColor="#4A4A4A"
         android:textSize="14dp"
+
         android:layout_gravity="center"
         android:layout_weight="1"
         android:gravity="center"
         />
 
     <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_weight="1"
+        android:layout_marginLeft="219dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_centerVertical="true"
+
+
         android:gravity="center"
         >
 
         <TextView
             android:id="@+id/grtx_list1_lv1"
-            android:layout_width="26dp"
-            android:layout_height="12dp"
-            android:background="#FFF5A623"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/lvg_bg"
             android:text="Lv2"
             android:textColor="#ffffff"
-            android:textSize="10dp"
+            android:textSize="8sp"
             android:gravity="center"
             android:layout_gravity="center"
             />
@@ -55,6 +71,7 @@
             android:layout_height="26dp"
             android:orientation="vertical"
             android:layout_gravity="center"
+            android:layout_marginLeft="2dp"
             >
 
             <TextView
@@ -75,6 +92,7 @@
                 android:max="100"
                 android:progress="10"
                 android:layout_gravity="center"
+                android:progressDrawable="@drawable/pb_pd_sp_download"
                 />
 
 
@@ -83,15 +101,18 @@
 
         <TextView
             android:id="@+id/grtx_list1_lv2"
-            android:layout_width="wrap_content"
+            android:layout_width="20dp"
             android:layout_height="wrap_content"
             android:text="Lv3"
-            android:textColor="#FFD85D27"
-            android:textSize="10dp"
+            android:gravity="center"
+            android:layout_marginLeft="2dp"
+            android:background="@drawable/lvg_bgb"
+            android:textColor="#FFFFFF"
+            android:textSize="8sp"
             android:layout_gravity="center"
             />
     </LinearLayout>
 
 
 
-</LinearLayout>
+</RelativeLayout>

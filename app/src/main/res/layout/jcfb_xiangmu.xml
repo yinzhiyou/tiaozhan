@@ -6,7 +6,7 @@
     android:background="#ffffff"
     >
 
-    <com.example.android.promoter.Toos.MyGridView
+    <com.example.android.tiaozhan.Toos.MyGridView
         android:id="@+id/jcfb_xiangmu_grid"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,5 +15,5 @@
         android:layout_marginBottom="150dp"
             >
 
-    </com.example.android.promoter.Toos.MyGridView>
+    </com.example.android.tiaozhan.Toos.MyGridView>
 </LinearLayout>

@@ -35,7 +35,7 @@
     </LinearLayout>
 
 
-    <com.example.android.promoter.Toos.HorizontalListView
+    <com.example.android.tiaozhan.Toos.HorizontalListView
         android:id="@+id/ds_paihang_diqu"
         android:layout_width="match_parent"
         android:layout_height="45dp"
@@ -65,7 +65,7 @@
                     android:layout_height="20dp"
                     android:layout_gravity="center"
                     android:layout_marginRight="4dp"
-                    android:src="@mipmap/jiangbei" />
+                    android:src="@mipmap/icon_jewel" />
 
                 <TextView
                     android:id="@+id/ds_paihang_top"
@@ -107,7 +107,7 @@
 
                             />
 
-                        <com.example.android.promoter.Toos.XCRoundImageView
+                        <com.example.android.tiaozhan.Toos.XCRoundImageView
                             android:id="@+id/my_ds_paihang_tx2"
                             android:layout_width="52dp"
                             android:layout_height="52dp"
@@ -169,7 +169,7 @@
                             android:layout_centerHorizontal="true"
                             android:background="@mipmap/diyiming1" />
 
-                        <com.example.android.promoter.Toos.XCRoundImageView
+                        <com.example.android.tiaozhan.Toos.XCRoundImageView
                             android:id="@+id/my_ds_paihang_tx1"
                             android:layout_width="56dp"
                             android:layout_height="56dp"
@@ -237,7 +237,7 @@
 
                             />
 
-                        <com.example.android.promoter.Toos.XCRoundImageView
+                        <com.example.android.tiaozhan.Toos.XCRoundImageView
                             android:id="@+id/my_ds_paihang_tx3"
                             android:layout_width="52dp"
                             android:layout_height="52dp"
@@ -281,10 +281,10 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <com.example.android.promoter.Toos.MyListView
+            <com.example.android.tiaozhan.Toos.MyListView
                 android:id="@+id/ds_paihang_list"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"></com.example.android.promoter.Toos.MyListView>
+                android:layout_height="wrap_content"></com.example.android.tiaozhan.Toos.MyListView>
 
             <RelativeLayout
                 android:id="@+id/gr_paihang"
@@ -329,7 +329,7 @@
 
                     </RelativeLayout>
 
-                    <com.example.android.promoter.Toos.CircleImageView
+                    <com.example.android.tiaozhan.Toos.CircleImageView
                         android:id="@+id/paihang_my_touxiang"
                         android:layout_width="43dp"
                         android:layout_height="43dp"

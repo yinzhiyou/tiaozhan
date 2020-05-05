@@ -8,7 +8,7 @@
     >
 
 
-    <com.example.android.promoter.Toos.CustomRoundAngleImageView
+    <com.example.android.tiaozhan.Toos.CustomRoundAngleImageView
         android:id="@+id/haoyou_touxiang"
         android:layout_width="70dp"
         android:layout_height="70dp"
@@ -120,7 +120,9 @@
     </LinearLayout>
 
 
-
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
     <RelativeLayout
         android:id="@+id/haoyou_anniu"
         android:layout_width="50dp"
@@ -135,10 +137,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="挑战"
+            android:text="邀请"
             android:textColor="#ffffff"
             android:textSize="12dp" />
     </RelativeLayout>
 
-
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/haoyou_juli"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginBottom="5dp"
+        android:text="距离"
+        android:textColor="#FF9B9B9B"
+        android:textSize="12dp"
+        />
+</RelativeLayout>
 </LinearLayout>

@@ -1,628 +1,857 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/beijing"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-
-
-
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:ratingbar="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="80dp"
-    >
-
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/grtx_zhengti"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
-        android:focusableInTouchMode="true"
-        android:orientation="vertical"
-        tools:context=".Home.HomeGRTXActivity">
+    android:layout_height="match_parent"
+    android:background="#ffffff">
 
 
-        <RelativeLayout
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:ratingbar="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        >
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/grtx_zhengti"
             android:layout_width="match_parent"
-            android:layout_height="260dp"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
 
-            android:background="@mipmap/grtx_beijing"
-            android:orientation="vertical">
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            tools:context=".Home.HomeGRTXActivity">
+
 
             <RelativeLayout
-                android:id="@+id/layout_base_title_rl"
                 android:layout_width="match_parent"
-                android:layout_height="45dp">
+                android:layout_height="280dp"
 
-                <ImageView
-                    android:id="@+id/fanhui"
-                    android:layout_width="40dp"
-                    android:layout_height="20dp"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="15dp"
-                    android:src="@mipmap/fanhuijian" />
-
-                <ImageView
-                    android:id="@+id/grtx_jiahao"
-                    android:layout_width="26dp"
-                    android:layout_height="16dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="15dp"
-                    android:src="@mipmap/cujiahao"
-                    android:textSize="17sp" />
-
-
-            </RelativeLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@id/layout_base_title_rl"
-                android:layout_marginTop="10dp"
+                android:background="@mipmap/grtx_beijing"
                 android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/layout_base_title_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp">
+
+                    <ImageView
+                        android:id="@+id/fanhui"
+                        android:layout_width="40dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:src="@mipmap/fanhui" />
+
+                    <ImageView
+                        android:id="@+id/grtx_jiahao"
+                        android:layout_width="26dp"
+                        android:layout_height="16dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:src="@mipmap/icon_jiahao_bai"
+                        android:textSize="17sp" />
+
+
+                </RelativeLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/layout_base_title_rl"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
 
-                    <com.example.android.promoter.Toos.CircleImageView
-                        android:id="@+id/grtx_touxiang"
-                        android:layout_width="85dp"
-                        android:layout_height="85dp"
-                        android:layout_marginLeft="40dp"
-                        android:layout_marginRight="25dp"
-                        android:background="@mipmap/home_vip_head"
-                        android:scaleType="fitXY"
-
-                        />
-
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:layout_height="wrap_content">
+
+                        <com.example.android.tiaozhan.Toos.CircleImageView
+                            android:id="@+id/grtx_touxiang"
+                            android:layout_width="85dp"
+                            android:layout_height="85dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginRight="25dp"
+                            android:background="@mipmap/home_vip_head"
+                            android:scaleType="fitXY"
+
+                            />
 
                         <RelativeLayout
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            >
-
-                            <TextView
-                                android:id="@+id/grtx_name"
-                                android:layout_width="70dp"
-                                android:layout_height="wrap_content"
-                                android:text=""
-                                android:ellipsize="end"
-                                android:maxEms="6"
-                                android:singleLine="true"
-
-                                android:layout_centerVertical="true"
-                                android:textColor="#FFFFFFFF"
-                                android:textSize="14dp" />
+                            android:layout_below="@+id/grtx_touxiang"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="3dp">
 
                             <ImageView
                                 android:id="@+id/grtx_xingbie"
                                 android:layout_width="15dp"
                                 android:layout_height="15dp"
-                                android:layout_gravity="center"
-                                android:layout_toRightOf="@id/grtx_name"
                                 android:layout_centerVertical="true"
-                                android:background="@mipmap/xingbie" />
+
+                                android:layout_gravity="center" />
 
                             <ImageView
                                 android:id="@+id/grtx_qiu"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
                                 android:layout_centerVertical="true"
-                                android:layout_toRightOf="@id/grtx_xingbie"
-                                android:layout_marginLeft="20dp" />
+                                android:layout_marginLeft="10dp"
+                                android:layout_toRightOf="@id/grtx_xingbie" />
 
                             <TextView
                                 android:id="@+id/grtx_dengji"
                                 android:layout_width="26dp"
-                                android:layout_height="12dp"
-                                android:layout_toRightOf="@id/grtx_qiu"
-                                android:layout_marginLeft="20dp"
-                                android:background="#FFF4C03D"
-                                android:gravity="center"
-                                android:text="Lv 2"
+                                android:layout_height="wrap_content"
                                 android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_toRightOf="@id/grtx_qiu"
+                                android:background="@drawable/lv_bg"
+                                android:gravity="center"
+                                android:text=""
                                 android:textColor="#ffffff"
                                 android:textSize="10dp" />
                         </RelativeLayout>
 
-                        <RelativeLayout
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/grtx_touxiang"
+                            android:orientation="vertical">
 
-                            android:layout_marginTop="4dp">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
 
-                            <TextView
-                                android:layout_width="70dp"
+                                <TextView
+                                    android:id="@+id/grtx_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:ellipsize="end"
+                                    android:maxEms="11"
+                                    android:singleLine="true"
+                                    android:text=""
+                                    android:textColor="#FFFFFFFF"
+                                    android:textSize="14dp" />
+
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="对手币"
-                                android:layout_centerVertical="true"
-                                android:id="@+id/duishoubi"
-                                android:textColor="#FFFFFFFF"
-                                android:textSize="12dp" />
 
-                            <TextView
-                                android:id="@+id/grtx_jinbi"
-                                android:layout_width="wrap_content"
+                                android:layout_marginTop="4dp">
+
+                                <TextView
+                                    android:id="@+id/duishoubi"
+                                    android:layout_width="60dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:text="对手币"
+                                    android:textColor="#FFFFFFFF"
+                                    android:textSize="12dp" />
+
+                                <TextView
+                                    android:id="@+id/grtx_jinbi"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="center"
+                                    android:layout_toRightOf="@id/duishoubi"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="#FFFFFFFF"
+                                    android:textSize="12dp" />
+
+                                <TextView
+                                    android:id="@+id/grtx_tyjb"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="13dp"
+
+                                    android:layout_marginRight="12dp"
+                                    android:layout_toRightOf="@+id/grtx_jinbi"
+                                    android:text="对手币？"
+                                    android:textColor="#FFFFFFFF"
+                                    android:textSize="12dp" />
+
+                            </RelativeLayout>
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="10000"
-                                android:layout_centerVertical="true"
-                                android:textColor="#FFFFFFFF"
-                                android:layout_toRightOf="@id/duishoubi"
-                                android:layout_gravity="center"
-                                android:gravity="center"
-                                android:textSize="12dp" />
 
-                            <TextView
-                                android:id="@+id/grtx_tyjb"
-                                android:layout_width="wrap_content"
+                                android:layout_marginTop="4dp">
+
+                                <TextView
+                                    android:id="@+id/grtx_haopinglv"
+                                    android:layout_width="60dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:text="好    评"
+                                    android:textColor="#FFFFFFFF"
+                                    android:textSize="12dp" />
+
+                                <com.example.android.tiaozhan.Toos.StarBar
+                                    android:id="@+id/starBar"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toRightOf="@id/grtx_haopinglv"
+                                    ratingbar:starCount="5"
+                                    ratingbar:starDistance="5dp"
+
+                                    ratingbar:starEmpty="@mipmap/xingxinghei"
+                                    ratingbar:starFill="@mipmap/xingxinghuang"
+                                    ratingbar:starSize="12dp" />
+
+                                <TextView
+                                    android:id="@+id/grade"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="13dp"
+                                    android:layout_toRightOf="@+id/starBar"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="#FFFFFFFF"
+                                    android:textSize="12dp" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="10dp"
-                                android:text="对手币？"
-                                android:layout_centerVertical="true"
-                                android:layout_alignParentRight="true"
-                                android:textColor="#FFFFFFFF"
-                                android:layout_marginRight="12dp"
-                                android:textSize="12dp" />
+                                android:layout_marginTop="4dp">
 
-                        </RelativeLayout>
+                                <TextView
+                                    android:id="@+id/lvyuelv"
+                                    android:layout_width="60dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:text="履约率"
+                                    android:textColor="#FFFFFFFF"
+                                    android:textSize="12dp" />
+
+                                <TextView
+                                    android:id="@+id/grtx_lvyuelv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toRightOf="@id/lvyuelv"
+
+                                    android:text=""
+                                    android:textColor="#FFFFFFFF"
+                                    android:textSize="12dp" />
+
+                            </RelativeLayout>
 
 
-                        <RelativeLayout
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <GridView
+                        android:id="@+id/grtx_gridview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:numColumns="2"></GridView>
+                </LinearLayout>
+                <!--分割线-->
+                <LinearLayout
+                    android:id="@+id/grtx_xiala"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="#FFFFFF"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/grtx_jiahaoyou"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/grtx_jiahaoyou_image"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@mipmap/jiahaoyou" />
+
+                        <TextView
+                            android:id="@+id/grtx_jiahaoyou_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="申请加好友"
+                            android:textSize="14sp"
+                            android:textColor="#333333" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/grtx_guanzhu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/grtx_guanzhu_image"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@mipmap/icon_guanzhu" />
+
+                        <TextView
+                            android:id="@+id/grtx_guanzhu_text"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="关注"
+                            android:textSize="14sp"
+                            android:textColor="#333333"/>
+                    </LinearLayout>
 
-                            android:layout_marginTop="4dp">
+                    <LinearLayout
+                        android:id="@+id/grtx_jiaheimingdan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
 
-                            <TextView
-                                android:id="@+id/grtx_haopinglv"
-                                android:layout_width="70dp"
-                                android:layout_height="wrap_content"
-                                android:text="好评率"
-                                android:layout_centerVertical="true"
-                                android:textColor="#FFFFFFFF"
-                                android:textSize="12dp" />
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@mipmap/jiaheimingdan" />
 
-                            <com.example.android.promoter.Toos.StarBar
-                                android:id="@+id/starBar"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_toRightOf="@id/grtx_haopinglv"
-                                ratingbar:starCount="5"
-                                android:layout_centerVertical="true"
-                                ratingbar:starDistance="5dp"
-
-                                ratingbar:starEmpty="@mipmap/xingxinghei"
-                                ratingbar:starFill="@mipmap/xingxinghuang"
-                                ratingbar:starSize="12dp" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/grade"
-                                android:textColor="#FFFFFFFF"
-                                android:layout_marginRight="12dp"
-                                android:layout_gravity="center"
-                                android:gravity="center"
-                                android:layout_centerVertical="true"
-                                android:textSize="12dp"
-                                android:layout_alignParentRight="true"
-                                android:text="4.0"/>
-                        </RelativeLayout>
-
-                        <RelativeLayout
-                            android:layout_width="match_parent"
+                        <TextView
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp">
+                            android:layout_gravity="center"
+                            android:text="加入黑名单"
+                            android:textSize="14sp"
+                            android:textColor="#333333" />
+                    </LinearLayout>
 
-                            <TextView
-                                android:layout_width="70dp"
-                                android:layout_height="wrap_content"
-                                android:text="履约率"
-                                android:id="@+id/lvyuelv"
-                                android:layout_centerVertical="true"
-                                android:textColor="#FFFFFFFF"
-                                android:textSize="12dp" />
+                    <LinearLayout
+                        android:id="@+id/home_grtx_jubao"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
 
-                            <TextView
-                                android:id="@+id/grtx_lvyuelv"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerVertical="true"
-                                android:layout_toRightOf="@id/lvyuelv"
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@mipmap/jubao" />
 
-                                android:text=""
-                                android:textColor="#FFFFFFFF"
-                                android:textSize="12dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="举报"
+                            android:textSize="14sp"
+                            android:textColor="#333333" />
+                    </LinearLayout>
+                </LinearLayout>
 
-                        </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_centerInParent="true"
+
+                android:background="#FFFFFF"
+                android:orientation="horizontal">
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="188dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/look_partner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="个人资料"
+                            android:textColor="#D85D27"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
 
 
                     </LinearLayout>
 
-                </LinearLayout>
+                    <View
+                        android:id="@+id/my_look_partner"
+                        android:layout_width="20dp"
+                        android:layout_height="2dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:background="#D85D27"
 
-                <GridView
-                    android:id="@+id/grtx_gridview"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:numColumns="2"></GridView>
+                        />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="188dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/have_partner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="相册"
+                            android:textColor="#333333"
+                            android:textSize="16sp" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/my_have_partner"
+                        android:layout_width="20dp"
+                        android:layout_height="2dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:background="#D85D27"
+                        android:visibility="invisible" />
+                </RelativeLayout>
             </LinearLayout>
-            <!--分割线-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E9E9E9" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"></androidx.recyclerview.widget.RecyclerView>
+
             <LinearLayout
-                android:id="@+id/grtx_xiala"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="30dp"
-                android:layout_marginTop="30dp"
-                android:background="#FF333333"
+                android:id="@+id/zp_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="37dp"
                 android:orientation="vertical"
                 android:visibility="gone">
 
-                <LinearLayout
-                    android:id="@+id/grtx_jiahaoyou"
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
+                    android:layout_gravity="center"
+                    android:src="@mipmap/icon_wzp" />
 
-                    <ImageView
-                        android:id="@+id/grtx_jiahaoyou_image"
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="10dp"
-                        android:background="@mipmap/jiahaoyou" />
-
-                    <TextView
-                        android:id="@+id/grtx_jiahaoyou_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="申请加好友"
-                        android:textColor="#ffffff" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/grtx_guanzhu"
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="226dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:text="嗨，该用户暂时没有上传照片奥，看看其他内容吧！"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
 
-                    <ImageView
-                        android:id="@+id/grtx_guanzhu_image"
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="10dp"
-                        android:background="@mipmap/guanzhu" />
-
-                    <TextView
-                        android:id="@+id/grtx_guanzhu_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="关注"
-                        android:textColor="#ffffff" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/grtx_jiaheimingdan"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="10dp"
-                        android:background="@mipmap/jiaheimingdan" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="加入黑名单"
-                        android:textColor="#ffffff" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/home_grtx_jubao"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="10dp"
-                        android:background="@mipmap/jubao" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="举报"
-                        android:textColor="#ffffff" />
-                </LinearLayout>
             </LinearLayout>
 
-        </RelativeLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="34dp"
-            android:background="#ffffff">
-
-            <TextView
-                android:layout_width="70dp"
+            <LinearLayout
+                android:id="@+id/geren_zl"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
-                android:text="性别:" />
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/grtx_sex_text"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="2"
-                android:text=""
-                android:textColor="#FF333333" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:background="#ffffff">
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:text="年龄:" />
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:text="性别:"
+                        android:textColor="#9B9B9B"
+                        android:textSize="14sp" />
 
-            <TextView
-                android:id="@+id/grtx_age"
-                android:layout_width="0dp"
+                    <TextView
+                        android:id="@+id/grtx_sex_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:text=""
+                        android:textColor="#FF333333" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="年龄:"
+                        android:textColor="#9B9B9B"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/grtx_age"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:text=""
+                        android:textColor="#FF333333"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:background="#ffffff">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:text="身高:"
+                        android:textColor="#9B9B9B"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/grtx_shengao"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:text=""
+                        android:textColor="#FF333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="体重:"
+                        android:textColor="#9B9B9B"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/grtx_tizhong"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:text=""
+                        android:textColor="#FF333333"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:background="#ffffff">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:text="常驻地:"
+                        android:textColor="#9B9B9B"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/grtx_czd"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:text=""
+                        android:textColor="#FF333333"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp">
+
+                    <TextView
+                        android:id="@+id/pingding"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:text="技术水平自我评定:"
+                        android:textColor="#9B9B9B"
+                        android:visibility="gone"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/grtx_xiaiyundong"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/pingding"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="5dp"
+                        android:text=""
+                        android:textColor="#FF333333"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="8dp"
+                        android:text="个人简介:"
+                        android:textColor="#9B9B9B"
+                        android:visibility="gone"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/grtx_jianjie"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="10dp"
+                        android:text=""
+                        android:textColor="#FF333333"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="#F3F3F3" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:background="#ffffff"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="9dp"
+                        android:text="技术分及等级"
+                        android:textColor="#4A4A4A"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E9E9E9" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+
+                    android:background="#FFFFFF">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="运动项目"
+                        android:textColor="#FF333333"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="139dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="技术分"
+                        android:textColor="#FF333333"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="253dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="等级"
+                        android:textColor="#FF333333"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E9E9E9" />
+
+                <com.example.android.tiaozhan.Toos.MyListView
+                    android:id="@+id/grtx_list1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null"></com.example.android.tiaozhan.Toos.MyListView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#ffffff"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="精彩瞬间"
+                        android:textColor="#FF333333"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="12dp"
+                        android:background="@mipmap/youjiantou" />
+                </LinearLayout>
+
+                <com.example.android.tiaozhan.Toos.MyListView
+                    android:id="@+id/grtx_list2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:visibility="gone"></com.example.android.tiaozhan.Toos.MyListView>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:id="@+id/bj_line"
+                android:background="#F3F3F3" />
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="2"
-                android:text=""
-                android:textColor="#FF333333" />
+                android:id="@+id/faqi_layout"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+
+
+                    android:background="#ffffff"
+                    android:gravity="center">
+
+                    <RelativeLayout
+                        android:id="@+id/grtx_fqtz"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="23dp"
+                        android:layout_marginRight="23dp"
+                        android:background="@drawable/login_rounded_corners">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="发起挑战"
+                            android:textColor="#ffffff"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="34dp"
-            android:background="#ffffff">
 
-            <TextView
-                android:layout_width="70dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
-                android:text="身高:" />
+    </ScrollView>
 
-            <TextView
-                android:id="@+id/grtx_shengao"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="2"
-                android:text=""
-                android:textColor="#FF333333" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:text="体重:" />
-
-            <TextView
-                android:id="@+id/grtx_tizhong"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="2"
-                android:text=""
-                android:textColor="#FF333333" />
-        </LinearLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="3dp"
-            android:paddingBottom="3dp"
-            android:background="#ffffff">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
-                android:text="技术水平自我评定:"
-                />
-
-            <TextView
-                android:id="@+id/grtx_xiaiyundong"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-               android:paddingLeft="10dp"
-                android:text=""
-                android:textColor="#FF333333" />
-        </RelativeLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="34dp"
-            android:background="#ffffff">
-
-            <TextView
-                android:layout_width="70dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
-                android:text="常驻地:" />
-
-            <TextView
-                android:id="@+id/grtx_czd"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="2"
-                android:text=""
-                android:textColor="#FF333333" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="38dp"
-            android:background="#E1E0E1">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="运动项目"
-                android:textColor="#FF333333"
-                android:textSize="15dp" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="技术分"
-                android:textColor="#FF333333"
-                android:textSize="15dp" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="等级"
-                android:textColor="#FF333333"
-                android:textSize="15dp" />
-        </LinearLayout>
-
-        <com.example.android.promoter.Toos.MyListView
-            android:id="@+id/grtx_list1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:divider="@null"></com.example.android.promoter.Toos.MyListView>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="#ffffff"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="8dp"
-                android:text="个人简介"
-                android:textColor="#FF333333"
-                android:textSize="15dp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/grtx_jianjie"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="8dp"
-                android:text="走自己的路让别人去说吧！喜欢结交各种打球的好朋友一起相约打球。"
-                android:textColor="#FF333333"
-                android:textSize="14dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="38dp"
-            android:layout_marginTop="10dp"
-            android:visibility="gone"
-            android:background="#ffffff">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
-                android:text="精彩瞬间"
-                android:textColor="#FF333333"
-                android:textSize="15dp"
-                android:layout_weight="1"
-                android:textStyle="bold" />
-
-            <ImageView
-                android:layout_width="12dp"
-                android:layout_height="18dp"
-                android:background="@mipmap/youjiantou"
-                android:layout_gravity="center"
-                android:layout_marginRight="12dp"
-                />
-        </LinearLayout>
-
-        <com.example.android.promoter.Toos.MyListView
-            android:id="@+id/grtx_list2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="2dp"
-            android:visibility="gone"
-            android:layout_marginTop="2dp"></com.example.android.promoter.Toos.MyListView>
-
-
-    </LinearLayout>
-</ScrollView>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="#ffffff">
-
-        <RelativeLayout
-            android:id="@+id/grtx_fqtz"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="#D85D27">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="发起挑战"
-                android:textColor="#ffffff"
-                android:textSize="16sp" />
-
-        </RelativeLayout>
-
-    </LinearLayout>
 
 </RelativeLayout>

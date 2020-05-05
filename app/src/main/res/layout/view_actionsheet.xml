@@ -16,8 +16,8 @@
         android:paddingBottom="10dp"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:textColor="#8F8F8F"
-        android:textSize="13sp"
+        android:textColor="#4A4A4A"
+        android:textSize="20sp"
         android:visibility="gone" />
 
     <ScrollView
@@ -43,8 +43,8 @@
         android:background="@drawable/actionsheet_single_selector"
         android:gravity="center"
         android:text="取消"
-        android:textColor="#999999"
+        android:textColor="#4A4A4A"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        />
 
 </LinearLayout>

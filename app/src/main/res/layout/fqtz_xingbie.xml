@@ -41,7 +41,7 @@
         android:id="@+id/fqtz_xingbie_nan"
         android:layout_width="310dp"
         android:layout_height="34dp"
-        android:background="@drawable/shuying_4"
+        android:background="@drawable/sex_out"
         android:layout_centerInParent="true"
         android:layout_gravity="center"
         android:layout_marginTop="32dp"
@@ -50,6 +50,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#4A4A4A"
+            android:id="@+id/nan"
             android:text="男"
             android:layout_centerInParent="true"
             />
@@ -58,7 +60,7 @@
         android:id="@+id/fqtz_xingbie_nv"
         android:layout_width="310dp"
         android:layout_height="34dp"
-        android:background="@drawable/shuying_4"
+        android:background="@drawable/sex_out"
         android:layout_centerInParent="true"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
@@ -68,6 +70,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="女"
+            android:id="@+id/nv"
+            android:textColor="#4A4A4A"
             android:layout_centerInParent="true"
             />
     </RelativeLayout>
@@ -75,7 +79,7 @@
         android:id="@+id/fqtz_xingbie_buxian"
         android:layout_width="310dp"
         android:layout_height="34dp"
-        android:background="@drawable/shuying_4"
+        android:background="@drawable/sex_out"
         android:layout_centerInParent="true"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
@@ -86,6 +90,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="不限"
+            android:id="@+id/bux"
+            android:textColor="#4A4A4A"
             android:layout_centerInParent="true"
             />
     </RelativeLayout>

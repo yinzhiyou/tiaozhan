@@ -46,7 +46,7 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="18dp"
-        android:background="#D85D27"
+
         android:layout_gravity="center"
         android:orientation="vertical"
         >
@@ -55,7 +55,7 @@
             android:id="@+id/renwu_jinbi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="通用金币50个"
+            android:text=""
             android:textSize="11dp"
             android:layout_gravity="center"
             android:textColor="#ffffff"
@@ -69,7 +69,7 @@
 
 <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="504dp"
+    android:layout_height="450dp"
     android:orientation="vertical"
     android:background="@mipmap/renwubeijing2"
     >
@@ -111,7 +111,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+2.5个通用金币/次"
+                android:text="+2.5个对手币/次"
                 android:textColor="#D85D27"
                 android:textSize="12dp"
                 android:layout_marginTop="4dp"
@@ -125,16 +125,17 @@
             android:layout_height="20dp"
             android:layout_gravity="center"
 
-            android:background="@drawable/renwu_button"
+            android:gravity="center"
+            android:background="@drawable/login_rounded_corners"
             >
             <TextView
                 android:id="@+id/renwu_qiandao_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="已签到"
+                android:text="签到"
                 android:textSize="11dp"
                 android:textColor="#ffffff"
-                android:layout_centerInParent="true"
+
                 />
 
         </RelativeLayout>
@@ -174,7 +175,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+5个通用金币/次（匹配成功后）"
+                android:text="+5个对手币/次（匹配成功后）"
                 android:textColor="#D85D27"
                 android:textSize="12dp"
                 android:layout_marginTop="4dp"
@@ -187,7 +188,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="分享活动后，还有可能"
+                    android:text="分享活动后,还有可能"
                     android:textColor="#D85D27"
                     android:textSize="12dp"
                     android:layout_marginTop="4dp"
@@ -305,7 +306,7 @@
         android:layout_marginRight="24dp"
         >
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_weight="1"
@@ -320,7 +321,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+50个通用金币/注册新用户"
+                android:text="+50个对手币/注册新用户"
                 android:textColor="#D85D27"
                 android:textSize="12dp"
                 android:layout_marginTop="4dp"
@@ -334,7 +335,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="例:有20个新用户注册，您将获得"
+                    android:text="例:有20个新用户注册,您将获得"
                     android:textColor="#D85D27"
                     android:textSize="12dp"
                     android:layout_marginTop="4dp"
@@ -344,7 +345,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1000个通用金币"
+                    android:text="1000个对手币"
                     android:textColor="#ff0000"
                     android:textStyle="bold"
                     android:textSize="12dp"
@@ -408,7 +409,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+50个通用金币/次（审核通过后）"
+                android:text="+50个对手币/次（审核通过后）"
                 android:textColor="#D85D27"
                 android:textSize="12dp"
                 android:layout_marginTop="4dp"
@@ -470,7 +471,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+20个通用金币/次（审核通过后）"
+                android:text="+20个对手币/次（审核通过后）"
                 android:textColor="#D85D27"
                 android:textSize="12dp"
                 android:layout_marginTop="4dp"
@@ -506,6 +507,71 @@
         android:layout_marginRight="24dp"
         android:layout_marginTop="4dp"
         ></View>
+
+
+    <!--分割线-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="· 意见反馈"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+20个对手币/条（被认为是建设性意见）"
+                android:textColor="#D85D27"
+                android:textSize="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="10dp"
+                />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/renwu_qufankui"
+            android:layout_width="55dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+
+            android:background="@drawable/login_rounded_corners"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="去反馈"
+                android:textSize="11dp"
+                android:textColor="#ffffff"
+                android:layout_centerInParent="true"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#9B9B9B"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="4dp"
+        ></View>
+
+
 
     <!--分割线-->
     <LinearLayout

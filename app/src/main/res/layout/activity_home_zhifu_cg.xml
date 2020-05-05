@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_gravity="center"
     tools:context=".Home.HomeZhifuCGActivity">
 
     <include
@@ -21,23 +22,47 @@
         <ImageView
             android:layout_width="62dp"
             android:layout_height="62dp"
+            android:id="@+id/dui"
             android:background="@mipmap/zhifuchenggongbeijing2"
             android:layout_centerInParent="true"
             />
 
+        <TextView
+            android:id="@+id/CG_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="报名成功"
+            android:textColor="#FFFFFF"
+            android:layout_below="@+id/dui"
+            android:textSize="16sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            />
     </RelativeLayout>
 
-    <TextView
-        android:id="@+id/CG_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="报名成功"
-        android:textColor="#FF333333"
-        android:textSize="18dp"
-        android:layout_marginTop="30dp"
-        android:layout_gravity="center"
-        />
 
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/huod_xz"
+        android:textColor="#FF333333"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_margin="20dp"
+        android:textSize="14sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/huod_xz_cg"
+        android:gravity="center"
+        android:textColor="#FF333333"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_margin="20dp"
+        android:visibility="gone"
+        android:textSize="14sp"/>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -49,9 +74,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="分享即可获得一个对手币"
+            android:id="@+id/fenx"
+            android:text=""
             android:textColor="#FF333333"
-            android:textSize="14dp"/>
+            android:textSize="14sp"/>
 
         <TextView
             android:id="@+id/CG_tyjb"
@@ -93,13 +119,13 @@
             android:layout_width="110dp"
             android:layout_height="34dp"
             android:layout_marginLeft="20dp"
-            android:background="@drawable/zhifu_cg_yuanjiao">
+            android:background="@drawable/ellipse_home_details">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:text="立即分享"
-                android:textColor="#ffffff"
+                android:textColor="#FFD85D27"
                 android:textSize="12dp"/>
         </RelativeLayout>
 

@@ -2,4 +2,5 @@
 <resources>
     <item name="dropDownMenu_tabMenuView" type="id"></item>
     <item name="dropDownMenu_underLine" type="id"></item>
+    <item type="id" name="glide_tag" />
 </resources>

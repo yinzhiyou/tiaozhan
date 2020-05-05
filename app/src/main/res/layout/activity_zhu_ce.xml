@@ -5,19 +5,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#ffffff"
+    android:orientation="vertical"
     tools:context=".Denglu.ZhuCeActivity">
 
 
-    <include layout="@layout/layout_tab"
+    <include
+        layout="@layout/layout_tab"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#FF999999"/>
+        android:background="#FF999999" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,107 +27,125 @@
         android:layout_marginRight="20dp"
         android:orientation="vertical">
 
-
-        <EditText
-            android:id="@+id/zhuce_shouji"
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:background="@null"
-            android:layout_gravity="center_vertical"
-            android:textSize="14dp"
-            android:maxLength="11"
-            android:phoneNumber="true"
-            android:textColorHint="#999999"
-            android:layout_marginTop="60dp"
-            android:hint="请输入手机号"/>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="4dp"
-        android:background="#999999"/>
-
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="20dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="16dp"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/zhuce_yanzheng"
-                android:layout_width="160dp"
-                android:layout_height="20dp"
-                android:background="@null"
+                android:id="@+id/zhuce_shouji"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:textSize="14dp"
+                android:background="@null"
+                android:hint="请输入手机号"
+                android:maxLength="11"
                 android:phoneNumber="true"
-                android:layout_weight="1"
                 android:textColorHint="#999999"
-                android:hint="请输入验证码"/>
+                android:layout_weight="1"
+                android:textSize="14sp" />
 
             <RelativeLayout
                 android:id="@+id/yanzheng"
                 android:layout_width="100dp"
-                android:layout_height="20dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
                 android:background="@drawable/login_rounded_corners">
 
                 <TextView
                     android:id="@+id/zhuce_yan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+
                     android:layout_centerInParent="true"
                     android:text="获取验证码"
                     android:textColor="#ffffff"
-                    android:textSize="12dp"/>
+                    android:textSize="12dp" />
 
             </RelativeLayout>
 
         </LinearLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:layout_marginTop="4dp"
-            android:background="#999999"/>
+            android:layout_marginTop="8dp"
+            android:background="#999999" />
 
-        <EditText
-            android:id="@+id/zhuce_mima"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/zhuce_yanzheng"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:maxLength="6"
+                    android:background="@null"
+                    android:hint="请输入验证码"
+                    android:phoneNumber="true"
+                    android:textColorHint="#999999"
+                    android:textSize="14sp" />
+
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="#999999" />
+
+
+
+
+        <RelativeLayout
             android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/zhuce_mima"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="16dp"
+                android:background="@null"
+                android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:hint="请输入密码"
+                android:maxLength="15"
+                android:password="true"
+                android:layout_toLeftOf="@+id/main_denglu_yan"
+                android:textColorHint="#999999"
+                android:textSize="14sp" />
+        <ImageView
+            android:id="@+id/main_denglu_yan"
+            android:layout_width="20dp"
             android:layout_height="20dp"
-            android:background="@null"
-            android:layout_gravity="center_vertical"
-            android:textSize="14dp"
-            android:maxLength="15"
-            android:textColorHint="#999999"
             android:layout_marginTop="16dp"
-            android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-            android:password="true"
-            android:hint="请输入密码（至少输入6位数字或英文字母）"/>
+            android:layout_alignParentRight="true"
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="4dp"
-            android:background="#999999"/>
-        <EditText
-            android:id="@+id/zhuce_mima2"
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:background="@null"
+
             android:layout_gravity="center_vertical"
-            android:textSize="14dp"
-            android:maxLength="15"
-            android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-            android:textColorHint="#999999"
-            android:layout_marginTop="16dp"
-            android:password="true"
-            android:hint="请再次输入密码"/>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="4dp"
-            android:background="#999999"/>
+            />
+
+        </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="#999999" />
+
+
+
+
 
 
         <LinearLayout
@@ -134,23 +153,24 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp">
 
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
             <ImageView
                 android:id="@+id/zhuce_yuedu"
                 android:layout_width="14dp"
                 android:layout_height="14dp"
-                android:background="@mipmap/huidian"
                 android:layout_gravity="center"
-                />
-
+                android:background="@mipmap/duihaobai" />
+            </RelativeLayout>
             <TextView
                 android:id="@+id/zhuce_tiaokuan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="已阅读并接受“用户服务条款”"
-                android:textSize="12dp"
+                android:layout_marginLeft="14dp"
+                android:text="已阅读并接受“用户协议”"
                 android:textColor="#333333"
-                android:layout_marginLeft="6dp"
-                />
+                android:textSize="12dp" />
         </LinearLayout>
 
 
@@ -158,7 +178,7 @@
             android:id="@+id/zhuce_zhuce"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginTop="134dp"
+            android:layout_marginTop="60dp"
             android:background="@drawable/login_rounded_corners">
 
             <TextView
@@ -166,11 +186,11 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:text="注册"
+                android:textStyle="bold"
                 android:textColor="#ffffff"
-                android:textSize="16sp"/>
+                android:textSize="16sp" />
 
         </RelativeLayout>
-
 
 
     </LinearLayout>

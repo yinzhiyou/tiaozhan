@@ -18,7 +18,7 @@
             android:background="@mipmap/daichuli"
 
             />
-        <com.example.android.promoter.Toos.CustomRoundAngleImageView
+        <com.example.android.tiaozhan.Toos.CustomRoundAngleImageView
             android:id="@+id/promo_dcl_list_touxiang"
             android:layout_width="80dp"
             android:layout_height="80dp"

@@ -124,13 +124,27 @@
 
         </com.handmark.pulltorefresh.library.PullToRefreshListView>
     </LinearLayout>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
         android:id="@+id/zanwu_dd"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
         android:visibility="gone"
-        android:text="暂无订单！"/>
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:src="@mipmap/icon_qxy_dd"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="36dp"
+
+
+            android:textSize="14sp"
+            android:text="亲，您的订单暂时是空的呦~"/>
+    </LinearLayout>
 </RelativeLayout>

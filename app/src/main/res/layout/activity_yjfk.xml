@@ -67,7 +67,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="(必填)"
+                android:text="(选填)"
                 android:textColor="#FF9B9B9B"
                 android:textSize="10dp"
                 android:layout_gravity="center"
@@ -78,10 +78,12 @@
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:id="@+id/phone_num"
                 android:hint="便于我们与您联系！"
                 android:textColorHint="#FF9D9D9D"
                 android:textSize="15dp"
                 android:layout_gravity="center"
+                android:inputType="number"
                 android:layout_weight="2"
                 android:background="@null"
                 />
@@ -122,6 +124,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:hint="便于我们与您联系！"
+                android:id="@+id/eml_num"
                 android:textColorHint="#FF9D9D9D"
                 android:textSize="15dp"
                 android:layout_gravity="center"

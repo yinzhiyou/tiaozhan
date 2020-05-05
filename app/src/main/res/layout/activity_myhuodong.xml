@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:fitsSystemWindows="true"
     tools:context=".My.MyhuodongActivity">
 
     <RelativeLayout
@@ -335,8 +336,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginTop="8dp"
-                            android:text="待确认结束/
-待填写比赛结果"
+                            android:text="待填写结果"
                             android:textColor="#FF333333"
                             android:textSize="12dp" />
                     </LinearLayout>

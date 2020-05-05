@@ -6,7 +6,7 @@
     android:layout_height="68dp">
 
 
-    <com.example.android.promoter.Toos.CustomRoundAngleImageView
+    <com.example.android.tiaozhan.Toos.CustomRoundAngleImageView
         android:id="@+id/hmd_touxiang"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

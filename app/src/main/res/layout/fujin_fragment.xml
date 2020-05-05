@@ -14,8 +14,8 @@
 
         <ImageView
             android:id="@+id/fujin_huodong"
-            android:layout_width="14dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="20dp"
             android:layout_gravity="center"
             android:layout_marginLeft="12dp"
             android:background="@mipmap/huodonghomehei" />
@@ -26,7 +26,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:gravity="right"
-            android:text="附近伙伴"
+            android:text="附近对手"
             android:textColor="#333333"
             android:textSize="18dp" />
 
@@ -169,12 +169,12 @@
             android:orientation="vertical"
             >
 
-            <com.example.android.promoter.Toos.MyListView
+            <com.example.android.tiaozhan.Toos.MyListView
                 android:id="@+id/fujin_sxList1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#E6ffffff"
-                android:divider="@null"></com.example.android.promoter.Toos.MyListView>
+                android:divider="@null"></com.example.android.tiaozhan.Toos.MyListView>
         </LinearLayout>
 
         <LinearLayout
@@ -191,12 +191,12 @@
                 android:gravity="center"
                 android:background="#E6ffffff"
                 />
-            <com.example.android.promoter.Toos.MyListView
+            <com.example.android.tiaozhan.Toos.MyListView
                 android:id="@+id/fujin_sxList2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#E6ffffff"
-                android:divider="@null"></com.example.android.promoter.Toos.MyListView>
+                android:divider="@null"></com.example.android.tiaozhan.Toos.MyListView>
 
         </LinearLayout>
         <LinearLayout
@@ -206,12 +206,12 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <com.example.android.promoter.Toos.MyListView
+            <com.example.android.tiaozhan.Toos.MyListView
                 android:id="@+id/fujin_sxList3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#E6ffffff"
-                android:divider="@null"></com.example.android.promoter.Toos.MyListView>
+                android:divider="@null"></com.example.android.tiaozhan.Toos.MyListView>
         </LinearLayout>
 
 

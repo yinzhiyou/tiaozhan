@@ -32,7 +32,7 @@
 
             android:orientation="horizontal">
 
-            <com.example.android.promoter.Toos.XCRoundImageView
+            <com.example.android.tiaozhan.Toos.XCRoundImageView
                 android:id="@+id/my_jingcai_item_touxiang"
                 android:layout_width="55dp"
                 android:layout_height="55dp"
@@ -169,7 +169,7 @@
         </LinearLayout>
 
         <!--分割线-->
-        <com.example.android.promoter.Toos.MyListView
+        <com.example.android.tiaozhan.Toos.MyListView
             android:id="@+id/my_jingcai_item_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

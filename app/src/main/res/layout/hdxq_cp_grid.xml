@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:orientation="horizontal"
+    >
+
+    <RelativeLayout
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        >
+        <com.example.android.tiaozhan.Toos.CustomRoundAngleImageView
+            android:id="@+id/hdxq_a_grid_touxiang"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/icon_touxiang_wu"
+            android:scaleType="fitXY"
+            />
+        <TextView
+            android:id="@+id/hdxq_a_grid_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="C1"
+            android:textColor="#FFFFFFFF"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:background="#4d000000"
+            />
+        <TextView
+            android:id="@+id/hdxq_a_grid_yqz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6dp"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="8dp"
+
+        >
+
+        <ImageView
+            android:id="@+id/hdxq_a_grid_danliao"
+            android:layout_width="13dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:visibility="gone"
+            android:src="@mipmap/danliao" />
+        <ImageView
+            android:id="@+id/hdxq_a_grid_qiulei"
+            android:layout_width="22dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+            android:background="@mipmap/qiulei"
+            />
+
+        <TextView
+            android:id="@+id/hdxq_a_grid_dengji"
+            android:layout_width="24dp"
+            android:layout_height="12dp"
+            android:layout_gravity="center"
+            android:background="#FFF5A623"
+            android:gravity="center"
+            android:text="Lv12"
+
+            android:textColor="#ffffff"
+            android:layout_marginTop="6dp"
+            android:textSize="8sp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/hdxq_a_grid_diejia"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginTop="2dp"
+            android:visibility="gone"
+            >
+            <ImageView
+                android:id="@+id/hdxq_a_grid_qiulei2"
+                android:layout_width="22dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:background="@mipmap/qiulei"
+                android:layout_centerInParent="true"/>
+
+            <TextView
+                android:id="@+id/hdxq_a_grid_dengji2"
+                android:layout_width="24dp"
+                android:layout_height="12dp"
+                android:layout_gravity="center"
+                android:background="#FFF5A623"
+                android:gravity="center"
+                android:text="Lv2"
+                android:textColor="#ffffff"
+                android:textSize="8sp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

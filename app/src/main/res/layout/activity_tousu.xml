@@ -45,20 +45,57 @@
             android:id="@+id/tousu_qita"
             android:layout_width="147dp"
             android:layout_height="38dp"
-            android:text="其他"
-            android:background="@drawable/tousu"
+            android:text="陪练未到场"
+            android:background="@drawable/tousu_two"
             android:gravity="center"
             android:visibility="gone"
             />
 
+        <TextView
+            android:id="@+id/tousu_referee"
+            android:layout_width="147dp"
+            android:layout_height="38dp"
+            android:text="裁判未到场"
+            android:background="@drawable/tousu_two"
+
+            android:gravity="center"
+
+            />
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:id="@+id/referee_wd"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="12dp"
+            android:text="请选择未到裁判(可多选)"
+            android:textColor="#FF333333" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:id="@+id/tousu_referee_num">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="请填写场馆未预留场地详情（选填）"
+        android:text="请填写详情（选填）"
         android:textColor="#FF333333"
         android:textSize="17dp"
         android:layout_marginLeft="12dp"

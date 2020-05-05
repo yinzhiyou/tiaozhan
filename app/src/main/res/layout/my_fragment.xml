@@ -13,41 +13,48 @@
 
         <ImageView
             android:id="@+id/my_huodong_Image"
-            android:layout_width="14dp"
-            android:layout_height="16dp"
+            android:layout_width="18dp"
+            android:layout_height="20dp"
             android:layout_gravity="center"
-            android:layout_marginLeft="12dp"
+            android:layout_marginLeft="24dp"
             android:layout_marginTop="12dp"
             android:background="@mipmap/huodonghome" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="我的"
+            android:textColor="#FFFFFF"
+            android:textSize="17dp" />
 
 
         <RelativeLayout
-            android:layout_width="17dp"
+            android:layout_width="27dp"
             android:layout_height="17dp"
             android:layout_gravity="center"
             android:layout_marginLeft="12dp"
             android:layout_marginTop="12dp"
             android:layout_marginRight="12dp"
+
             >
 
-        <ImageView
-            android:id="@+id/my_xiaoxi"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            android:layout_gravity="center"
-            android:background="@mipmap/xinxi" />
-        <ImageView
-            android:id="@+id/my_xiaoxi_weidu"
-            android:layout_width="6dp"
-            android:layout_height="6dp"
-            android:background="@mipmap/hongdianshi"
-            android:layout_alignParentRight="true"
-            />
+            <ImageView
+                android:id="@+id/my_xiaoxi"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:background="@mipmap/xinxi" />
+
+            <ImageView
+                android:id="@+id/my_xiaoxi_weidu"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_alignParentRight="true"
+                android:background="@mipmap/hongdianshi" />
         </RelativeLayout>
     </LinearLayout>
 
@@ -75,10 +82,10 @@
                     android:id="@+id/my_yinying"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="4dp"
                     android:layout_marginLeft="12dp"
-                    android:layout_marginRight="12dp"
                     android:layout_marginTop="4dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginBottom="4dp"
                     android:background="@drawable/wode_bj"
                     android:elevation="2dp"
                     android:orientation="vertical">
@@ -89,23 +96,22 @@
                         android:layout_height="108dp"
                         android:orientation="horizontal">
 
-                        <com.example.android.promoter.Toos.CircleImageView
+                        <com.example.android.tiaozhan.Toos.CircleImageView
                             android:id="@+id/my_touxiang"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
                             android:layout_gravity="bottom"
-                            android:layout_marginBottom="12dp"
                             android:layout_marginLeft="26dp"
-                            android:background="@mipmap/home_vip_head"
-                            android:scaleType="fitXY"
-                            />
+                            android:layout_marginBottom="12dp"
+                            android:background="@mipmap/logo"
+                            android:scaleType="fitXY" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
-                            android:layout_marginBottom="12dp"
                             android:layout_marginLeft="12dp"
+                            android:layout_marginBottom="12dp"
                             android:layout_weight="1"
                             android:orientation="vertical">
 
@@ -126,18 +132,17 @@
                                 <ImageView
                                     android:id="@+id/my_qiulei"
                                     android:layout_width="22dp"
-                                    android:layout_height="20dp"
-                                    android:background="@mipmap/qiulei" />
+                                    android:layout_height="20dp" />
 
                                 <TextView
                                     android:id="@+id/my_dengji"
                                     android:layout_width="26dp"
-                                    android:layout_height="12dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_marginLeft="8dp"
-                                    android:background="#F5A623"
+                                    android:background="@drawable/lv_bg"
                                     android:gravity="center"
-                                    android:text="Lv 2"
+                                    android:text=""
                                     android:textColor="#FFFFFFFF"
                                     android:textSize="10dp" />
 
@@ -150,8 +155,8 @@
                             android:layout_width="11dp"
                             android:layout_height="17dp"
                             android:layout_gravity="center"
-                            android:layout_marginRight="26dp"
                             android:layout_marginTop="12dp"
+                            android:layout_marginRight="26dp"
                             android:background="@mipmap/youjiantou" />
 
                     </LinearLayout>
@@ -184,9 +189,10 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:text="0个"
-                                android:visibility="gone"
                                 android:textColor="#FFF5A623"
-                                android:textSize="14dp" />
+                                android:textSize="14dp"
+                                android:visibility="gone" />
+
                             <ImageView
                                 android:layout_width="22dp"
                                 android:layout_height="17dp"
@@ -208,8 +214,8 @@
                         <View
                             android:layout_width="1dp"
                             android:layout_height="match_parent"
-                            android:layout_marginBottom="20dp"
                             android:layout_marginTop="14dp"
+                            android:layout_marginBottom="20dp"
                             android:background="#E1E0E1"></View>
 
                         <LinearLayout
@@ -262,11 +268,15 @@
 
             </LinearLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E9E9E9" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:layout_marginTop="1dp"
+
                 android:background="#ffffff">
 
                 <LinearLayout
@@ -278,7 +288,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="22dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="22dp"
                         android:layout_gravity="center"
                         android:background="@mipmap/myhuodong" />
@@ -367,14 +377,17 @@
                 </LinearLayout>
 
 
-
             </LinearLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E9E9E9" />
             <!--分割线-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:layout_marginTop="1dp"
+
                 android:background="#ffffff">
 
                 <LinearLayout
@@ -432,8 +445,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:visibility="gone"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:visibility="gone">
 
                     <ImageView
                         android:layout_width="22dp"
@@ -457,8 +470,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:visibility="visible"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:visibility="visible">
 
                     <ImageView
                         android:layout_width="22dp"
@@ -500,15 +513,18 @@
                 </LinearLayout>
 
 
-
-
             </LinearLayout>
 
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E9E9E9" />
             <!--分割线-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:layout_marginTop="1dp"
+
                 android:background="#ffffff">
 
                 <LinearLayout
@@ -531,6 +547,31 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="8dp"
                         android:text="设置"
+                        android:textColor="#FF333333"
+                        android:textSize="13dp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/my_cp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:background="@mipmap/icon_cp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:text="成为裁判"
                         android:textColor="#FF333333"
                         android:textSize="13dp" />
                 </LinearLayout>
@@ -584,14 +625,29 @@
                         android:textSize="13dp" />
                 </LinearLayout>
 
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E9E9E9" />
+            <!--分割线-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+
+                android:background="#ffffff">
+
+
                 <LinearLayout
                     android:id="@+id/my_bangzhu"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:visibility="visible"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:visibility="visible">
 
                     <ImageView
                         android:layout_width="22dp"
@@ -605,6 +661,76 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="8dp"
                         android:text="帮助中心"
+                        android:textColor="#FF333333"
+                        android:textSize="13dp" />
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:text=""
+                        android:textColor="#FF333333"
+                        android:textSize="13dp" />
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:text=""
+                        android:textColor="#FF333333"
+                        android:textSize="13dp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:text=""
                         android:textColor="#FF333333"
                         android:textSize="13dp" />
                 </LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+
+    >
+<ImageView
+    android:layout_width="43dp"
+    android:layout_height="43dp"
+    android:id="@+id/icon_cp"
+    android:src="@mipmap/icon_touxiang_wu"
+
+    />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       app:layout_constraintTop_toBottomOf="@id/icon_cp"
+        app:layout_constraintLeft_toLeftOf="@id/icon_cp"
+        app:layout_constraintRight_toRightOf="@id/icon_cp"
+        android:id="@+id/check_box"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

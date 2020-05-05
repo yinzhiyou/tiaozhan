@@ -81,7 +81,7 @@
     <include layout="@layout/layout_tab"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-    <com.example.android.promoter.Toos.HorizontalListView
+    <com.example.android.tiaozhan.Toos.HorizontalListView
         android:id="@+id/jbmx_xiangmu"
         android:layout_width="match_parent"
         android:layout_height="45dp"

@@ -63,7 +63,7 @@
             android:layout_marginTop="6dp"
             />
 
-        <com.example.android.promoter.Toos.zhifu.PayPwdView
+        <com.example.android.tiaozhan.Toos.zhifu.PayPwdView
             android:id="@+id/payPwdView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -86,7 +86,7 @@
     </LinearLayout>
 
 
-    <com.example.android.promoter.Toos.zhifu.PwdInputMethodView
+    <com.example.android.tiaozhan.Toos.zhifu.PwdInputMethodView
         android:id="@+id/inputMethodView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

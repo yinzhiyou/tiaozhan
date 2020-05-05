@@ -24,13 +24,27 @@
         android:divider="#F5F5F5">
 
     </com.handmark.pulltorefresh.library.PullToRefreshListView>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
         android:id="@+id/zanwu_c"
-        android:textSize="18sp"
-        android:text="暂无处理中投诉！"/>
+        android:visibility="gone"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:src="@mipmap/icon_qxy"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="36dp"
+
+
+            android:textSize="14sp"
+            android:text="您好，暂无处理中的投诉奥~"/>
+    </LinearLayout>
 </RelativeLayout>

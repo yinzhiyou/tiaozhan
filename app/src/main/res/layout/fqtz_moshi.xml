@@ -53,10 +53,11 @@
             android:layout_weight="1"
             >
         <RelativeLayout
-            android:id="@+id/fqtz_ms_yule"
+            android:id="@+id/fqtz_ms_jingji"
+
             android:layout_width="130dp"
             android:layout_height="34dp"
-            android:background="@drawable/shuying_4"
+            android:background="@drawable/mos_bg"
             android:layout_centerInParent="true"
             android:layout_gravity="center"
             >
@@ -64,7 +65,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="娱乐模式"
+            android:text="竞技模式"
+            android:id="@+id/ji_text"
+            android:textColor="#4A4A4A"
             android:layout_centerInParent="true"
             />
         </RelativeLayout>
@@ -73,7 +76,7 @@
             android:id="@+id/fqtz_ms_woshi"
             android:layout_width="130dp"
             android:layout_height="34dp"
-            android:background="@drawable/shuying_4"
+            android:background="@drawable/mos_bg"
             android:layout_centerInParent="true"
             android:layout_gravity="center"
             android:layout_marginTop="24dp"
@@ -83,6 +86,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="我是陪练"
+                android:id="@+id/wpl_text"
+                android:textColor="#4A4A4A"
                 android:layout_centerInParent="true"
                 />
         </RelativeLayout>
@@ -96,10 +101,10 @@
             android:layout_weight="1"
             >
             <RelativeLayout
-                android:id="@+id/fqtz_ms_jingji"
+                android:id="@+id/fqtz_ms_yule"
                 android:layout_width="130dp"
                 android:layout_height="34dp"
-                android:background="@drawable/shuying_4"
+                android:background="@drawable/mos_bg"
                 android:layout_centerInParent="true"
                 android:layout_gravity="center"
                 >
@@ -107,7 +112,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="竞技模式"
+                    android:text="娱乐模式"
+                    android:id="@+id/yul_text"
+
+                    android:textColor="#4A4A4A"
                     android:layout_centerInParent="true"
                     />
             </RelativeLayout>
@@ -116,7 +124,7 @@
                 android:id="@+id/fqtz_ms_wozhao"
                 android:layout_width="130dp"
                 android:layout_height="34dp"
-                android:background="@drawable/shuying_4"
+                android:background="@drawable/mos_bg"
                 android:layout_centerInParent="true"
                 android:layout_gravity="center"
                 android:layout_marginTop="24dp"
@@ -126,6 +134,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="我找陪练"
+                    android:id="@+id/zpl_text"
+                    android:textColor="#4A4A4A"
                     android:layout_centerInParent="true"
                     />
             </RelativeLayout>

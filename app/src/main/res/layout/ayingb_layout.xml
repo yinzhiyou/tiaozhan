@@ -1,14 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-    <com.example.android.promoter.Toos.XCRoundImageView
+    android:layout_width="36dp"
+    android:layout_height="36dp"
+    android:layout_gravity="center"
+    android:gravity="center"
+
+    >
+    <!--<com.example.android.promoter.Toos.XCRoundImageView
         android:id="@+id/my_touxiang"
         android:layout_width="36dp"
         android:layout_height="36dp"
         android:layout_gravity="center"
         android:background="@mipmap/home_vip_head"
 
+
+        />-->
+
+    <com.example.android.tiaozhan.Toos.CustomRoundAngleImageView
+        android:id="@+id/my_touxiang"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:scaleType="fitXY"
         />
-</android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/hdxq_a_grid_no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="A1"
+        android:textColor="#FFFFFFFF"
+        android:textSize="12dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:background="#4d000000"
+        />
+</RelativeLayout>

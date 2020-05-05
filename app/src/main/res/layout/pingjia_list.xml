@@ -6,10 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <com.example.android.promoter.Toos.CustomRoundAngleImageView
+        <com.example.android.tiaozhan.Toos.CustomRoundAngleImageView
             android:id="@+id/pingjia_item_touxiang"
             android:layout_width="40dp"
             android:layout_height="40dp"
@@ -23,6 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_toRightOf="@+id/pingjia_item_touxiang"
             android:layout_marginTop="12dp"
             >
             <TextView
@@ -40,10 +41,24 @@
                 android:text="Nicholas Lawson"
                 android:textColor="#FF333333"
                 android:textSize="14dp"
+
+                android:textStyle="bold"
                 />
 
         </LinearLayout>
-    </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="比赛结果"
+            android:id="@+id/jg_text"
+            android:textSize="14sp"
+            android:textColor="#333333"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            />
+    </RelativeLayout>
 
 <!--分割线-->
     <LinearLayout
@@ -60,7 +75,8 @@
             android:textColor="#FF9B9B9B"
             android:textSize="14dp"
             />
-        <com.example.android.promoter.Toos.StarBar
+
+        <com.example.android.tiaozhan.Toos.StarBar
             android:id="@+id/starBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -68,7 +84,7 @@
             ratingbar:starFill="@mipmap/xingxinghuang"
             ratingbar:starDistance="5dp"
             ratingbar:starCount="5"
-            ratingbar:starSize="14dp"
+            ratingbar:starSize="15sp"
             android:layout_gravity="center"
             android:layout_marginLeft="12dp"
             android:layout_marginRight="12dp"
@@ -84,13 +100,14 @@
             />
     </LinearLayout>
 
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#E1E0E1"
         android:layout_marginTop="12dp"
         android:layout_marginBottom="12dp"
-        android:visibility="gone"
+
         ></View>
 
     <TextView
@@ -101,7 +118,7 @@
         android:textSize="14dp"
         android:layout_marginLeft="12dp"
         android:layout_marginBottom="12dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="5dp"
         />
 
     <!--<com.example.android.promoter.Toos.MyGridView-->
@@ -112,10 +129,10 @@
         <!--&gt;-->
     <!--</com.example.android.promoter.Toos.MyGridView>-->
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        />
+        android:layout_marginBottom="5dp"
+         />
 </LinearLayout>

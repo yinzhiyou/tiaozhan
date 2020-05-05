@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <com.example.android.promoter.Toos.CustomRoundAngleImageView
+        <com.example.android.tiaozhan.Toos.CustomRoundAngleImageView
             android:id="@+id/pingjia_two_touxiang"
             android:layout_width="40dp"
             android:layout_height="40dp"

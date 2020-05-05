@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.example.android.tiaozhan.Toos.XCRoundImageView
+                android:id="@+id/promo_hdxq_touxiang_other"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="15dp"
+                android:background="@mipmap/home_vip_head" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/promo_hdxq_touxiang_other"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/promo_hdxq_name_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+
+                    android:text=" "
+                    android:textColor="#4A4A4A"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/promo_hdxq_time_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:text="2019年07月20日"
+                    android:textColor="#FF9B9B9B"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/icon_wanc_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="17dp"
+                android:src="@mipmap/icon_yiwanc"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/promo_hdxq_text1_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="12dp"
+
+            android:text="发起投诉："
+            android:textColor="#4A4A4A"
+            android:textSize="14dp" />
+
+        <RelativeLayout
+            android:id="@+id/cp_Rlayout_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="6dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/cp1_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="到场裁判："
+                android:textColor="#4A4A4A" />
+
+            <RelativeLayout
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/cp1">
+
+                <com.example.android.tiaozhan.Toos.CustomRoundAngleImageView
+                    android:id="@+id/hdxq_cp_touxiang_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/yaoqingtouxiang" />
+
+                <TextView
+                    android:id="@+id/hdxq_a_grid_no_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="#4d000000"
+                    android:gravity="center"
+                    android:text="A1"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="12dp" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/promo_hdxq_text2_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="12dp"
+
+            android:text="详细说明："
+            android:textColor="#4A4A4A"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/promo_xq_bofang_other"
+            android:layout_width="180dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="6dp"
+            android:background="@mipmap/yybf"
+            android:text=""
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/promo_jielun_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="12dp"
+
+            android:text="结论："
+            android:textColor="#4A4A4A"
+            android:textSize="14dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/heshi_text_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="12dp"
+
+            android:text="推广专员将在48小时内核实您的投诉。"
+            android:textColor="#4A4A4A"
+            android:textSize="14dp" />
+
+        <LinearLayout
+            android:id="@+id/promo_hdxq_anniu_other"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp">
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_weight="1"></View>
+
+            <TextView
+                android:id="@+id/promo_xsls_other"
+                android:layout_width="70dp"
+                android:layout_height="26dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/tous_bg"
+                android:gravity="center"
+                android:text="协商历史"
+                android:textColor="#333333" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

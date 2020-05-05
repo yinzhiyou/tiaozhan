@@ -48,7 +48,7 @@
 
         </RelativeLayout>
 
-        <com.example.android.promoter.Toos.CircleImageView
+        <com.example.android.tiaozhan.Toos.CircleImageView
             android:id="@+id/paihang_list_touxiang"
             android:layout_toRightOf="@+id/paihang_list_huizhang"
             android:layout_width="43dp"

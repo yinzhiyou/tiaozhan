@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Home.HZCGActivity">
-
     <WebView
+        android:id="@+id/hzcgshop"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:id="@+id/hzcgshop">
+
+        android:layout_height="match_parent"
+
+        >
 
     </WebView>
-</LinearLayout>
+    <com.example.android.tiaozhan.Toos.StatusBarHeightView
+        android:id="@+id/view_need_offset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+
+        app:use_type="use_padding_top">
+
+
+    </com.example.android.tiaozhan.Toos.StatusBarHeightView>
+</RelativeLayout>

@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="140dp"
+    android:layout_height="120dp"
     android:orientation="horizontal"
     android:background="#ffffff"
     >
 
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:id="@+id/tour"
         android:layout_weight="3"
         >
 
-        <com.example.android.promoter.Toos.CustomRoundAngleImageView
+        <com.example.android.tiaozhan.Toos.CustomRoundAngleImageView
             android:id="@+id/home_list_touxiang"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="63dp"
+            android:layout_height="63dp"
             android:background="@mipmap/home_vip_head"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="14dp"
@@ -40,12 +41,13 @@
             <TextView
                 android:id="@+id/home_list_dengji"
                 android:layout_width="26dp"
-                android:layout_height="12dp"
-                android:background="#FFF4C03D"
+                android:layout_height="wrap_content"
+                android:background="@drawable/lv_bg"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="8dp"
-                android:text="Lv 2"
-                android:textSize="10dp"
+                android:text="Lv2"
+                android:textSize="10sp"
+
                 android:textColor="#ffffff"
                 android:gravity="center"
                 />
@@ -54,26 +56,31 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_weight="6"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="16dp"
+        android:id="@+id/zhong_tu"
+        android:layout_toRightOf="@+id/tour"
+
+        android:layout_toLeftOf="@+id/zhuangl"
+        android:layout_marginLeft="8dp"
+
+
         >
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_marginTop="18dp"
             >
             <TextView
                 android:id="@+id/home_list_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="一生有你"
-                android:textSize="14dp"
-                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="#333333"
                 />
             <ImageView
                 android:id="@+id/home_list_sex"
@@ -88,15 +95,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-      >
+            android:layout_marginTop="4dp">
             <TextView
                 android:id="@+id/home_list_moshi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="娱乐模式"
                 android:textColor="#D85D27"
-                android:textSize="12dp"
+                android:textSize="12sp"
                 android:layout_weight="1"
                 />
             <TextView
@@ -105,7 +111,8 @@
                 android:layout_height="wrap_content"
                 android:text="篮球"
                 android:layout_weight="1"
-                android:textSize="12dp"
+                android:textSize="12sp"
+                android:textColor="#4A4A4A"
                 />
             <TextView
                 android:id="@+id/home_list_renshu"
@@ -113,7 +120,8 @@
                 android:layout_height="wrap_content"
                 android:text="5V5"
                 android:layout_weight="1"
-                android:textSize="12dp"
+                android:textSize="12sp"
+                android:textColor="#4A4A4A"
                 />
             <TextView
                 android:id="@+id/home_list_queren"
@@ -121,7 +129,8 @@
                 android:layout_height="wrap_content"
                 android:text="缺1人"
                 android:layout_weight="1"
-                android:textSize="12dp"
+                android:textSize="12sp"
+                android:textColor="#4A4A4A"
                 />
 
         </LinearLayout>
@@ -129,7 +138,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_marginTop="1dp"
             >
             <TextView
                 android:id="@+id/home_list_time1"
@@ -137,7 +146,8 @@
                 android:layout_height="wrap_content"
                 android:text="2018-09-09"
                 android:layout_weight="1"
-                android:textSize="12dp"
+                android:textSize="12sp"
+                android:textColor="#4A4A4A"
                 />
             <TextView
                 android:id="@+id/home_list_time2"
@@ -145,7 +155,8 @@
                 android:layout_height="wrap_content"
                 android:text="星期三"
                 android:layout_weight="1"
-                android:textSize="12dp"
+                android:textSize="12sp"
+                android:textColor="#4A4A4A"
                 />
             <TextView
                 android:id="@+id/home_list_time3"
@@ -153,14 +164,15 @@
                 android:layout_height="wrap_content"
                 android:text="15:00-16:00"
                 android:layout_weight="1"
-                android:textSize="12dp"
+                android:textSize="12sp"
+                android:textColor="#4A4A4A"
                 />
 
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_marginTop="1dp"
             >
             <TextView
                 android:id="@+id/home_list_dizhi"
@@ -168,65 +180,78 @@
                 android:layout_height="wrap_content"
                 android:text="北京市海淀区软件园三区"
                 android:layout_weight="1"
-                android:textSize="12dp"
+                android:textSize="12sp"
+                android:textColor="#4A4A4A"
                 />
-
-
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            >
-            <TextView
-                android:id="@+id/home_list_fangshi"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="场地费：AA"
-                android:layout_weight="1"
-                android:textSize="12dp"
-                />
-            <TextView
-                android:id="@+id/home_list_feiyong"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="打赏费：40元/小时"
-                android:layout_weight="1"
-                android:textSize="12dp"
-                />
 
-        </LinearLayout>
     </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_weight="1.5"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tour"
+        android:layout_below="@+id/zhong_tu"
+        android:layout_marginTop="1dp"
+        android:layout_marginLeft="8dp"
         >
+        <TextView
+            android:id="@+id/home_list_fangshi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="场地费：输方买单"
 
-        <ImageView
-            android:id="@+id/home_list_zhuangtai"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@mipmap/daichufa"
-            android:layout_gravity="right"
+            android:textSize="12sp"
+            android:textColor="#4A4A4A"
             />
-
+        <TextView
+            android:id="@+id/home_list_feiyong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="打赏费：40元/小时"
+            android:layout_toRightOf="@+id/home_list_fangshi"
+            android:layout_marginLeft="9dp"
+            android:textSize="12sp"
+            android:textColor="#4A4A4A"
+            />
         <TextView
             android:id="@+id/home_list_juli"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="2km"
-            android:textSize="12dp"
+            android:textSize="12sp"
+            android:textColor="#4A4A4A"
             android:singleLine="true"
             android:ellipsize="end"
             android:layout_weight="1"
-            android:gravity="bottom"
-            android:paddingBottom="17dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"
             android:layout_gravity="center"
             />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/zhuangl"
+        android:layout_alignParentRight="true"
+        android:layout_weight="1.5"
+        >
+
+        <ImageView
+            android:id="@+id/home_list_zhuangtai"
+            android:layout_width="46dp"
+            android:layout_height="41dp"
+            android:background="@mipmap/daichufa"
+            android:layout_gravity="right"
+            />
+
+
     </LinearLayout>
-</LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E9E9E9"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<com.example.android.promoter.view.MyScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.example.android.tiaozhan.view.MyScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/my_scrollview"
@@ -172,7 +172,7 @@
                         android:textSize="14dp" />
 
 
-                    <com.example.android.promoter.Toos.StarBar
+                    <com.example.android.tiaozhan.Toos.StarBar
                         android:id="@+id/cgxx_star"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -416,11 +416,11 @@
                     android:background="@mipmap/youjiantou" />
             </LinearLayout>
 
-            <com.example.android.promoter.Toos.MyListView
+            <com.example.android.tiaozhan.Toos.MyListView
                 android:id="@+id/cgxx_list"
                 android:layout_width="match_parent"
                 android:layout_height="315dp"
-                android:layout_marginTop="2dp"></com.example.android.promoter.Toos.MyListView>
+                android:layout_marginTop="2dp"></com.example.android.tiaozhan.Toos.MyListView>
         </LinearLayout>
     </LinearLayout>
-</com.example.android.promoter.view.MyScrollView>
+</com.example.android.tiaozhan.view.MyScrollView>

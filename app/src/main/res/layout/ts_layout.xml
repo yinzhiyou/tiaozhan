@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.example.android.tiaozhan.Toos.CustomRoundAngleImageView
+        android:id="@+id/my_touxiang"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:scaleType="fitXY"
+        android:background="@mipmap/icon_touxiang_wu"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        app:layout_constraintLeft_toLeftOf="@+id/my_touxiang"
+        app:layout_constraintRight_toRightOf="@+id/my_touxiang"
+        app:layout_constraintBottom_toBottomOf="@+id/my_touxiang"
+        android:id="@+id/ts_name"
+        android:textSize="12sp"
+        android:textColor="#FFFFFF"
+        android:text=""/>
+</androidx.constraintlayout.widget.ConstraintLayout>

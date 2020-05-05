@@ -174,12 +174,12 @@
                 android:gravity="center"
                 android:background="#E6ffffff"
                 />
-            <com.example.android.promoter.Toos.MyListView
+            <com.example.android.tiaozhan.Toos.MyListView
                 android:id="@+id/jingcai_sxList1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#E6ffffff"
-                android:divider="@null"></com.example.android.promoter.Toos.MyListView>
+                android:divider="@null"></com.example.android.tiaozhan.Toos.MyListView>
         </LinearLayout>
 
         <LinearLayout
@@ -197,12 +197,12 @@
                 android:background="#E6ffffff"
                 android:visibility="gone"
                 />
-            <com.example.android.promoter.Toos.MyListView
+            <com.example.android.tiaozhan.Toos.MyListView
                 android:id="@+id/jingcai_sxList2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#E6ffffff"
-                android:divider="@null"></com.example.android.promoter.Toos.MyListView>
+                android:divider="@null"></com.example.android.tiaozhan.Toos.MyListView>
 
         </LinearLayout>
         <LinearLayout
@@ -212,12 +212,12 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <com.example.android.promoter.Toos.MyListView
+            <com.example.android.tiaozhan.Toos.MyListView
                 android:id="@+id/jingcai_sxList3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#E6ffffff"
-                android:divider="@null"></com.example.android.promoter.Toos.MyListView>
+                android:divider="@null"></com.example.android.tiaozhan.Toos.MyListView>
         </LinearLayout>
 
 

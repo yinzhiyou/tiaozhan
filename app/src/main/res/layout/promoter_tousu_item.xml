@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.example.android.tiaozhan.Toos.XCRoundImageView
+                android:id="@+id/promo_hdxq_touxiang"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="15dp"
+                android:background="@mipmap/home_vip_head" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/promo_hdxq_touxiang"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/promo_hdxq_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+
+                    android:text=" "
+                    android:textColor="#4A4A4A"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/promo_hdxq_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:text="2019年07月20日"
+                    android:textColor="#FF9B9B9B"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/icon_wanc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="17dp"
+                android:src="@mipmap/icon_yiwanc"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/promo_hdxq_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="12dp"
+
+            android:text="发起投诉："
+            android:textColor="#4A4A4A"
+            android:textSize="14dp" />
+
+        <RelativeLayout
+            android:id="@+id/cp_Rlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="6dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/cp1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="未到场裁判："
+                android:textColor="#4A4A4A" />
+
+            <RelativeLayout
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/cp1">
+
+                <com.example.android.tiaozhan.Toos.CustomRoundAngleImageView
+                    android:id="@+id/hdxq_cp_touxiang"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/yaoqingtouxiang" />
+
+                <TextView
+                    android:id="@+id/hdxq_a_grid_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="#4d000000"
+                    android:gravity="center"
+                    android:text="A1"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="12dp" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/promo_hdxq_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="12dp"
+
+            android:text="详细说明："
+            android:textColor="#4A4A4A"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/promo_xq_bofang"
+            android:layout_width="180dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="6dp"
+            android:background="@mipmap/yybf"
+            android:text=""
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/promo_jielun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="12dp"
+
+            android:text="结论："
+            android:textColor="#4A4A4A"
+            android:textSize="14dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/heshi_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="12dp"
+
+            android:text="请在48小时内予以核实，并提交核实结果。"
+            android:textColor="#4A4A4A"
+            android:textSize="14dp" />
+
+        <LinearLayout
+            android:id="@+id/promo_anniu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+           >
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_weight="1"></View>
+
+
+            <TextView
+                android:id="@+id/promo_bty"
+                android:layout_width="70dp"
+                android:layout_height="26dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/tous_bg"
+                android:gravity="center"
+                android:text="不属实"
+                android:textColor="#333333" />
+
+            <TextView
+                android:id="@+id/promo_ty"
+                android:layout_width="70dp"
+                android:layout_height="26dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/tous_bg"
+                android:gravity="center"
+                android:text="属实"
+                android:textColor="#333333"
+
+                />
+
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/pro_refree_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="#ffffff"
+        android:orientation="vertical"
+
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.example.android.tiaozhan.Toos.XCRoundImageView
+                android:id="@+id/promo_touxiang"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="15dp"
+                android:background="@mipmap/cctgy" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/promo_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="15dp"
+                    android:text="推广专员 "
+                    android:textColor="#4A4A4A"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/promo_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:text="2019年07月20日"
+                    android:textColor="#FF9B9B9B"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/promo_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="12dp"
+
+            android:text="反馈："
+            android:textColor="#4A4A4A"
+            android:textSize="14dp" />
+
+        <RelativeLayout
+            android:id="@+id/pro_cp_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="6dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/cp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="到场裁判："
+                android:textColor="#4A4A4A" />
+
+            <RelativeLayout
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/cp">
+
+                <com.example.android.tiaozhan.Toos.CustomRoundAngleImageView
+                    android:id="@+id/hdxq_touxiang"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/yaoqingtouxiang" />
+
+                <TextView
+                    android:id="@+id/hdxq_cp_bh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="#4d000000"
+                    android:gravity="center"
+                    android:text="A1"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="12dp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/promo_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="12dp"
+            android:text="详细说明："
+            android:textColor="#4A4A4A"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/promo_bofang"
+            android:layout_width="180dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="6dp"
+            android:background="@mipmap/yybf"
+            android:text=""
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/promo_text4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+
+            android:layout_marginRight="12dp"
+
+            android:text="结论："
+            android:textColor="#4A4A4A"
+            android:textSize="14dp"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/promo_anniu_xs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            >
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_weight="1"></View>
+
+
+            <TextView
+                android:id="@+id/promo_xs"
+                android:layout_width="70dp"
+                android:layout_height="26dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/tous_bg"
+                android:gravity="center"
+                android:text="协商历史"
+                android:textColor="#333333"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+
+        android:background="@color/cutting_line" />
+</LinearLayout>

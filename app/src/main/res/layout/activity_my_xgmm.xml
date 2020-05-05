@@ -38,7 +38,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="#ffffff"
         >
@@ -71,6 +71,9 @@
             android:layout_marginRight="12dp"
             ></View>
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
         <EditText
             android:id="@+id/my_xgmm_xin"
             android:layout_width="match_parent"
@@ -87,6 +90,19 @@
             android:layout_marginTop="12dp"
             android:layout_marginBottom="10dp"
             android:hint="请输入新密码"/>
+
+        <ImageView
+            android:id="@+id/main_denglu_yan"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="12dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+
+            android:layout_gravity="center_vertical"
+
+            />
+        </RelativeLayout>
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -95,28 +111,7 @@
             android:layout_marginRight="12dp"
             ></View>
 
-        <EditText
-            android:id="@+id/my_xgmm_xin_two"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:layout_gravity="center_vertical"
-            android:textSize="14dp"
-            android:password="true"
-            android:maxLength="15"
-            android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-            android:textColorHint="#999999"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginBottom="10dp"
-            android:hint="请在此输入新密码"/>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#E1E0E1"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp"
-            ></View>
+
     </LinearLayout>
 
     <RelativeLayout

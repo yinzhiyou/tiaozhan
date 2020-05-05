@@ -12,7 +12,7 @@
 
 
 
-    <com.example.android.promoter.Toos.NoScrollViewPager
+    <com.example.android.tiaozhan.Toos.NoScrollViewPager
         android:id="@+id/homeViewPager"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -43,6 +43,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:drawableTop="@drawable/bottom_button_home"
+            android:textColor="@drawable/bottom_button_home2"
             android:padding="5dp"
             android:text="  首页  "
             android:textSize="12dp"
@@ -60,8 +61,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:drawableTop="@drawable/bottom_button_community"
+            android:textColor="@drawable/bottom_button_home2"
             android:padding="5dp"
             android:text="附近对手"
+
             android:textSize="12dp"
             android:layout_centerInParent="true"
             android:layout_weight="1"
@@ -95,9 +98,10 @@
             android:id="@+id/main_button3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:drawableTop="@drawable/bottom_button_study"
+            android:drawableTop="@drawable/bottom_button_ph"
+            android:textColor="@drawable/bottom_button_home2"
             android:padding="5dp"
-            android:text="消息"
+            android:text="排行榜"
             android:textSize="12dp"
             android:layout_centerInParent="true"
             android:layout_weight="1"
@@ -112,6 +116,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:drawableTop="@drawable/bottom_button_my"
+            android:textColor="@drawable/bottom_button_home2"
             android:padding="5dp"
             android:text="我的"
             android:textSize="12dp"
@@ -140,7 +145,7 @@
             android:id="@+id/main_hongdian"
             android:layout_width="8dp"
             android:layout_height="8dp"
-            android:background="@mipmap/hongdian2"
+
             android:layout_marginRight="20dp"
             />
         <View

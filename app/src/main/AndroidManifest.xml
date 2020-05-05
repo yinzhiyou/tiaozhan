@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.android.tiaozhan">
 
-    package="com.example.android.promoter">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <!-- 打电话  com.example.android.promoter-->
     <uses-permission android:name="android.permission.CALL_PHONE" />
@@ -34,10 +42,12 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"
-        tools:ignore="MockLocation,ProtectedPermissions"/>
+    <uses-permission
+        android:name="android.permission.ACCESS_MOCK_LOCATION"
+        tools:ignore="MockLocation,ProtectedPermissions" />
 
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
         tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -49,7 +59,8 @@
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
-    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
         tools:ignore="ProtectedPermissions" />
 
     <!-- 分享 -->
@@ -62,14 +73,16 @@
         android:label="@string/app_name"
         android:networkSecurityConfig="@xml/network_security_config"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:targetApi="n">
         <!-- 头条适配 -->
         <meta-data
             android:name="design_width_in_dp"
-            android:value="360"/>
+            android:value="360" />
         <meta-data
             android:name="design_height_in_dp"
-            android:value="640"/>
+            android:value="640" />
+
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
@@ -99,12 +112,17 @@
             </intent-filter>
         </receiver>
 
-        <!-- 百度地图key   0xRmvPDRXDbj1Ql18OgKQIZpT6jmCTnH  -->
+        <!-- 百度地图key   0xRmvPDRXDbj1Ql18OgKQIZpT6jmCTnH      Yz5uvU8Py7osTziEDWgWYTAXOVDCIsXC-->
+        <!-- 百度地图key   我的笔记本电脑     Yz5uvU8Py7osTziEDWgWYTAXOVDCIsXC-->
+        <!-- 百度地图key   PTYCdEUWs1aeKG3y5tvWuIL3RBuZCwq1  -->
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="PTYCdEUWs1aeKG3y5tvWuIL3RBuZCwq1" />
-        <service android:name="com.baidu.location.f" android:enabled="true" android:process=":remote">
-        </service>
+            android:value="Yz5uvU8Py7osTziEDWgWYTAXOVDCIsXC" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"
@@ -126,7 +144,7 @@
             android:authorities="com.example.android.tiaozhan.DataProvider"
             android:exported="false" />
         <provider
-            android:name="android.support.v4.content.FileProvider"
+            android:name="androidx.core.content.FileProvider"
             android:authorities="com.example.android.tiaozhan.fileProvider"
             android:exported="false"
             android:grantUriPermissions="true"
@@ -136,11 +154,11 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
+
         <activity
             android:name=".Main"
-            android:screenOrientation="portrait"
-            android:theme="@style/DefaultCityPickerTheme"
-            >
+            android:screenOrientation="fullSensor"
+            android:theme="@style/DefaultCityPickerTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -149,154 +167,213 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/DefaultCityPickerTheme" />
         <activity
             android:name=".Denglu.DengluActivity"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan"
-            />
-        <activity android:name=".Denglu.ZhuCeActivity"
-            android:screenOrientation="portrait"
-            android:launchMode="singleTask"/>
-        <activity android:name=".Denglu.WangJiActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Denglu.GRXXActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Denglu.BangDingActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Denglu.XiugaiXXActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Home.RenWuActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Home.FenXiangActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Home.ShopActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Home.ShopListActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Home.TianjiaDizhiActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Denglu.TiaoKuanActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Home.XiaoxiActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Home.HomeHDXQActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Home.HomeZhifuActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Home.HomeZhifuCGActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Home.HomeGRTXActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Home.HomeShopJiluActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Home.JuBaoActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Home.FaqiTiaozhanActivity"
-            android:screenOrientation="portrait"/>
+            android:launchMode="singleTask"
+            android:screenOrientation="fullSensor"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Denglu.ZhuCeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Denglu.WangJiActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Denglu.GRXXActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Denglu.BangDingActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Denglu.XiugaiXXActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Home.RenWuActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Home.FenXiangActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Home.ShopActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Home.ShopListActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Home.TianjiaDizhiActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Denglu.TiaoKuanActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Home.XiaoxiActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Home.HomeHDXQActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Home.HomeZhifuActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Home.HomeZhifuCGActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Home.HomeGRTXActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Home.HomeShopJiluActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Home.JuBaoActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Home.FaqiTiaozhanActivity"
+            android:screenOrientation="fullSensor"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".Home.ChuangguanActivity"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/DefaultCityPickerTheme"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".Home.CGXXActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Home.StartTimeActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Home.YaoqingActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Home.JLGZActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Home.CGXXActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Home.StartTimeActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Home.YaoqingActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Home.JLGZActivity"
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".Home.CGGZActivity"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:windowSoftInputMode="adjustNothing" />
         <activity
             android:name=".Wonderful.JingcaiItemActivity"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".Nearby.SearchActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".My.MyhuodongActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".My.PingjiaActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".My.MyJinbiActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".My.JBMXActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".My.MyQianbaoActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".My.QBMXActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Nearby.SearchActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.MyhuodongActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.PingjiaActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.MyJinbiActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.JBMXActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.MyQianbaoActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.QBMXActivity"
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".My.MyTIxianActivity"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".My.TXCGActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".My.TJYHKActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".My.QBMXItemActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".My.MyHaoyouActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".My.MyJingcaiActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".My.MyGuanzhuActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".My.Setup.MyShezhiActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".My.Setup.MyAnquanOneActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".My.Setup.MyAnquanTWOActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".My.Setup.MyTXMMActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".My.Setup.MyTXMMTwoActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".My.Setup.AnquanActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".My.Setup.MyXGMMActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".My.Setup.GHSJActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".My.Setup.GHSJTwoActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".My.Setup.GHSJThreeActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".My.Setup.SMRZActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".My.Setup.SMRZTwoActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".My.Setup.YSSZActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".My.Setup.HMDActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".My.About.AboutActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".My.About.AboutMyActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".My.About.AboutSMActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".My.HelpActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".My.YJFKActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Home.FQTZXiangmuActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".My.TXCGActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.TJYHKActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.QBMXItemActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.MyHaoyouActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.MyJingcaiActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.MyGuanzhuActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.Setup.MyShezhiActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.Setup.MyAnquanOneActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.Setup.MyAnquanTWOActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.Setup.MyTXMMActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.Setup.MyTXMMTwoActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.Setup.AnquanActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.Setup.MyXGMMActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.Setup.GHSJActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.Setup.GHSJTwoActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.Setup.GHSJThreeActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.Setup.SMRZActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.Setup.SMRZTwoActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.Setup.YSSZActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.Setup.HMDActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.About.AboutActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.About.AboutMyActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.About.AboutSMActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.HelpActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.YJFKActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Home.FQTZXiangmuActivity"
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".Wonderful.MainJingcaiItemActivity"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".Wonderful.JCFBActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Wonderful.JCFBActivity"
+            android:screenOrientation="fullSensor" />
         <!-- 广播 -->
         <receiver
-            android:name=".Toos.MyReceiver"
-            android:enabled="true"
-            android:exported="false">
+            android:name=".Toos.NewMyReceiver"
+            android:enabled="true">
             <intent-filter>
                 <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!-- Required  用户注册SDK的intent -->
                 <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!-- Required  用户接收SDK消息的intent -->
@@ -304,18 +381,18 @@
                 <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!-- Required  用户打开自定义通知栏的intent -->
                 <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" /> <!-- Optional 用户接受Rich Push Javascript 回调函数的intent -->
                 <action android:name="cn.jpush.android.intent.CONNECTION" /> <!-- 接收网络变化 连接/断开 since 1.6.3 -->
-                <category android:name="com.example.android.promoter" />
+                <category android:name="com.example.android.tiaozhan" />
             </intent-filter>
         </receiver>
 
-        <activity android:name=".Wonderful.PaisheActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Wonderful.PaisheActivity"
+            android:screenOrientation="fullSensor" />
         <activity
             android:name="com.alipay.sdk.app.H5PayActivity"
             android:configChanges="orientation|keyboardHidden|navigation"
             android:exported="false"
-            android:screenOrientation="behind"
-            />
+            android:screenOrientation="behind" />
         <activity
             android:name="com.alipay.sdk.auth.AuthActivity"
             android:configChanges="orientation|keyboardHidden|navigation"
@@ -326,7 +403,7 @@
             android:name=".wxapi.WXEntryActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true"
-            android:screenOrientation="portrait"
+
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity
             android:name=".wxapi.WXPayEntryActivity"
@@ -340,24 +417,32 @@
                 <data android:scheme="wx60e2e2539670b0e5" />
             </intent-filter>
         </activity>
-        <activity android:name=".My.MyPaihang"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".My.TXJieguoActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".My.HDJGActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".My.DituActivity"
-            android:screenOrientation="portrait"
+        <activity
+            android:name=".My.MyPaihang"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.TXJieguoActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.HDJGActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.DituActivity"
+            android:screenOrientation="fullSensor"
             android:theme="@style/DefaultCityPickerTheme"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".My.Friends.LiaoTianActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Home.XiaoxiItem"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Home.HomeSousuoActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".My.MyDSBActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".My.Friends.LiaoTianActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Home.XiaoxiItem"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Home.HomeSousuoActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.MyDSBActivity"
+            android:screenOrientation="fullSensor" />
         <!-- 友盟 -->
         <meta-data
             android:name="UMENG_APPKEY"
@@ -368,103 +453,208 @@
         <!-- 地图 -->
         <activity
             android:name="com.hyphenate.easeui.ui.EaseBaiduMapActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/horizontal_slide"
-            />
-        <activity android:name=".Home.TousuActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".My.JBMXItemActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".My.JBMXItemTwoActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".wxapi.SplashActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".GuideActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Home.CGPJActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Promoter.TuiguangHomeActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Promoter.PromoterONEActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Promoter.PromoterTWOActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Promoter.MyPromoterActivity"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/horizontal_slide" />
+        <activity
+            android:name=".Home.TousuActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.JBMXItemActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.JBMXItemTwoActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".wxapi.SplashActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".GuideActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Home.CGPJActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Promoter.TuiguangHomeActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Promoter.PromoterONEActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Promoter.PromoterTWOActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Promoter.MyPromoterActivity"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Promoter.PromoterFJCGActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Promoter.PromterDDActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Promoter.PromoterYTGActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Promoter.PromoterDCLActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Promoter.PromoterCGXXActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Promoter.PromoterXQActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Promoter.PromoterLSActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Promoter.PromoterSSActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Promoter.PromoterFJCGActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Promoter.PromterDDActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Promoter.PromoterYTGActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Promoter.PromoterDCLActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Promoter.PromoterCGXXActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Promoter.PromoterXQActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Promoter.PromoterLSActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Promoter.PromoterSSActivity"
+            android:screenOrientation="fullSensor" />
 
-        <service android:name=".Toos.luyin.RecordingService"
-            android:screenOrientation="portrait"/>
+        <service android:name=".Toos.luyin.RecordingService" />
 
-        <activity android:name=".Promoter.PromoterCLActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".My.MyOpponentPaiHangActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Promoter.PromoterCLActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.MyOpponentPaiHangActivity"
+            android:screenOrientation="fullSensor" />
         <!-- 下面是环信的 -->
 
         <activity
             android:name="com.hyphenate.easeui.ui.EaseShowBigImageActivity"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/horizontal_slide" />
         <activity
             android:name="com.hyphenate.easeui.ui.EaseShowNormalFileActivity"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/horizontal_slide" />
         <activity
             android:name="com.hyphenate.easeui.ui.EaseShowVideoActivity"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity android:name=".My.PingjiaTwoActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Home.HZCGActivity"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name=".Home.HomeGzsmActivity"
-        android:screenOrientation="portrait" />
-        <activity android:name=".Home.ChangguanItem"
-            android:screenOrientation="portrait" />
+        <activity
+            android:name=".My.PingjiaTwoActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Home.HZCGActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Home.HomeGzsmActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Home.ChangguanItem"
+            android:screenOrientation="fullSensor" />
 
-        <activity android:name=".Promoter.PromoterErrorActivity"
-            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Promoter.PromoterErrorActivity"
+            android:screenOrientation="fullSensor" />
 
-        <activity android:name=".Promoter.PromoterShowActivity"
-            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Promoter.PromoterShowActivity"
+            android:screenOrientation="fullSensor" />
 
-        <activity android:name=".Promoter.PromoterMyMoneyActivity"
-            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Promoter.PromoterMyMoneyActivity"
+            android:screenOrientation="fullSensor" />
 
-        <activity android:name=".Promoter.PromoterMoneyDetailActivity"
-            android:screenOrientation="portrait" />
-        <activity android:name=".Promoter.PromoterMymoneyItemActivity"
-            android:screenOrientation="portrait" />
-        <activity android:name=".Promoter.PromoterNewsListActivity"
-            android:screenOrientation="portrait" />
-        <activity android:name=".Promoter.PromoterXiaoxiItemActivity"
-            android:screenOrientation="portrait" />
-        <activity android:name=".Promoter.PromoterClzTsActivity"
-            android:screenOrientation="portrait" />
-        <activity android:name=".Promoter.PromoterFcgXXActivity"
-            android:screenOrientation="portrait" />
-        <activity android:name=".Promoter.PromoterGDPJActivity"
-            android:screenOrientation="portrait" />
-        <activity android:name=".reserve.ReserveCGDetailsActivity"
-            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Promoter.PromoterMoneyDetailActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Promoter.PromoterMymoneyItemActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Promoter.PromoterNewsListActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Promoter.PromoterXiaoxiItemActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Promoter.PromoterClzTsActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Promoter.PromoterFcgXXActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Promoter.PromoterGDPJActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".reserve.ReserveCGDetailsActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Promoter.PromoterTXianActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.referee.MyCwRefereeActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.referee.RefereePerfectXXActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.referee.RefereeXmLvActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".My.referee.RefereeUpdateActivity"
+            android:screenOrientation="fullSensor" />
+
+        <activity
+            android:name=".Home.HomeReserveCGDetailsActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Home.BonelwaListYActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Home.HomeHDTSActivity"
+            android:screenOrientation="fullSensor" />
+
+        <activity
+            android:name=".Home.HomeTouSuActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Promoter.PromoterTouSuActivity"
+            android:screenOrientation="fullSensor" />
+
+        <activity
+            android:name=".Toos.cityselectordemo.activity.CityListActivity"
+            android:screenOrientation="fullSensor" />
+
+
+        <!--<activity
+            android:name="com.lzy.imagepicker.ui.ImagePreviewDelActivity"
+            android:theme="@style/ImagePickerThemeFullScreen"/>
+
+        <activity
+            android:name="com.lzy.imagepicker.ui.ImageGridActivity"
+            android:screenOrientation="portrait"
+            />-->
+
+        <activity
+            android:name=".Toos.fuyin.ui.ImagePreviewActivity"
+            android:screenOrientation="fullSensor"
+            />
+        <!--        <activity-->
+        <!--            android:name="com.example.android.tiaozhan.Denglu.TakePhotosActivity"-->
+        <!--            android:screenOrientation="fullSensor"-->
+        <!--            />-->
+
+
+        <!--        <activity android:name="com.donkingliang.imageselector.ImageSelectorActivity"-->
+
+        <!--            android:configChanges="orientation|keyboardHidden|screenSize"/>-->
+
+
+        <!--        <activity android:name="com.donkingliang.imageselector.PreviewActivity"-->
+        <!--            android:theme="@style/Theme.AppCompat.Light.NoActionBar"-->
+        <!--            android:configChanges="orientation|keyboardHidden|screenSize"/>-->
+
+        <!--        <activity-->
+        <!--            android:name="com.donkingliang.imageselector.ClipImageActivity"-->
+        <!--            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />-->
+
+
     </application>
+
 
 </manifest>

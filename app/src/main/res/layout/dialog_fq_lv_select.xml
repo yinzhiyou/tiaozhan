@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/dialog_normal_style"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/dialog_bg"
+    android:orientation="horizontal">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="至"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/xz_time"
+        android:layout_marginTop="65dp"
+        android:textColor="@color/text_sub"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/xz_time"
+        android:background="@color/cutting_line"
+        android:layout_marginTop="50dp"
+        />
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:id="@+id/xz_time"
+
+        android:background="#D8D8D8"
+
+        >
+
+        <TextView
+            android:id="@+id/select_time_cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:textSize="17sp"
+            android:textColor="#9B9B9B"
+
+            android:gravity="center"
+            />
+
+
+        <TextView
+            android:id="@+id/select_time_sure_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确定"
+            android:layout_centerVertical="true"
+
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:textSize="17sp"
+            android:textColor="#333333"
+            android:textStyle="bold"
+            android:gravity="center"
+             />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/select_time_layout"
+        android:layout_width="fill_parent"
+        android:layout_below="@+id/xz_time"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_weight="1">
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="最低级别"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:textSize="17sp"
+                android:textColor="#9B9B9B"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+            <com.example.android.tiaozhan.Toos.time.view.WheelView
+                android:id="@+id/select_time_wheel_left"
+                android:layout_width="fill_parent"
+                android:layout_height="150dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_weight="1">
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="最低级别"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:textSize="17sp"
+                android:textColor="#9B9B9B"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+            <com.example.android.tiaozhan.Toos.time.view.WheelView
+                android:id="@+id/select_time_wheel_right"
+                android:layout_width="fill_parent"
+                android:layout_height="150dp" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/cutting_line"
+        android:layout_above="@+id/btom"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="100dp"
+        />
+
+
+</RelativeLayout>

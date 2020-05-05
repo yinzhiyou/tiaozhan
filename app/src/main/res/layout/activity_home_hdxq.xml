@@ -24,10 +24,11 @@
             android:orientation="vertical">
 
             <RelativeLayout
+                android:id="@+id/daojishi_layout"
                 android:layout_width="match_parent"
                 android:layout_height="24dp"
                 android:layout_marginTop="2dp"
-                android:background="#ffffff">
+                android:background="#E9E9E9">
 
                 <TextView
                     android:id="@+id/daojishi"
@@ -62,7 +63,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    android:background="#FF9B9B9B"></View>
+                    android:background="#E9E9E9"></View>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -83,8 +84,8 @@
                         android:id="@+id/home_hdxq_text_qiulei"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="4dp"
                         android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
                         android:text="   "
                         android:textColor="#FF333333"
                         android:textSize="14dp" />
@@ -119,10 +120,11 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="12dp"
                     android:text="发布者"
+                    android:textStyle="bold"
                     android:textColor="#FF333333"
                     android:textSize="16dp" />
 
-                <com.example.android.promoter.Toos.CustomRoundAngleImageView
+                <com.example.android.tiaozhan.Toos.CustomRoundAngleImageView
                     android:id="@+id/home_hdxq_touxiang"
                     android:layout_width="34dp"
                     android:layout_height="34dp"
@@ -176,7 +178,7 @@
                     android:layout_height="28dp">
 
                     <TextView
-                        android:layout_width="70dp"
+                        android:layout_width="60dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginLeft="12dp"
@@ -190,7 +192,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginLeft="12dp"
                         android:ellipsize="end"
                         android:singleLine="true"
                         android:text=""
@@ -215,7 +217,7 @@
                     android:layout_height="28dp">
 
                     <TextView
-                        android:layout_width="70dp"
+                        android:layout_width="60dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginLeft="12dp"
@@ -227,7 +229,7 @@
                         android:layout_width="10dp"
                         android:layout_height="12dp"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginLeft="12dp"
                         android:background="@mipmap/dingwei" />
 
                     <TextView
@@ -252,51 +254,7 @@
                     <!--android:textSize="12dp" />-->
                 </LinearLayout>
 
-                <!--分割线-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="28dp">
 
-                    <TextView
-                        android:layout_width="70dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="12dp"
-                        android:text="场地费用"
-                        android:textColor="#FF9B9B9B"
-                        android:textSize="14dp" />
-
-                    <TextView
-                        android:id="@+id/home_hdxq_feiyong"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="20dp"
-                        android:layout_weight="3"
-                        android:text=""
-                        android:textColor="#FFD85D27"
-                        android:textSize="14dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="12dp"
-                        android:text="承担方式"
-                        android:textColor="#FF9B9B9B"
-                        android:textSize="14dp" />
-
-                    <TextView
-                        android:id="@+id/home_hdxq_fangshi"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="20dp"
-                        android:layout_weight="3"
-                        android:text=""
-                        android:textColor="#FF333333"
-                        android:textSize="14dp" />
-                </LinearLayout>
                 <!--分割线-->
 
                 <LinearLayout
@@ -305,7 +263,7 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="70dp"
+                        android:layout_width="60dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginLeft="12dp"
@@ -318,7 +276,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginLeft="12dp"
                         android:text=""
 
                         android:textColor="#FF333333"
@@ -329,14 +287,17 @@
 
                 <!--分割线-->
 
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="28dp"
-                    android:orientation="horizontal">
+
+                    >
 
                     <TextView
-                        android:layout_width="70dp"
+                        android:id="@+id/sc"
+                        android:layout_width="60dp"
                         android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
                         android:layout_gravity="center"
                         android:layout_marginLeft="12dp"
                         android:text="活动时长"
@@ -345,146 +306,377 @@
 
                     <TextView
                         android:id="@+id/home_hdxq_timelog"
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="20dp"
-                        android:layout_weight="3"
+                        android:layout_marginLeft="12dp"
+                        android:layout_toRightOf="@+id/sc"
+
                         android:text=""
                         android:textColor="#FF333333"
                         android:textSize="14dp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="12dp"
-                        android:text="场地号    "
-                        android:textColor="#FF9B9B9B"
-                        android:textSize="14dp" />
                     <RelativeLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="20dp"
-                        android:layout_weight="3"
-                        >
-                    <TextView
-                        android:id="@+id/home_hdxq_cgh"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="20dp"
+                        android:id="@+id/cdh_layout"
+                        android:layout_centerVertical="true">
 
-                        android:text=""
-                        android:textColor="#FFD85D27"
-                        android:textSize="14dp" />
                         <TextView
-                            android:id="@+id/home_hdxq_cdh"
+                            android:id="@+id/cd"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="190dp"
+                            android:text="场地号"
+                            android:textColor="#FF9B9B9B"
+                            android:textSize="14dp" />
+
+                        <RelativeLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
                             android:layout_gravity="center"
-                            android:layout_toRightOf="@+id/home_hdxq_cgh"
-                            android:layout_marginLeft="10dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_toRightOf="@+id/cd">
+
+                            <TextView
+                                android:id="@+id/home_hdxq_cgh"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+
+
+                                android:text=""
+                                android:textColor="#FFD85D27"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:id="@+id/home_hdxq_cdh"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignStart="@+id/home_hdxq_cgh"
+                                android:layout_gravity="center"
+
+                                android:layout_toRightOf="@+id/home_hdxq_cgh"
+                                android:text=""
+                                android:textColor="#FFD85D27"
+                                android:textSize="14dp" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <!--分割线-->
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/cdf_wu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+
+                        android:layout_marginLeft="12dp">
+
+                        <TextView
+                            android:id="@+id/fy"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+
+                            android:text="场地费用"
+                            android:textColor="#FF9B9B9B"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/home_hdxq_feiyong"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="12dp"
+                            android:layout_toRightOf="@+id/fy"
+
                             android:text=""
                             android:textColor="#FFD85D27"
                             android:textSize="14dp" />
-                    </RelativeLayout>
-                </LinearLayout>
 
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/cdf_cp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <RelativeLayout
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+
+                                android:id="@+id/fy1"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+
+                                android:layout_gravity="center"
+                                android:text="场地费用"
+                                android:textColor="#FF9B9B9B"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:id="@+id/cdf_cp_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="12dp"
+                                android:layout_toRightOf="@+id/fy1"
+
+                                android:gravity="center"
+                                android:hint=""
+                                android:textColor="#FFD85D27"
+                                android:textSize="14dp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp">
+
+                            <TextView
+
+                                android:id="@+id/cpfy"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+
+                                android:layout_gravity="center"
+
+                                android:text="裁判费用"
+                                android:textColor="#FF9B9B9B"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:id="@+id/cdf_cp_text2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="12dp"
+                                android:layout_toRightOf="@+id/cpfy"
+
+                                android:gravity="center"
+                                android:hint=""
+                                android:textColor="#FFD85D27"
+                                android:textSize="14dp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="190dp">
+
+                        <TextView
+                            android:id="@+id/cdfs"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="承担方式"
+                            android:textColor="#FF9B9B9B"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:id="@+id/home_hdxq_fangshi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="12dp"
+                            android:layout_toRightOf="@+id/cdfs"
+                            android:text=""
+                            android:textColor="#FF333333"
+                            android:textSize="14dp" />
+                    </RelativeLayout>
+                </RelativeLayout>
 
                 <!--分割线-->
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="28dp">
 
                     <TextView
-                        android:layout_width="70dp"
+                        android:id="@+id/xb"
+                        android:layout_width="60dp"
                         android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
                         android:layout_gravity="center"
                         android:layout_marginLeft="12dp"
-                        android:text="成员性别"
+                        android:text="性别要求"
                         android:textColor="#FF9B9B9B"
                         android:textSize="14dp" />
 
                     <TextView
                         android:id="@+id/home_hdxq_sex"
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="20dp"
-                        android:layout_weight="3"
+                        android:layout_marginLeft="12dp"
+                        android:layout_toRightOf="@+id/xb"
                         android:text=""
                         android:textColor="#FF333333"
                         android:textSize="14dp" />
 
                     <TextView
+                        android:id="@+id/nl"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="190dp"
+                        android:text="年龄要求"
+                        android:textColor="#FF9B9B9B"
+                        android:textSize="14dp" />
+
+                    <TextView
+
+                        android:id="@+id/nl_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+
                         android:layout_gravity="center"
                         android:layout_marginLeft="12dp"
-                        android:text="成员级别"
+                        android:layout_toRightOf="@+id/nl"
+                        android:text=""
+                        android:textColor="#FF333333"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+
+
+                <!--分割线-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp">
+
+                    <TextView
+                        android:id="@+id/jb"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:text="技术级别"
                         android:textColor="#FF9B9B9B"
                         android:textSize="14dp" />
 
                     <TextView
                         android:id="@+id/home_hdxq_dengji"
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="20dp"
-                        android:layout_weight="3"
+                        android:layout_marginLeft="12dp"
+                        android:layout_toRightOf="@+id/jb"
                         android:text=""
                         android:textColor="#FF333333"
                         android:textSize="14dp" />
-                </LinearLayout>
-
-                <!--分割线-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="28dp">
 
                     <TextView
                         android:id="@+id/home_hdxq_zhuanhuan"
-                        android:layout_width="70dp"
+                        android:layout_width="60dp"
                         android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="12dp"
+                        android:layout_marginLeft="190dp"
                         android:text="打赏费用"
                         android:textColor="#FF9B9B9B"
                         android:textSize="14dp" />
 
                     <TextView
                         android:id="@+id/home_hdxq_dashang"
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+
                         android:layout_gravity="center"
-                        android:layout_marginLeft="20dp"
-                        android:layout_weight="3"
+                        android:layout_marginLeft="12dp"
+                        android:layout_toRightOf="@+id/home_hdxq_zhuanhuan"
                         android:text=""
                         android:textColor="#FF333333"
                         android:textSize="14dp" />
+                </RelativeLayout>
+
+
+                <!--分割线-->
+                <RelativeLayout
+                    android:id="@+id/cp_yd"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:id="@+id/home_hdxq_cp_fy"
+                        android:layout_width="60dp"
                         android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
                         android:layout_gravity="center"
                         android:layout_marginLeft="12dp"
-                        android:text="缺人数    "
+                        android:text="裁判应得"
                         android:textColor="#FF9B9B9B"
                         android:textSize="14dp" />
 
                     <TextView
-                        android:id="@+id/home_hdxq_queren"
-                        android:layout_width="0dp"
+                        android:id="@+id/home_hdxq_cq_yd"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="20dp"
-                        android:layout_weight="3"
+                        android:layout_marginLeft="12dp"
+                        android:layout_toRightOf="@+id/home_hdxq_cp_fy"
+
                         android:text=""
                         android:textColor="#FF333333"
                         android:textSize="14dp" />
-                </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/dj"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="190dp"
+                        android:text="裁判等级"
+                        android:textColor="#FF9B9B9B"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/home_hdxq_cp_dj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_toRightOf="@+id/dj"
+
+                        android:text=""
+                        android:textColor="#FF333333"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+
 
                 <!--分割线-->
 
@@ -494,12 +686,12 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="70dp"
+                        android:layout_width="60dp"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="6dp"
+
                         android:layout_marginLeft="12dp"
                         android:layout_marginTop="6dp"
+                        android:layout_marginBottom="6dp"
                         android:text="活动备注"
                         android:textColor="#FF9B9B9B"
                         android:textSize="14dp" />
@@ -509,9 +701,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginBottom="6dp"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginLeft="12dp"
                         android:layout_marginTop="6dp"
+                        android:layout_marginBottom="6dp"
                         android:text=""
                         android:textColor="#FF333333"
                         android:textSize="14dp" />
@@ -534,7 +726,7 @@
                     android:layout_marginLeft="12dp"
                     android:text="参与人员"
                     android:textColor="#FF333333"
-                    android:textSize="14dp"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -566,78 +758,159 @@
             </LinearLayout>
 
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:background="#ffffff"
-                android:orientation="horizontal">
+                android:background="#ffffff">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="12dp"
-                    android:layout_marginRight="24dp"
                     android:layout_marginTop="12dp"
-                    android:text="A队"
-                    android:textColor="#FF333333" />
 
-                <com.example.android.promoter.Toos.MyGridView
+                    android:text="A队"
+                    android:textColor="#FF333333"
+                    android:textSize="17sp" />
+
+                <com.example.android.tiaozhan.Toos.MyGridView
                     android:id="@+id/home_hdxq_grid_a"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:layout_marginRight="58dp"
+                    android:layout_marginLeft="65dp"
+
                     android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
                     android:horizontalSpacing="14dp"
                     android:numColumns="3"
-                    android:verticalSpacing="12dp"></com.example.android.promoter.Toos.MyGridView>
-            </LinearLayout>
+                    android:verticalSpacing="12dp"></com.example.android.tiaozhan.Toos.MyGridView>
+            </RelativeLayout>
 
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:background="#ffffff"
-                android:orientation="horizontal">
+                android:background="#ffffff">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="12dp"
-                    android:layout_marginRight="24dp"
                     android:layout_marginTop="12dp"
                     android:text="B队"
-                    android:textColor="#FF333333" />
+                    android:textColor="#FF333333"
+                    android:textSize="17sp" />
 
-                <com.example.android.promoter.Toos.MyGridView
+                <com.example.android.tiaozhan.Toos.MyGridView
                     android:id="@+id/home_hdxq_grid_b"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:layout_marginRight="58dp"
+                    android:layout_marginLeft="65dp"
+
                     android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
                     android:horizontalSpacing="14dp"
                     android:numColumns="3"
-                    android:verticalSpacing="12dp"></com.example.android.promoter.Toos.MyGridView>
-            </LinearLayout>
+                    android:verticalSpacing="12dp"></com.example.android.tiaozhan.Toos.MyGridView>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/cp_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="#ffffff">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="24dp"
+                    android:text="裁判"
+                    android:textColor="#FF333333"
+                    android:textSize="17sp" />
+
+                <com.example.android.tiaozhan.Toos.MyGridView
+                    android:id="@+id/home_hdxq_grid_c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="65dp"
+
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:horizontalSpacing="14dp"
+                    android:numColumns="3"
+                    android:verticalSpacing="12dp"></com.example.android.tiaozhan.Toos.MyGridView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/promo_hdxq_dt"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:layout_marginTop="10dp"
+                android:background="#FFFFFF"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="12dp"
+                    android:text="活动投诉过程"
+                    android:textColor="#FF333333"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="详情"
+                        android:textColor="#949494"
+                        android:textSize="11sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="12dp"
+                        android:background="@mipmap/youjiantou"
+                        android:gravity="center" />
+                </LinearLayout>
+            </RelativeLayout>
+
+
             <!--分割线-->
             <LinearLayout
-                android:id="@+id/promo_hdxq_tousu"
+
+                android:id="@+id/tousu_jieguo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:orientation="vertical"
-                android:visibility="gone"
-
-                >
+                android:visibility="gone">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:layout_marginBottom="1dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginBottom="1dp"
                     android:background="#ffffff">
 
                     <TextView
@@ -646,248 +919,91 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginLeft="12dp"
-                        android:text="活动投诉"
+                        android:text="投诉审核结果"
                         android:textColor="#FF333333"
                         android:textSize="16dp"
                         android:textStyle="bold" />
 
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-
-                        android:layout_weight="1" />
-
-                    <LinearLayout
-                        android:id="@+id/promo_hdxq_xsls"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="详情" />
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="2dp"
-                            android:layout_marginRight="12dp"
-                            android:background="@mipmap/youjiantou"
-                            android:gravity="center" />
-                    </LinearLayout>
-
                 </LinearLayout>
 
-
                 <LinearLayout
+
+                    android:id="@+id/sh_cg_layout"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="1dp"
                     android:background="#ffffff"
                     android:orientation="vertical">
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-
-                        <com.example.android.promoter.Toos.XCRoundImageView
-                            android:id="@+id/promo_hdxq_touxiang"
-                            android:layout_width="55dp"
-                            android:layout_height="55dp"
-                            android:layout_marginLeft="12dp"
-                            android:layout_marginTop="12dp"
-                            android:background="@mipmap/home_vip_head" />
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/promo_hdxq_name"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="12dp"
-                                android:layout_marginTop="18dp"
-                                android:text=" "
-                                android:textColor="#FF9B9B9B"
-                                android:textSize="12dp" />
-
-                            <TextView
-                                android:id="@+id/promo_hdxq_time"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="12dp"
-                                android:layout_marginTop="12dp"
-                                android:text="2019年07月20日"
-                                android:textColor="#FF9B9B9B"
-                                android:textSize="12dp" />
-                        </LinearLayout>
-
-
-                    </LinearLayout>
-
-
                     <TextView
-                        android:id="@+id/promo_hdxq_text1"
+                        android:id="@+id/home_xq_tsjg_text1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="12dp"
                         android:layout_marginLeft="12dp"
-                        android:layout_marginRight="12dp"
                         android:layout_marginTop="12dp"
-                        android:text="投诉："
-                        android:textColor="#FF4A4A4A"
-                        android:textSize="14dp" />
+                        android:layout_weight="1"
+                        android:text="投诉场馆未预留场地"
+                        android:textColor="#FF333333"
+                        android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/promo_hdxq_text3"
+                        android:id="@+id/home_xq_tsjg_text2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="12dp"
                         android:layout_marginLeft="12dp"
-                        android:layout_marginRight="12dp"
-                        android:layout_marginTop="12dp"
-                        android:text="详细说明："
-                        android:textColor="#FF4A4A4A"
-                        android:textSize="14dp" />
-
-                    <TextView
-                        android:id="@+id/promo_hdxq_text4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginRight="12dp"
-                        android:layout_marginTop="12dp"
-                        android:text="结论："
-                        android:textColor="#FF4A4A4A"
-                        android:textSize="14dp"
-                        android:visibility="gone" />
-
-                    <TextView
-                        android:id="@+id/promo_hdxq_text5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="12dp"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginRight="12dp"
-                        android:layout_marginTop="12dp"
-                        android:text=""
-                        android:textColor="#FF4A4A4A"
-                        android:textSize="14dp"
-                        android:textStyle="bold"
-                        android:visibility="gone" />
-
-                    <TextView
-                        android:id="@+id/promo_hdxq_text6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="12dp"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginRight="12dp"
-                        android:layout_marginTop="12dp"
-                        android:text=""
-                        android:textColor="#FF4A4A4A"
-                        android:textSize="14dp"
-                        android:visibility="gone" />
-
-                    <TextView
-                        android:id="@+id/promo_xq_bofang"
-                        android:layout_width="180dp"
-                        android:layout_height="38dp"
-                        android:layout_marginLeft="12dp"
-                        android:background="@mipmap/yybf"
-                        android:text="" />
-
-                    <TextView
-                        android:id="@+id/promo_hdxq_text2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="12dp"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginRight="12dp"
-                        android:layout_marginTop="12dp"
-                        android:text="推广专员将在48小时内核实您的投诉。"
-                        android:textColor="#FF4A4A4A"
-                        android:textSize="14dp" />
-
-
-                    <LinearLayout
-                        android:id="@+id/promo_hdxq_anniu"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="12dp"
-                        android:layout_marginTop="6dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1" />
-
-                        <!--<TextView-->
-                        <!--android:id="@+id/promo_hdxq_xsls"-->
-                        <!--android:layout_width="70dp"-->
-                        <!--android:layout_height="26dp"-->
-                        <!--android:gravity="center"-->
-                        <!--android:background="@drawable/hei_kuang"-->
-                        <!--android:text="协商历史"-->
-                        <!--android:layout_marginLeft="12dp"-->
-                        <!--android:layout_marginRight="12dp"-->
-                        <!--/>-->
-
-                        <TextView
-                            android:id="@+id/promo_hdxq_ty"
-                            android:layout_width="70dp"
-                            android:layout_height="26dp"
-                            android:layout_marginLeft="12dp"
-                            android:layout_marginRight="12dp"
-                            android:background="@drawable/shuying_4"
-                            android:gravity="center"
-                            android:text="同意"
-                            android:textColor="#D85D27" />
-
-                        <TextView
-                            android:id="@+id/promo_hdxq_bty"
-                            android:layout_width="70dp"
-                            android:layout_height="26dp"
-                            android:layout_marginLeft="12dp"
-                            android:layout_marginRight="12dp"
-                            android:background="@drawable/shuying_4"
-                            android:gravity="center"
-                            android:text="不同意"
-                            android:textColor="#D85D27"
-
-                            />
-
-
-                        <TextView
-                            android:id="@+id/promo_hdxq_cxts"
-                            android:layout_width="70dp"
-                            android:layout_height="26dp"
-                            android:layout_marginLeft="12dp"
-                            android:layout_marginRight="12dp"
-                            android:background="@drawable/shuying_4"
-                            android:gravity="center"
-                            android:text="撤销投诉"
-                            android:textColor="#D85D27" />
-                    </LinearLayout>
+                        android:text="投诉场馆未预留场地"
+                        android:textColor="#FF4A4A4A" />
                 </LinearLayout>
             </LinearLayout>
 
 
-            <!--分割线-->
+            <LinearLayout
+                android:id="@+id/home_hdxq_gzsm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="1dp"
+                    android:background="#ffffff"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:paddingLeft="12dp"
+                        android:text="到场情况及规则"
+                        android:textColor="#FF333333"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="12dp"
+                        android:src="@mipmap/youjiantou" />
+                </LinearLayout>
+
+
+            </LinearLayout>
             <!--分割线-->
 
             <LinearLayout
-                android:id="@+id/home_hdxq_jieguo"
+                android:id="@+id/home_hdxq_jieguo1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:visibility="gone">
+                android:visibility="gone"
+
+                >
 
                 <LinearLayout
                     android:id="@+id/home_hdxq_zhichirenshu"
@@ -898,7 +1014,7 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
+                        android:layout_height="46dp"
                         android:layout_marginTop="1dp"
                         android:background="#ffffff"
                         android:orientation="horizontal">
@@ -908,17 +1024,38 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:paddingLeft="12dp"
-                            android:text="支持人数"
+                            android:text="比赛结果填写"
                             android:textColor="#FF333333"
                             android:textSize="16dp"
                             android:textStyle="bold" />
+
 
                     </LinearLayout>
 
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
+                        android:layout_height="44dp"
+                        android:layout_marginTop="1dp"
+                        android:background="#ffffff"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingLeft="12dp"
+                            android:text="运动者比赛结果填写"
+                            android:textColor="#333333"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="57dp"
+                        android:layout_gravity="center"
                         android:layout_marginTop="1dp"
                         android:background="#ffffff"
                         android:orientation="horizontal">
@@ -927,22 +1064,37 @@
                             android:id="@+id/home_hdxq_AyingB"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
                             android:layout_gravity="center"
                             android:layout_marginLeft="12dp"
                             android:text="A赢B："
                             android:textColor="#FF333333" />
 
-                        <com.example.android.promoter.Toos.MyGridView
+                        <com.example.android.tiaozhan.Toos.MyGridView
                             android:id="@+id/home_hdxq_AyingB_grid"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:columnWidth="36dp"
-                            android:numColumns="auto_fit"></com.example.android.promoter.Toos.MyGridView>
-                    </LinearLayout>
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="95dp"
 
-                    <LinearLayout
+                            android:layout_toLeftOf="@+id/icon_yd_y"
+                            android:columnWidth="38dp"
+                            android:numColumns="auto_fit" />
+
+                        <ImageView
+                            android:id="@+id/icon_yd_y"
+                            android:layout_width="37dp"
+                            android:layout_height="36dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="18dp"
+                            android:background="@mipmap/icon_yd"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
+                        android:layout_height="57dp"
                         android:layout_marginTop="1dp"
                         android:background="#ffffff"
                         android:orientation="horizontal">
@@ -951,24 +1103,38 @@
                             android:id="@+id/home_hdxq_AshuB"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
                             android:layout_gravity="center"
                             android:layout_marginLeft="12dp"
                             android:text="A输B："
                             android:textColor="#FF333333" />
 
-                        <com.example.android.promoter.Toos.MyGridView
+                        <com.example.android.tiaozhan.Toos.MyGridView
                             android:id="@+id/home_hdxq_AshuB_grid"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:columnWidth="36dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="95dp"
+                            android:layout_toLeftOf="@+id/icon_yd_s"
+                            android:columnWidth="38dp"
                             android:numColumns="auto_fit">
 
-                        </com.example.android.promoter.Toos.MyGridView>
-                    </LinearLayout>
+                        </com.example.android.tiaozhan.Toos.MyGridView>
 
-                    <LinearLayout
+                        <ImageView
+                            android:id="@+id/icon_yd_s"
+                            android:layout_width="37dp"
+                            android:layout_height="36dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="18dp"
+                            android:background="@mipmap/icon_yd"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
+                        android:layout_height="57dp"
                         android:layout_marginTop="1dp"
                         android:background="#ffffff"
                         android:orientation="horizontal">
@@ -977,25 +1143,39 @@
                             android:id="@+id/home_hdxq_ApingB"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
                             android:layout_gravity="center"
                             android:layout_marginLeft="12dp"
                             android:text="A平B："
                             android:textColor="#FF333333" />
 
-                        <com.example.android.promoter.Toos.MyGridView
+                        <com.example.android.tiaozhan.Toos.MyGridView
                             android:id="@+id/home_hdxq_ApingB_grid"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:columnWidth="36dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="95dp"
+                            android:layout_toLeftOf="@+id/icon_yd_p"
+                            android:columnWidth="38dp"
                             android:numColumns="auto_fit">
 
-                        </com.example.android.promoter.Toos.MyGridView>
-                    </LinearLayout>
+                        </com.example.android.tiaozhan.Toos.MyGridView>
+
+                        <ImageView
+                            android:id="@+id/icon_yd_p"
+                            android:layout_width="37dp"
+                            android:layout_height="36dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="18dp"
+                            android:background="@mipmap/icon_yd"
+                            android:visibility="gone" />
+                    </RelativeLayout>
 
 
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
+                        android:layout_height="57dp"
                         android:layout_marginTop="1dp"
                         android:background="#ffffff"
                         android:orientation="horizontal">
@@ -1004,27 +1184,83 @@
                             android:id="@+id/home_hdxq_qiquan"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
                             android:layout_gravity="center"
                             android:layout_marginLeft="12dp"
                             android:text="弃权："
                             android:textColor="#FF333333" />
 
-                        <com.example.android.promoter.Toos.MyGridView
+                        <com.example.android.tiaozhan.Toos.MyGridView
                             android:id="@+id/home_hdxq_qiquan_grid"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:columnWidth="36dp"
-                            android:numColumns="auto_fit"></com.example.android.promoter.Toos.MyGridView>
-                    </LinearLayout>
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="95dp"
+                            android:layout_toLeftOf="@+id/icon_yd_q"
+                            android:columnWidth="38dp"
+                            android:numColumns="auto_fit" />
+
+
+                        <ImageView
+                            android:id="@+id/icon_yd_q"
+                            android:layout_width="37dp"
+                            android:layout_height="36dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="18dp"
+                            android:background="@mipmap/icon_yd"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:background="#ffffff">
+
+                        <LinearLayout
+                            android:id="@+id/cp_jg"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="1dp"
+                            android:background="#ffffff"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:paddingLeft="12dp"
+                                android:text="裁判比赛结果填写"
+                                android:textColor="#333333"
+                                android:textSize="14dp" />
+
+                        </LinearLayout>
+
+                        <com.example.android.tiaozhan.Toos.MyGridView
+                            android:id="@+id/home_hdxq_cp_grid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cp_jg"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20dp"
+                            android:columnWidth="38dp"
+                            android:numColumns="auto_fit" />
+
+
+                    </RelativeLayout>
                 </LinearLayout>
 
                 <!--分割线-->
 
                 <LinearLayout
+                    android:id="@+id/home_hdxq_jgsm"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_marginTop="10dp"
-                    android:id="@+id/home_hdxq_jgsm"
                     android:background="#ffffff"
                     android:orientation="horizontal"
                     android:visibility="gone">
@@ -1034,7 +1270,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:paddingLeft="12dp"
-                        android:text="到场及规则说明"
+                        android:text="比赛结果说明"
                         android:textColor="#FF333333"
                         android:textSize="16dp"
                         android:textStyle="bold" />
@@ -1046,8 +1282,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="1dp"
                     android:background="#ffffff"
-                    android:orientation="horizontal"
-                    >
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/home_hdxq_jgsm_Text"
@@ -1075,16 +1310,12 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:paddingLeft="12dp"
-                        android:text="比赛结果"
+                        android:text="最终比赛结果"
                         android:textColor="#FF333333"
                         android:textSize="16dp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
-
-
-
-
 
 
                 <LinearLayout
@@ -1181,43 +1412,6 @@
                             android:textSize="20dp" />
                     </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/home_hdxq_gzsm"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:orientation="vertical"
-                android:visibility="gone">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="1dp"
-                    android:background="#ffffff"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:paddingLeft="12dp"
-                        android:text="比赛规则说明"
-                        android:textColor="#FF333333"
-                        android:textSize="16dp"
-                        android:textStyle="bold" />
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_gravity="center"
-                        android:layout_marginRight="12dp"
-                        android:src="@mipmap/youjiantou" />
-                </LinearLayout>
-
-
             </LinearLayout>
 
 
@@ -1376,7 +1570,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="16dp"
-                    android:text="发布时间"
+                    android:text="发布活动时间"
                     android:textColor="#FF9B9B9B"
                     android:textSize="14dp" />
 
@@ -1407,7 +1601,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="16dp"
-                    android:text="匹配时间"
+                    android:text="报名截止时间"
                     android:textColor="#FF9B9B9B"
                     android:textSize="14dp" />
 
@@ -1438,7 +1632,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="16dp"
-                    android:text="开始时间"
+                    android:text="活动开始时间"
                     android:textColor="#FF9B9B9B"
                     android:textSize="14dp" />
 
@@ -1469,7 +1663,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="16dp"
-                    android:text="结束时间"
+                    android:text="活动结束时间"
                     android:textColor="#FF9B9B9B"
                     android:textSize="14dp" />
 
@@ -1500,7 +1694,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="16dp"
-                    android:text="取消时间"
+                    android:text="活动取消时间"
                     android:textColor="#FF9B9B9B"
                     android:textSize="14dp" />
 
@@ -1550,8 +1744,8 @@
                 android:id="@+id/home_hdxq_tousu_layout"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp"
+
                 android:background="#ffffff"
                 android:orientation="horizontal">
 
@@ -1568,13 +1762,13 @@
                     android:id="@+id/home_hdxq_tousu2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
                     android:layout_weight="1"
                     android:maxLength="150"
-                    android:text="场馆方已正常提供场地，请及时确认结束，如无任何操作，将在2天后自动确认。"
+                    android:text=""
                     android:visibility="invisible"
 
                     />
@@ -1596,10 +1790,10 @@
                 android:id="@+id/hdxq_qxbm"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:layout_marginBottom="24dp"
                 android:layout_marginLeft="24dp"
+                android:layout_marginTop="12dp"
                 android:layout_marginRight="24dp"
-                android:layout_marginTop="34dp"
+                android:layout_marginBottom="24dp"
                 android:background="@drawable/login_rounded_corners"
                 android:visibility="gone">
 
@@ -1617,7 +1811,7 @@
                 android:id="@+id/hdxq_qiandao"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:layout_marginTop="34dp"
+                android:layout_marginTop="12dp"
                 android:visibility="gone">
 
 
@@ -1627,10 +1821,22 @@
                     android:layout_height="match_parent"
                     android:layout_marginRight="1dp"
                     android:layout_weight="1"
-                    android:background="#CCD85D27 "
+                    android:background="#D85D27"
                     android:gravity="center"
                     android:text="提前退出"
                     android:textColor="#ffffff" />
+
+                <TextView
+                    android:id="@+id/hdxq_dianji_bm"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:background="#D85D27 "
+                    android:gravity="center"
+                    android:text="取消报名"
+                    android:textColor="#ffffff"
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/hdxq_dianji_you"
@@ -1648,10 +1854,10 @@
                 android:id="@+id/hdxq_hdz"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:layout_marginBottom="24dp"
                 android:layout_marginLeft="24dp"
+                android:layout_marginTop="12dp"
                 android:layout_marginRight="24dp"
-                android:layout_marginTop="34dp"
+                android:layout_marginBottom="24dp"
                 android:background="@drawable/login_rounded_corners"
                 android:visibility="gone">
 

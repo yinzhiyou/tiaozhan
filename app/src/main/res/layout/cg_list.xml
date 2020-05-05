@@ -74,7 +74,7 @@
 
             >
 
-            <com.example.android.promoter.Toos.StarBar
+            <com.example.android.tiaozhan.Toos.StarBar
                 android:id="@+id/starBar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

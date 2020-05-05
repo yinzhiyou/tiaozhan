@@ -106,16 +106,21 @@
 
             </LinearLayout>
 
-            <com.example.android.promoter.Toos.MyListView
+            <com.example.android.tiaozhan.Toos.MyListView
                 android:id="@+id/pingjia_list"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginTop="10dp"
 
                 >
                 <!--android:dividerHeight="10dp"-->
                 <!--android:divider="#039B9B9B"-->
-            </com.example.android.promoter.Toos.MyListView>
+            </com.example.android.tiaozhan.Toos.MyListView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/pingjia_list2"
+                ></androidx.recyclerview.widget.RecyclerView>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -149,7 +154,7 @@
                         android:textColor="#FF333333"
                         android:textSize="14dp" />
 
-                    <com.example.android.promoter.Toos.StarBar
+                    <com.example.android.tiaozhan.Toos.StarBar
                         android:id="@+id/pingjia_sheshi"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -186,7 +191,7 @@
                         android:textColor="#FF333333"
                         android:textSize="14dp" />
 
-                    <com.example.android.promoter.Toos.StarBar
+                    <com.example.android.tiaozhan.Toos.StarBar
                         android:id="@+id/pingjia_fuwu"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -223,7 +228,7 @@
                         android:textColor="#FF333333"
                         android:textSize="14dp" />
 
-                    <com.example.android.promoter.Toos.StarBar
+                    <com.example.android.tiaozhan.Toos.StarBar
                         android:id="@+id/pingjia_jiage"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -253,7 +258,7 @@
                 android:orientation="vertical">
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="wrap_content"
                     android:background="#ffffff"
                     android:layout_marginRight="12dp"
                     android:layout_marginTop="12dp"
@@ -265,10 +270,10 @@
                 <EditText
                     android:id="@+id/pingjia_edit"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:background="@null"
                     android:gravity="top"
-                    android:layout_weight="1"
+
                     android:hint="说一说您对本场馆的评价吧！"
                     android:textColor="#FF9B9B9B"
                     android:maxLength="200"
@@ -277,6 +282,7 @@
                     android:id="@+id/yjfk_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:visibility="gone"
                     android:text="剩余字数：200"
                     android:layout_gravity="right"
                     />
@@ -286,6 +292,7 @@
                     android:layout_height="wrap_content"
                     android:background="#ffffff"
                     android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="12dp"
                     android:orientation="vertical">
 
                     <GridView

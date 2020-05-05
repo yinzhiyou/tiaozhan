@@ -59,7 +59,7 @@
             android:layout_height="150dp"
             android:layout_weight="1">
 
-            <com.example.android.promoter.Toos.time.view.WheelView
+            <com.example.android.tiaozhan.Toos.time.view.WheelView
                 android:id="@+id/select_time_wheel_left"
                 android:layout_width="fill_parent"
                 android:layout_height="150dp" />
@@ -72,7 +72,7 @@
             android:layout_height="150dp"
             android:layout_weight="1">
 
-            <com.example.android.promoter.Toos.time.view.WheelView
+            <com.example.android.tiaozhan.Toos.time.view.WheelView
                 android:id="@+id/select_time_wheel_right"
                 android:layout_width="fill_parent"
                 android:layout_height="150dp" />
@@ -95,21 +95,22 @@
         android:id="@+id/btom"
         android:layout_below="@id/select_time_layout"
         android:background="@color/login_forget"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:gravity="center">
 
         <TextView
             android:id="@+id/select_time_cancel_btn"
             android:background="@color/bg_content"
+            android:gravity="center"
             style="@style/dialog_left_btn_style" />
-            android:textStyle="bold"
-
-        <View
+       <View
             style="@style/dialog_cutting_line_style" />
 
         <TextView
             android:id="@+id/select_time_sure_btn"
             android:background="@color/bg_content"
             android:textStyle="bold"
+            android:gravity="center"
             style="@style/dialog_right_btn_style" />
     </LinearLayout>
 

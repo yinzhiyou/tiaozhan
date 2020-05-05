@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/dialog_normal_style"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/butn"
+
+        android:background="@color/bg_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/cancel_btn"
+            style="@style/dialog_left_btn_reseree_style" />
+
+
+        <TextView
+            android:layout_marginRight="10dp"
+            android:id="@+id/sure_btn"
+            style="@style/dialog_right_btn_reseree_style" />
+    </RelativeLayout>
+    <com.example.android.tiaozhan.Toos.time.view.PickValueView
+        android:id="@+id/picks_num"
+        android:layout_below="@+id/butn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.example.android.tiaozhan.Toos.time.view.PickValueView>
+
+    <com.example.android.tiaozhan.Toos.time.view.PickValueView
+        android:id="@+id/picks_lv"
+        android:layout_below="@+id/butn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+    </com.example.android.tiaozhan.Toos.time.view.PickValueView>
+</RelativeLayout>

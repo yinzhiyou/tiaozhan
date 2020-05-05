@@ -37,7 +37,7 @@
         android:id="@+id/fatz_feiyong_aa"
         android:layout_width="310dp"
         android:layout_height="34dp"
-        android:background="@drawable/ellipse_home_details"
+        android:background="@drawable/sex_out"
         android:layout_centerInParent="true"
         android:layout_gravity="center"
         android:layout_marginTop="32dp"
@@ -46,6 +46,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/aa"
             android:text="AA支付"
             android:layout_centerInParent="true"
             />
@@ -54,7 +55,7 @@
         android:id="@+id/fatz_feiyong_shumai"
         android:layout_width="310dp"
         android:layout_height="34dp"
-        android:background="@drawable/ellipse_home_details"
+        android:background="@drawable/sex_out"
         android:layout_centerInParent="true"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
@@ -64,7 +65,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="谁输谁买单"
+            android:id="@+id/shm"
+            android:text="输方买单"
             android:layout_centerInParent="true"
             />
     </RelativeLayout>

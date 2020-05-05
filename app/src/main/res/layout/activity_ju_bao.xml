@@ -17,19 +17,20 @@
     <View
         android:layout_width="wrap_content"
         android:layout_height="1dp"
-        android:background="#9B9B9B"
+        android:background="#E9E9E9"
         ></View>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="#ffffff"
+        android:id="@+id/check_layout"
         >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="举报选项"
-            android:textColor="#FF333333"
-            android:textSize="17dp"
+            android:textColor="#333333"
+            android:textSize="17sp"
             android:layout_gravity="center"
             android:layout_marginLeft="12dp"
             android:layout_weight="1"
@@ -37,16 +38,17 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="恶意骚扰"
-            android:textColor="#FF9B9B9B"
-            android:textSize="14dp"
+            android:id="@+id/text_jubao"
+            android:text="本人与资料不符"
+            android:textColor="#9B9B9B"
+            android:textSize="14sp"
             android:layout_gravity="center"
             android:layout_marginRight="10dp"
             />
         <ImageView
             android:layout_width="11dp"
             android:layout_height="17dp"
-            android:background="@mipmap/youjiantou"
+            android:background="@mipmap/youjiantou_hei"
             android:layout_gravity="center"
             android:layout_marginRight="12dp"
             />
@@ -54,25 +56,26 @@
     <View
         android:layout_width="wrap_content"
         android:layout_height="1dp"
-        android:background="#9B9B9B"
+        android:background="#E9E9E9"
         ></View>
-    <GridView
+    <com.example.android.tiaozhan.Toos.MyGridView
         android:id="@+id/grid_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/activity_opinion_feedback_two_et"
         android:layout_marginBottom="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="62dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="13dp"
         android:numColumns="3"
         android:scrollbars="none" />
 
 
     <RelativeLayout
-        android:id="@+id/Denglu_denglu"
+        android:id="@+id/submit_layout"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="66dp"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
         android:background="@drawable/login_rounded_corners">
@@ -81,7 +84,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="绑定"
+            android:text="提交"
             android:textColor="#ffffff"
             android:textSize="16sp"/>
 

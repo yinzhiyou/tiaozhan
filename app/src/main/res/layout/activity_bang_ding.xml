@@ -28,7 +28,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
@@ -37,7 +37,7 @@
         <EditText
             android:id="@+id/bangding_shouji"
             android:layout_width="160dp"
-            android:layout_height="20dp"
+            android:layout_height="wrap_content"
             android:background="@null"
             android:layout_gravity="center_vertical"
             android:textSize="14dp"
@@ -45,12 +45,13 @@
             android:layout_weight="1"
             android:textColorHint="#999999"
 
+            android:maxLength="11"
             android:hint="请输入手机号"/>
 
         <RelativeLayout
             android:id="@+id/yanzheng"
             android:layout_width="100dp"
-            android:layout_height="20dp"
+            android:layout_height="24dp"
             android:background="@drawable/login_rounded_corners">
 
             <TextView
@@ -58,7 +59,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="验证码"
+                android:text="获取验证码"
                 android:textColor="#ffffff"
                 android:textSize="12dp"/>
 
@@ -101,7 +102,7 @@
         android:id="@+id/bangding_queding"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="52dp"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
         android:background="@drawable/login_rounded_corners">
@@ -110,9 +111,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="绑定"
+            android:text="确定"
+            android:textStyle="bold"
             android:textColor="#ffffff"
-            android:textSize="16sp"/>
+            android:textSize="17sp"/>
 
     </RelativeLayout>
 

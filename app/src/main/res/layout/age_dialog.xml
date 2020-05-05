@@ -14,15 +14,16 @@
         android:layout_marginTop="34dp"
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp"
-        android:background="@drawable/ellipse_home_details">
+        android:background="@drawable/sex_out">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:id="@+id/text_nan"
             android:text="男"
-            android:textColor="#999999"
-            android:textSize="16sp"/>
+            android:textColor="#4A4A4A"
+            android:textSize="14sp"/>
 
     </RelativeLayout>
 
@@ -34,15 +35,16 @@
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp"
         android:layout_marginBottom="34dp"
-        android:background="@drawable/ellipse_home_details">
+        android:background="@drawable/sex_out">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="女"
-            android:textColor="#999999"
-            android:textSize="16sp"/>
+            android:id="@+id/text_nv"
+            android:textColor="#4A4A4A"
+            android:textSize="14sp"/>
 
     </RelativeLayout>
 </LinearLayout>
