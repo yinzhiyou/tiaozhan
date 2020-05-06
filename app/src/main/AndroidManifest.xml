@@ -621,37 +621,16 @@
             android:screenOrientation="fullSensor" />
 
 
-        <!--<activity
-            android:name="com.lzy.imagepicker.ui.ImagePreviewDelActivity"
-            android:theme="@style/ImagePickerThemeFullScreen"/>
-
-        <activity
-            android:name="com.lzy.imagepicker.ui.ImageGridActivity"
-            android:screenOrientation="portrait"
-            />-->
 
         <activity
             android:name=".Toos.fuyin.ui.ImagePreviewActivity"
             android:screenOrientation="fullSensor"
             />
-        <!--        <activity-->
-        <!--            android:name="com.example.android.tiaozhan.Denglu.TakePhotosActivity"-->
-        <!--            android:screenOrientation="fullSensor"-->
-        <!--            />-->
 
-
-        <!--        <activity android:name="com.donkingliang.imageselector.ImageSelectorActivity"-->
-
-        <!--            android:configChanges="orientation|keyboardHidden|screenSize"/>-->
-
-
-        <!--        <activity android:name="com.donkingliang.imageselector.PreviewActivity"-->
-        <!--            android:theme="@style/Theme.AppCompat.Light.NoActionBar"-->
-        <!--            android:configChanges="orientation|keyboardHidden|screenSize"/>-->
-
-        <!--        <activity-->
-        <!--            android:name="com.donkingliang.imageselector.ClipImageActivity"-->
-        <!--            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />-->
+        <activity
+            android:name=".My.Setup.SMRZoverActivity"
+            android:screenOrientation="fullSensor"
+            />
 
 
     </application>

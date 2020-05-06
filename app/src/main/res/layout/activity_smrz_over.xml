@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".My.Setup.SMRZTwoActivity">
+
+    <include layout="@layout/layout_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="姓名"
+                android:textColor="#FF333333"
+                android:textSize="15dp"
+                android:layout_marginLeft="12dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:id="@+id/smrz_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="请输入姓名"
+                android:textColorHint="#FF9D9D9D"
+                android:textSize="15dp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:background="@null"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E1E0E1"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            ></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="身份证号"
+                android:textColor="#FF333333"
+                android:textSize="15dp"
+                android:layout_marginLeft="12dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:id="@+id/smrz_sfz"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="最多18个字符"
+                android:textColorHint="#FF9D9D9D"
+                android:textSize="15dp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:background="@null"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E1E0E1"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            ></View>
+
+    </LinearLayout>
+
+</LinearLayout>

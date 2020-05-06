@@ -64,15 +64,9 @@ public class SMRZTwoActivity extends BaseActivity {
         queren.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (tag.equals("5")){
-                    Intent intent = new Intent();
-                    intent.setClass(SMRZTwoActivity.this,AnquanActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    startActivity(intent);
-                    finish();
-                }else {
+
                     initjiaru();
-                }
+
             }
         });
         spUtils = new SPUtils();
@@ -81,9 +75,7 @@ public class SMRZTwoActivity extends BaseActivity {
         Bundle bundle = new Bundle();//接收
         bundle = this.getIntent().getExtras();
         tag =  bundle.getString("tag");
-        if (tag.equals("5")){
-            init();
-        }
+
     }
 
     @Override
@@ -164,56 +156,6 @@ public class SMRZTwoActivity extends BaseActivity {
     }
 
 
-    //安全问题
-    private void init() {
-        OkHttpUtils
-                .get()
-                .url(getResources().getString(R.string.http_xutils_zpf_al_cs) + "/getUserRealInfo")
-                .addHeader("token",token)
-                .build()
-                .execute(new StringCallback() {
-                    @Override
-                    public void onError(Call call, Exception e, int id) {
-                    }
 
-                    @Override
-                    public void onResponse(String response, int id) {
-                        String result = response.toString();
-                        LogU.Ld("1608", "实名信息" + result);
-                        Boolean a = result.indexOf("2000") != -1;
-
-                        if (a) {
-                            Gson gson = new Gson();
-                            SMRZEntity entity = gson.fromJson(result, SMRZEntity.class);
-//                            HomeDialog dialog = new HomeDialog(this);
-//                            dialog.show();
-
-                            String  sfzString = entity.getData().getPlayerID();
-                            String phoneNumber = sfzString.substring(0, 1) + "*****************" + sfzString.substring(17, sfzString.length());
-                            String realname1 =null;
-                            String realname =  entity.getData().getPlayerRealName();
-
-                            char[] r =  realname.toCharArray();
-                            if(r.length ==1){
-                                realname1 =  realname;
-                            }
-                            if(r.length == 2){
-                                realname1 =  realname.replaceFirst(realname.substring(1),"*");
-                            }
-                            if (r.length > 2) {
-                                realname1 =  realname.replaceFirst(realname.substring(1,r.length-1) ,"*");
-                            }
-                            name.setText(realname1);
-
-                            sfz.setText(phoneNumber);
-                        } else {
-                            Gson gson = new Gson();
-                            JiekouSBEntity entity = gson.fromJson(result, JiekouSBEntity.class);
-                            ToastUitl.longs(entity.getMsg());
-
-                        }
-                    }
-                });
-    }
 
 }

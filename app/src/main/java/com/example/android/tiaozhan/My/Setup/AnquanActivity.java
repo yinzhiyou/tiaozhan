@@ -110,9 +110,7 @@ public class AnquanActivity extends BaseActivity implements View.OnClickListener
                         if (a) {
                           //  ToastUitl.longs("您已经实名认证过，不可重复认证");
 
-                            intent.setClass(AnquanActivity.this,SMRZTwoActivity.class);
-                            bundle.putString("tag","5");
-                            intent.putExtras(bundle);
+                            intent.setClass(AnquanActivity.this,SMRZoverActivity.class);
                             startActivity(intent);
                         } else {
 
